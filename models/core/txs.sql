@@ -1,4 +1,20 @@
-{{ config(materialized='view', tags=['core']) }}
+{{ config(materialized='table', tags=['core']) }}
+
+SELECT 
+    block_id,
+    block_timestamp,
+    tx:hash::string as tx_id,
+    tx:transactionIndex as tx_index,
+    tx:bech32_from::string as native_from_address,
+    tx:bech32_to::string as native_to_address,
+    tx:from::string as eth_from_address,
+    tx:to::string as eth_to_address,
+    tx:value as amount,
+    tx:gas as gas,
+    tx:gas_price as gas_price,
+    tx:input::string as input
+FROM {{ chainwalker_txs("harmony_blocks") }} q
+
 
 -- {
 --   "bech32_from": "one1ua97fx08qg8s5t7s0l7lg9j6vwxzxlqyd3a6nx",
@@ -148,17 +164,3 @@
 --   "v": "0xc6ac98a3",
 --   "value": 0
 -- }
-SELECT 
-    block_id,
-    block_timestamp,
-    tx:hash::string as tx_id,
-    tx:transactionIndex as tx_index,
-    tx:bech32_from::string as native_from_address,
-    tx:bech32_to::string as native_to_address,
-    tx:from::string as eth_from_address,
-    tx:to::string as eth_to_address,
-    tx:value as amount,
-    tx:gas as gas,
-    tx:gas_price as gas_price,
-    tx:input::string as input
-FROM {{ chainwalker_txs("harmony_blocks") }} q

@@ -1,4 +1,4 @@
-{{ config(materialized='view', tags=['metrics']) }}
+{{ config(materialized='table', tags=['metrics']) }}
 
 SELECT 
     date_trunc('day', block_timestamp) as metric_date,
