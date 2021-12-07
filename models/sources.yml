@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: chainwalkers
-    schema: bronze_chainwalkers
-    database: flipside
+    schema: prod
+    database: chainwalkers
     tables:
       - name: harmony_blocks
         description: "Blocks from the Harmony chain. Note always use the latest block by ingested at timestamp as duplicates can exist in this table!"
