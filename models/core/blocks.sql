@@ -10,4 +10,4 @@ SELECT
     header:miner::string as miner,
     header:size as size,
     tx_count
-FROM {{ deduped_src_table("chainwalkers", "harmony_blocks") }}
+FROM {{ deduped_blocks("harmony_blocks") }}
