@@ -10,4 +10,4 @@ SELECT
     header:miner::string as miner,
     header:size as size,
     tx_count
-FROM {{ chainwalker_blocks("harmony_blocks") }}
+FROM {{ chainwalkers_latest("harmony_blocks") }}

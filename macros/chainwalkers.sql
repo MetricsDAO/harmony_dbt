@@ -1,4 +1,4 @@
-{% macro chainwalker_blocks(table_name) -%}
+{% macro chainwalkers_latest(table_name) -%}
     (
         SELECT
             *
