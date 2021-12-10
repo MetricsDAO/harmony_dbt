@@ -13,7 +13,7 @@ SELECT
     tx:gas as gas,
     tx:gas_price as gas_price,
     tx:input::string as input
-FROM {{ chainwalkers_latest("harmony_txs") }} q
+FROM {{ deduped_src_table("chainwalkers", "harmony_txs") }} q
 
 
 -- {

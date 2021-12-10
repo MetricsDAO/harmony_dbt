@@ -53,7 +53,7 @@ Blocks and transactions are fed into the above two Harmony tables utilizing the 
 
 1. This is near-real time. Blocks land in this table within 3-5 minutes of being minted.
 2. The table is a read-only data share in the Metrics DAO Snowflake account under the database `FLIPSIDE`.
-3. The table is append-only, meaning that duplicates can exist if blocks are re-processed. The injested_at timestamp should be used to retrieve only the most recent block. Macros exist `macros/chainwalkers.sql` to handle this. See `models/core/blocks.sql` or `/models/core/txs.sql` for an example.
+3. The table is append-only, meaning that duplicates can exist if blocks are re-processed. The injested_at timestamp should be used to retrieve only the most recent block. Macros exist `macros/dedupe_utils.sql` to handle this. See `models/core/blocks.sql` or `/models/core/txs.sql` for an example.
 4. Tx logs are decoded where an ABI exists.
 
 ### Table Structures:
