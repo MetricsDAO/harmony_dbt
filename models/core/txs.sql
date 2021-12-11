@@ -1,10 +1,10 @@
-{{ config(materialized='table', tags=['core']) }}
+{{ config(materialized='incremental', unique_key='tx_id', tags=['core']) }}
 
 SELECT 
     block_id,
     block_timestamp,
-    tx:hash::string as tx_id,
-    tx:transactionIndex as tx_index,
+    tx_id,
+    tx_block_index as tx_index,
     tx:bech32_from::string as native_from_address,
     tx:bech32_to::string as native_to_address,
     tx:from::string as eth_from_address,
@@ -14,6 +14,10 @@ SELECT
     tx:gas_price as gas_price,
     tx:input::string as input
 FROM {{ deduped_txs("harmony_txs") }} q
+-- Incrementaly load new data so that we don't do a full refresh each time
+-- we run `dbt run` see the macro `macros/incremental_utils.sql` 
+-- or https://docs.getdbt.com/docs/building-a-dbt-project/building-models/configuring-incremental-models
+{{ incremental_load_filter("block_timestamp") }}
 
 
 -- {

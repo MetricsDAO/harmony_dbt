@@ -47,7 +47,7 @@ models:
   - name: txs
     description: "Harmony Transactions"
     columns:
-      - name: id
+      - name: tx_id
         description: "The primary key for this table"
         tests:
           - unique
