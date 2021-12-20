@@ -10,14 +10,14 @@ What's Harmony? Learn more [here](https://www.harmony.one/)
 2. Create a `.env` file with the following contents (note `.env` will not be commited to source):
 
 ```
-SF_ACCOUNT="zsniary-metricsdao"
-SF_USERNAME="<your_metrics_dao_snowflake_username>"
-SF_PASSWORD="<your_metrics_dao_snowflake_password>"
-SF_REGION="us-east-1"
-SF_DATABASE="HARMONY"
-SF_WAREHOUSE="DEFAULT"
-SF_ROLE="PUBLIC"
-SF_SCHEMA="DEV"
+SF_ACCOUNT=zsniary-metricsdao
+SF_USERNAME=<your_metrics_dao_snowflake_username>
+SF_PASSWORD=<your_metrics_dao_snowflake_password>
+SF_REGION=us-east-1
+SF_DATABASE=HARMONY
+SF_WAREHOUSE=DEFAULT
+SF_ROLE=PUBLIC
+SF_SCHEMA=DEV
 ```
 
 3. New to DBT? It's pretty dope. Read up on it [here](https://www.getdbt.com/docs/)
