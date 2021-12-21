@@ -1,31 +1,17 @@
 {% macro deduped_blocks(table_name) -%}
     (
-        SELECT
+        select 
             *
-        FROM
-        (
-            SELECT 
-                *,
-                row_number() OVER (PARTITION BY block_id ORDER BY ingested_at DESC) AS rn
-            FROM {{source("chainwalkers", table_name)}}
-        ) sq
-        WHERE
-        sq.rn = 1
+        from {{ source("chainwalkers", table_name) }}
+        qualify row_number() over (partition by block_id order by ingested_at desc) = 1
     )
 {%- endmacro %}
 
 {% macro deduped_txs(table_name ) -%}
     (
-        SELECT
+        select 
             *
-        FROM
-        (
-            SELECT 
-                *,
-                row_number() OVER (PARTITION BY tx_id ORDER BY ingested_at DESC) AS rn
-            FROM {{source("chainwalkers", table_name)}}
-        ) sq
-        WHERE
-        sq.rn = 1
+        from {{ source("chainwalkers", table_name) }}
+        qualify row_number() over (partition by tx_id order by ingested_at desc) = 1
     )
 {%- endmacro %}

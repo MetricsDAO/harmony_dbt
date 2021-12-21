@@ -1,6 +1,6 @@
 {{ config(materialized='incremental', unique_key='block_id', tags=['core']) }}
 
-SELECT 
+select 
     block_id,
     block_timestamp,
     header:hash::string as block_hash,
@@ -10,8 +10,8 @@ SELECT
     header:miner::string as miner,
     header:size as size,
     tx_count
-FROM {{ deduped_blocks("harmony_blocks") }}
+from {{ deduped_blocks("harmony_blocks") }}
 -- Incrementaly load new data so that we don't do a full refresh each time
 -- we run `dbt run` see the macro `macros/incremental_utils.sql` 
 -- or https://docs.getdbt.com/docs/building-a-dbt-project/building-models/configuring-incremental-models
-{{ incremental_load_filter("block_timestamp") }}
+where {{ incremental_load_filter("block_timestamp") }}
