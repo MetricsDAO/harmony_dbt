@@ -1,5 +1,5 @@
-{{ config(materialized='incremental', unique_key='tx_id', tags=['playground', 'small_blocks']) }}
-SELECT 
+{{ config(materialized='incremental', unique_key='block_id', tags=['playground', 'small_blocks', 'small']) }}
+select
     *
-FROM "HARMONY"."DEV"."BLOCKS" q
-where block_timestamp > CURRENT_DATE - 2
+from harmony.dev.blocks q
+where {{ incremental_load_filter("block_timestamp") }}

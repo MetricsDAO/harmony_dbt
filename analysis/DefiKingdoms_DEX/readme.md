@@ -1,6 +1,6 @@
 ## files
 1. liquidity_pools.json 
-    - extracted from https://graph.defikingdoms.com/subgraphs/name/defikingdoms/dex/graphql 
+    - extracted from http://graph3.defikingdoms.com/subgraphs/name/defikingdoms/dex/graphql 
     - only has 500-ish pairs for now (21-dec-2021)
 ```
 {
