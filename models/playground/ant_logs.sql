@@ -26,7 +26,7 @@ Important data
       "0x0000000000000000000000000000000000000000000000000000000000000003"
     ],
 */
-SELECT 
+select 
     block_id,
     block_timestamp,
     tx_id,
@@ -39,7 +39,7 @@ SELECT
     one_log.value:decoded:inputs as event_inputs, -- event_inputs
     one_log.value:logIndex as event_index, -- event_index of the whole tx
     one_log.value:removed as event_removed -- TODO: unsure, if the event was removed?
-FROM {{ deduped_txs("harmony_txs") }} q
+from {{ deduped_txs("harmony_txs") }} q
 ,lateral flatten (input => tx:receipt:logs) one_log
 
 -- Incrementaly load new data so that we don't do a full refresh each time
