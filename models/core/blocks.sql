@@ -1,17 +1,24 @@
-{{ config(materialized='incremental', unique_key='block_id', tags=['core']) }}
+{{ config(
+    materialized = 'incremental',
+    unique_key = 'block_id',
+    tags = ['core']
+) }}
 
-select 
+SELECT
     block_id,
     block_timestamp,
-    header:hash::string as block_hash,
-    header:parent_hash::string as block_parent_hash,
-    header:gas_limit as gas_limit,
-    header:gas_used as gas_used,
-    header:miner::string as miner,
-    header:size as size,
+    header :hash :: STRING AS block_hash,
+    header :parent_hash :: STRING AS block_parent_hash,
+    header :gas_limit AS gas_limit,
+    header :gas_used AS gas_used,
+    header :miner :: STRING AS miner,
+    header :size AS SIZE,
     tx_count
-from {{ deduped_blocks("harmony_blocks") }}
--- Incrementaly load new data so that we don't do a full refresh each time
--- we run `dbt run` see the macro `macros/incremental_utils.sql` 
--- or https://docs.getdbt.com/docs/building-a-dbt-project/building-models/configuring-incremental-models
-where {{ incremental_load_filter("block_timestamp") }}
+FROM
+    {{ deduped_blocks("harmony_blocks") }}
+    -- Incrementaly load new data so that we don't do a full refresh each time
+    -- we run `dbt run` see the macro `macros/incremental_utils.sql`
+    -- or https://docs.getdbt.com/docs/building-a-dbt-project/building-models/configuring-incremental-models
+WHERE
+    {{ incremental_load_filter("block_timestamp") }}
+    -- hey
