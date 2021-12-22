@@ -15,3 +15,4 @@ from {{ deduped_blocks("harmony_blocks") }}
 -- we run `dbt run` see the macro `macros/incremental_utils.sql` 
 -- or https://docs.getdbt.com/docs/building-a-dbt-project/building-models/configuring-incremental-models
 where {{ incremental_load_filter("block_timestamp") }}
+-- test
