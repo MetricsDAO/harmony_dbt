@@ -16,3 +16,4 @@ from {{ deduped_blocks("harmony_blocks") }}
 -- or https://docs.getdbt.com/docs/building-a-dbt-project/building-models/configuring-incremental-models
 where {{ incremental_load_filter("block_timestamp") }}
 -- test
+-- another test, yo!
