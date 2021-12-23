@@ -1,4 +1,5 @@
-union select '0x006d392b015d154f6580f68d659f803f0d22bcee' as pool_address, 'TESTRVRS-WONE LP' as pool_name, '0x5a24e33c1f3ac55b96f818d40d0ad97f71b42658' as token0, '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a' as token1
+{{ config(materialized='table', unique_key="CONCAT_WS('-', pool_address, pool_name)", tags=['playground', 'ant_labels', 'ant_dex_lp_labels']) }}
+      select '0x006d392b015d154f6580f68d659f803f0d22bcee' as pool_address, 'TESTRVRS-WONE LP' as pool_name, '0x5a24e33c1f3ac55b96f818d40d0ad97f71b42658' as token0, '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a' as token1
 union select '0x00925fbe08dc8f6ecf838d7823e0e089a388ac2c' as pool_address, 'WONE-TEST LP' as pool_name, '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a' as token0, '0xf94dffa0d6dbbf20a663907d798ed92565456c33' as token1
 union select '0x0128f5beacf96165e80ddfaf165d44c4f7bdc013' as pool_address, 'bsc1bscBNB-BUSD LP' as pool_name, '0x59b766f8dfca8834010705833dc33b7b2687dc10' as token0, '0xe176ebe47d621b984a73036b9da5d834411ef734' as token1
 union select '0x01dbf3053152a23c60cb1c106b94d2959b3cf7cc' as pool_address, 'bscADA-WONE LP' as pool_name, '0x582617bd8ca80d22d4432e63fda52d74dcdcee4c' as token0, '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a' as token1

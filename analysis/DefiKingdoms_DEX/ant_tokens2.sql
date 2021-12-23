@@ -1,4 +1,5 @@
-union select '0x5a24e33c1f3ac55b96f818d40d0ad97f71b42658' as token_address, 'TEST Reverse Token' as token_name, 'TESTRVRS' as token_symbol, 18 as decimals
+{{ config(materialized='table', unique_key="CONCAT_WS('-', token_address, token_name)", tags=['playground', 'ant_labels', 'ant_tokens2']) }}
+      select '0x5a24e33c1f3ac55b96f818d40d0ad97f71b42658' as token_address, 'TEST Reverse Token' as token_name, 'TESTRVRS' as token_symbol, 18 as decimals
 union select '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a' as token_address, 'Wrapped ONE' as token_name, 'WONE' as token_symbol, 18 as decimals
 union select '0xf94dffa0d6dbbf20a663907d798ed92565456c33' as token_address, 'Testicles' as token_name, 'TEST' as token_symbol, 18 as decimals
 union select '0x59b766f8dfca8834010705833dc33b7b2687dc10' as token_address, 'BNB' as token_name, 'bsc1bscBNB' as token_symbol, 18 as decimals

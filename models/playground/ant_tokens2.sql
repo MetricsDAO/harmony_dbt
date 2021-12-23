@@ -1,7 +1,9 @@
-{{ config(materialized='incremental', unique_key="CONCAT_WS('-', contract_name, contract_address)", tags=['playground', 'ant_labels', 'ant_tokens2']) }}
+{{ config(materialized='table', unique_key="CONCAT_WS('-', token_address, token_name)", tags=['playground', 'ant_labels', 'ant_tokens2']) }}
       select '0x5a24e33c1f3ac55b96f818d40d0ad97f71b42658' as token_address, 'TEST Reverse Token' as token_name, 'TESTRVRS' as token_symbol, 18 as decimals
 union select '0xcf664087a5bb0237a0bad6742852ec6c8d69a27a' as token_address, 'Wrapped ONE' as token_name, 'WONE' as token_symbol, 18 as decimals
 union select '0xf94dffa0d6dbbf20a663907d798ed92565456c33' as token_address, 'Testicles' as token_name, 'TEST' as token_symbol, 18 as decimals
+union select '0x59b766f8dfca8834010705833dc33b7b2687dc10' as token_address, 'BNB' as token_name, 'bsc1bscBNB' as token_symbol, 18 as decimals
+union select '0xe176ebe47d621b984a73036b9da5d834411ef734' as token_address, 'Binance USD' as token_name, 'BUSD' as token_symbol, 18 as decimals
 union select '0x582617bd8ca80d22d4432e63fda52d74dcdcee4c' as token_address, 'Cardano Token' as token_name, 'bscADA' as token_symbol, 18 as decimals
 union select '0x218532a12a389a4a92fc0c5fb22901d1c19198aa' as token_address, 'ChainLink Token' as token_name, 'LINK' as token_symbol, 18 as decimals
 union select '0x72cb10c6bfa5624dd07ef608027e366bd690048f' as token_address, 'Jewels' as token_name, 'JEWEL' as token_symbol, 18 as decimals
@@ -18,7 +20,6 @@ union select '0x7bf379fcb16b4a6f648371cd72d9d443ef24168f' as token_address, 'Ame
 union select '0x66f5bfd910cd83d3766c4b39d13730c911b2d286' as token_address, 'Shvas rune' as token_name, 'DFKSHVAS' as token_symbol, 0 as decimals
 union select '0xa9ce83507d872c5e1273e745abcfda849daa654f' as token_address, 'xJewels' as token_name, 'xJEWEL' as token_symbol, 18 as decimals
 union select '0xb12c13e66ade1f72f71834f2fc5082db8c091358' as token_address, 'Avalanche' as token_name, 'AVAX' as token_symbol, 18 as decimals
-union select '0xe176ebe47d621b984a73036b9da5d834411ef734' as token_address, 'Binance USD' as token_name, 'BUSD' as token_symbol, 18 as decimals
 union select '0x40596735baf0bf101f0e5f4ac1168f1ceba7efa3' as token_address, 'Baby Harmony' as token_name, 'BH' as token_symbol, 18 as decimals
 union select '0xb8e0497018c991e86311b64efd9d57b06aedbbae' as token_address, 'DaVinci Token' as token_name, 'VINCI' as token_symbol, 18 as decimals
 union select '0x56ba644ae496fb04dffa8679fd6c65ed7de1170e' as token_address, 'DefiKingDomCapital' as token_name, 'DFKCap' as token_symbol, 9 as decimals
@@ -78,6 +79,7 @@ union select '0xc2852a5f9439b5494bbe5f023d5bf02ddbc8a040' as token_address, 'Har
 union select '0x43bd877d4addac16ff0a7c2285ff32be6a011f86' as token_address, 'TEST' as token_name, 'TEST' as token_symbol, 18 as decimals
 union select '0xabaed82fe5380db3f946cc9b8c124eb30bbda8a1' as token_address, 'BABYJEWEL' as token_name, 'BABYJEWEL' as token_symbol, 18 as decimals
 union select '0xfbabda1b56cba6cdd63eb7204d5d403d9abd2dcd' as token_address, 'BIGPISS' as token_name, 'BIGPISS' as token_symbol, 18 as decimals
+union select '0x600541ad6ce0a8b5dae68f086d46361534d20e80' as token_address, 'Goldvein' as token_name, 'DFKGLDVN' as token_symbol, 0 as decimals
 union select '0xbb948620fa9cd554ef9a331b13edea9b181f9d45' as token_address, 'Wrapped sWAGMI' as token_name, 'wsWAGMI' as token_symbol, 18 as decimals
 union select '0xd4f0032abcadeefe74eafa898f9d94b099a14f73' as token_address, 'unknown' as token_name, 'JEWEL-LP' as token_symbol, 18 as decimals
 union select '0x3e018675c0ef63eb361b9ef4bfea3a3294c74c7b' as token_address, 'Kuro Shiba' as token_name, 'KURO' as token_symbol, 9 as decimals
@@ -103,6 +105,8 @@ union select '0x7e530f0cc102ba74ceba020bc68281646e1468bf' as token_address, 'Smu
 union select '0x5d1cd3220f62b0550c422d7928f72531c6a6a851' as token_address, 'Haywood' as token_name, 'WOOD' as token_symbol, 18 as decimals
 union select '0x79151ee249ab4ad701f1b45777094e97f99ed73b' as token_address, 'babymoon' as token_name, 'babymoon' as token_symbol, 9 as decimals
 union select '0x9467a0958c36b0a92b0f9683e65e3223e7428df9' as token_address, 'Amethyst' as token_name, 'AME' as token_symbol, 18 as decimals
+union select '0xcdffe898e687e941b124dfb7d24983266492ef1d' as token_address, 'Swift-Thistle' as token_name, 'DFKSWFTHSL' as token_symbol, 0 as decimals
+union select '0xef977d2f931c1978db5f6747666fa1eacb0d0339' as token_address, 'Dai Stablecoin' as token_name, '1DAI' as token_symbol, 18 as decimals
 union select '0x6523688efd8212b83bc30a4e2af98389a9014ed5' as token_address, 'Tranquility City' as token_name, 'LUMEN' as token_symbol, 18 as decimals
 union select '0x5e1368b87c8bdf9807290627cdb2aef065318496' as token_address, 'SmugDoge.com' as token_name, 'SMUG' as token_symbol, 9 as decimals
 union select '0x6261d9904acc8cce43012d7fa5c96603d97a099f' as token_address, 'SpookyPengu' as token_name, 'SPOOKY' as token_symbol, 9 as decimals
@@ -112,7 +116,6 @@ union select '0xb688962d3b8d8caa970522babbc057173b56f331' as token_address, 'Smu
 union select '0x58f1b044d8308812881a1433d9bbeff99975e70c' as token_address, '1INCH Token' as token_name, '11INCH' as token_symbol, 18 as decimals
 union select '0x7d8da7e25966d9c73c54b24ebcc09c5cb50f2ae4' as token_address, 'CESS' as token_name, 'SESS' as token_symbol, 18 as decimals
 union select '0x1ce753cd86c1881411c281bfab533d54086d9377' as token_address, 'BSNAPPY' as token_name, 'bsnappy' as token_symbol, 18 as decimals
-union select '0x600541ad6ce0a8b5dae68f086d46361534d20e80' as token_address, 'Goldvein' as token_name, 'DFKGLDVN' as token_symbol, 0 as decimals
 union select '0x07189ba29febdf88e9c03c8cce976f6b66253e1f' as token_address, 'BabyPiggy' as token_name, 'BPIGGY' as token_symbol, 18 as decimals
 union select '0x0ac99600995ef2c9cdaf3ca7a30eff67e8d9661d' as token_address, 'SmugDoge.com' as token_name, 'SMUG' as token_symbol, 9 as decimals
 union select '0x5ac88d80f6a01e7af4e55faadd04bfc2ea754987' as token_address, 'BetterOne1' as token_name, 'B1' as token_symbol, 10 as decimals
@@ -122,6 +125,7 @@ union select '0x411bf1ac21faa6018f543631570066e1433eb036' as token_address, 'Cat
 union select '0x6546d3fc7cde8c2956355b3ddfd80e7ce0116117' as token_address, 'Amethyst' as token_name, 'AME' as token_symbol, 18 as decimals
 union select '0x9ad4f6e79386d21fd0c262a323813175ac14bdb0' as token_address, 'Jewel Shiba' as token_name, 'JEWELSHIB' as token_symbol, 18 as decimals
 union select '0x55caa3f618372267a0de23fd78354223c44515a2' as token_address, 'SmugDoge.com' as token_name, 'SMUG' as token_symbol, 9 as decimals
+union select '0x50c3ef240da45faeffa9f27d818143c5f97e726c' as token_address, 'DomiOnline Meta' as token_name, 'mDomi' as token_symbol, 18 as decimals
 union select '0xfbdd194376de19a88118e84e279b977f165d01b8' as token_address, 'Wrapped Matic' as token_name, 'WMATIC' as token_symbol, 18 as decimals
 union select '0xd647090c1cdcdbb72de411b1ba16f03d4a7bba02' as token_address, 'Fantom Token' as token_name, 'rFTM' as token_symbol, 18 as decimals
 union select '0x888495d668f3702f992bbe1f069230aa73cd5307' as token_address, 'BABYJEWEL' as token_name, 'BABYJEWEL' as token_symbol, 18 as decimals
@@ -132,6 +136,8 @@ union select '0x95ce547d730519a90def30d647f37d9e5359b6ae' as token_address, 'Wra
 union select '0x53ba62ddd5a9a6b6d97c7a496d7832d13a9218c4' as token_address, 'Avalanche Token' as token_name, 'rAVAX' as token_symbol, 18 as decimals
 union select '0xf69ff02a6c6b9c95ed36dde1bc0e22a4b53e8bce' as token_address, 'ShibaOne' as token_name, 'ShibaOne' as token_symbol, 18 as decimals
 union select '0x78aed65a2cc40c7d8b0df1554da60b38ad351432' as token_address, 'Bloater' as token_name, 'DFKBLOATER' as token_symbol, 0 as decimals
+union select '0x2b24bb17c9bb25668ea01caabd43bf10eaa332eb' as token_address, 'Baby Piggy' as token_name, 'xB Piggy' as token_symbol, 18 as decimals
+union select '0x7ca9c1d0bb11f1b7c31ee5538d7a75aaf2d8e2fc' as token_address, 'CryptoPigs Token' as token_name, 'COINKX' as token_symbol, 18 as decimals
 union select '0x372caf681353758f985597a35266f7b330a2a44d' as token_address, 'ShimmerSkin' as token_name, 'DFKSHIMMERSKIN' as token_symbol, 0 as decimals
 union select '0x4b3c0bcea4dd4e8849eb00903efa1cdb0697e849' as token_address, 'SmugDoge.com' as token_name, 'SMUG' as token_symbol, 9 as decimals
 union select '0x9218e4be8138203e8fa231820d302bbe0e51b41c' as token_address, 'CatTeeth' as token_name, 'CT' as token_symbol, 18 as decimals
@@ -141,7 +147,6 @@ union select '0xcdede8c590d6e3c44c55053a9a7f22bb3e3a8767' as token_address, 'Anu
 union select '0xdc14e703896bc7bccf727645674cd46924271405' as token_address, 'RainDAO' as token_name, 'Rain' as token_symbol, 18 as decimals
 union select '0x5b20d82629f1aca785d823759a62664b78cb431e' as token_address, 'Reverse' as token_name, 'Reverse' as token_symbol, 18 as decimals
 union select '0xfc73b5a14f1b2e2b618620eaed98e7df8d8d4a39' as token_address, 'ElonDoge' as token_name, 'eDOGE' as token_symbol, 18 as decimals
-union select '0xef977d2f931c1978db5f6747666fa1eacb0d0339' as token_address, 'Dai Stablecoin' as token_name, '1DAI' as token_symbol, 18 as decimals
 union select '0x4970417a897cc7ae812b9b8db34bb44833c26739' as token_address, 'Piggybankone' as token_name, 'COINK' as token_symbol, 18 as decimals
 union select '0xb82307ff75f0cd2cfc253ba2621851fd9123a818' as token_address, 'Wrapped UST Token' as token_name, 'bscUST' as token_symbol, 18 as decimals
 union select '0xf0aedfcd1110ac9a599d801682d8efe40511de4a' as token_address, 'Locked JEWEL' as token_name, 'L-JEWEL' as token_symbol, 18 as decimals
@@ -159,7 +164,6 @@ union select '0x9094b2f225c936e6c9d2c8072b788bc6f73dde7c' as token_address, 'Shi
 union select '0xc5891912718ccffcc9732d1942ccd98d5934c2e1' as token_address, 'Redgill' as token_name, 'DFKREDGILL' as token_symbol, 0 as decimals
 union select '0x9d6032604b64181b752f943065e025c3e3f24940' as token_address, 'Chonks Tears' as token_name, 'CHONKTEARS' as token_symbol, 18 as decimals
 union select '0x3b78766b85aa97dbaa87194ae46c61b87b9f244e' as token_address, '1SHIBA' as token_name, '1SHIBA' as token_symbol, 18 as decimals
-union select '0x2b24bb17c9bb25668ea01caabd43bf10eaa332eb' as token_address, 'Baby Piggy' as token_name, 'xB Piggy' as token_symbol, 18 as decimals
 union select '0x2493cfdacc0f9c07240b5b1c4be08c62b8eeff69' as token_address, 'Silverfin' as token_name, 'DFKSILVERFIN' as token_symbol, 0 as decimals
 union select '0x2b51890f18f1ea2aa65c78aca58fcdc7543037d6' as token_address, 'BABYTRANQ' as token_name, 'BABYTRANQ' as token_symbol, 18 as decimals
 union select '0x17056b13451d25944ca25f01c33e4734b921c311' as token_address, 'Shiba One' as token_name, 'SHIB' as token_symbol, 18 as decimals
@@ -171,18 +175,17 @@ union select '0x26b39e8d527d9dc9f8fedb00c3ecb00aee6ca472' as token_address, 'Iri
 union select '0x728c2feb0b09da60f8c46c7324971c8f33017950' as token_address, 'GrowTrees Finance' as token_name, 'GROW' as token_symbol, 18 as decimals
 union select '0x95fcbc19562ef7434fdc6f43d620c26c34c8d5c2' as token_address, 'SmugDoge1' as token_name, 'SMUG1' as token_symbol, 10 as decimals
 union select '0xe5dfcd29dfac218c777389e26f1060e0d0fe856b' as token_address, 'Plutus' as token_name, 'PLTS' as token_symbol, 18 as decimals
-union select '0xcdffe898e687e941b124dfb7d24983266492ef1d' as token_address, 'Swift-Thistle' as token_name, 'DFKSWFTHSL' as token_symbol, 0 as decimals
 union select '0x009bb99ee1ebea9712967b8e22ec2697414f802e' as token_address, 'SAITAMA' as token_name, 'STM' as token_symbol, 18 as decimals
 union select '0x34704c70e9ec9fb9a921da6daad7d3e19f43c734' as token_address, 'DSLA' as token_name, '1DSLA' as token_symbol, 18 as decimals
 union select '0x8eb03202275bd598adc23678008ef88655544910' as token_address, 'Radiant' as token_name, 'RADI' as token_symbol, 18 as decimals
-union select '0x7ca9c1d0bb11f1b7c31ee5538d7a75aaf2d8e2fc' as token_address, 'CryptoPigs Token' as token_name, 'COINKX' as token_symbol, 18 as decimals
 union select '0x74ecc7adebab7870f012c0b23489f965d43d6ab0' as token_address, 'PrimeTime' as token_name, 'PTime' as token_symbol, 18 as decimals
 union select '0x0359a3e8ed9456a81eaaa8c83415b425a6d004d1' as token_address, 'Bsnappy' as token_name, 'Bsnappy' as token_symbol, 18 as decimals
-union select '0x578051af8452da456caaf76a0191ea3aa5bbe307' as token_address, 'PartyHat' as token_name, 'PHAT' as token_symbol, 18 as decimals
+union select '0x578051af8452da456caaf76a0191ea3aa5bbe307' as token_address, 'PartyHat' as token_name, 'PHAT' as token_symbol, 0 as decimals
 union select '0x9a9b18630ff6f0de6fc776f8c5e03bf929b7a90c' as token_address, 'SmugDoge.com' as token_name, 'SMUG' as token_symbol, 9 as decimals
 union select '0xbd16b0b2eb520b7ff4a4156d367ee359ac19c531' as token_address, 'ARANK' as token_name, 'ARANK' as token_symbol, 18 as decimals
 union select '0x3fb0cb373f063dc0b1de333f998b0ca821759b71' as token_address, 'BABYTRANQ' as token_name, 'BABYTRANQ' as token_symbol, 18 as decimals
 union select '0x86c602b59fe35e18f22ed4d7557bf75ec53e9c1f' as token_address, 'Artemis' as token_name, 'MIS' as token_symbol, 18 as decimals
+union select '0xb98873d2fdabe56cae11566916a8b7bb2a4e59ef' as token_address, 'Soil' as token_name, '1Sl' as token_symbol, 18 as decimals
 union select '0x3ec248ed4b69142a40fb2f2b9d990125a830a598' as token_address, 'CryptoBunny' as token_name, 'NFT' as token_symbol, 18 as decimals
 union select '0x5db646252a209ec84c25678c478fbff3316f73e6' as token_address, 'Mana' as token_name, 'Mana' as token_symbol, 18 as decimals
 union select '0x044246137670a03ca790d7ed20af0c552c88117c' as token_address, 'Arbiter' as token_name, 'ARB' as token_symbol, 18 as decimals
@@ -221,12 +224,14 @@ union select '0x1e05c8b69e4128949fcef16811a819ef2f55d33e' as token_address, 'Son
 union select '0x83c006d4d36f9c44d06532366098e456269f92b8' as token_address, 'BABYJEWEL' as token_name, 'BABYJEWEL' as token_symbol, 18 as decimals
 union select '0xfb163e7349fd149d1e4a1052a045d285c1bed98f' as token_address, 'SmugDoge.com' as token_name, 'SMUG' as token_symbol, 9 as decimals
 union select '0x0e0094b37bae95f6189677b0a03eb0af342a9638' as token_address, 'BABYBOO' as token_name, 'BABYBOO' as token_symbol, 18 as decimals
+union select '0xbd11f79bf3e2ba6cf7868420f74e6f6decc580bc' as token_address, 'Bronze Swords' as token_name, 'DFKSWORD' as token_symbol, 18 as decimals
 union select '0xf861f79a23f2d38d2fe9db9cef80efe0b04a9d16' as token_address, 'RocketMoon🚀' as token_name, 'RocketMoon🚀' as token_symbol, 18 as decimals
 union select '0x277956523f088b73d968b5659256e76e61349a7e' as token_address, 'wBUYBACK' as token_name, 'bscwBBT' as token_symbol, 18 as decimals
 union select '0x777b83c70d604eaa464020e5f0492a05fba2bb86' as token_address, 'HeroFarm' as token_name, 'HeroFarm' as token_symbol, 18 as decimals
 union select '0xf38593388079f7f5130d605e38abf6090d981ec2' as token_address, 'Staked WAGMI' as token_name, 'sWAGMI' as token_symbol, 9 as decimals
 union select '0xe90f34d69e8c1077c5cb96f8da729c01abc05b2b' as token_address, 'BetterOne1' as token_name, 'B1' as token_symbol, 10 as decimals
 union select '0x5733a6fd81ad74bff90d7ae38ecbdf95897b7b18' as token_address, 'Elon Doge' as token_name, 'ELON' as token_symbol, 18 as decimals
+union select '0xbbd83ef0c9d347c85e60f1b5d2c58796dbe1ba0d' as token_address, 'Cheese' as token_name, 'CHEEZ' as token_symbol, 9 as decimals
 union select '0x7f110f9aebc4addf035bd1ca8216632c8b82e05f' as token_address, 'Enhancement Stone' as token_name, 'DFKESTONE' as token_symbol, 18 as decimals
 union select '0xf3463b4a5903fbacb9ca492aa41e1f53d2e4e95d' as token_address, 'Baby Shiba ' as token_name, 'BabySHIB' as token_symbol, 18 as decimals
 union select '0xd901634ae1dfa9df0b8fd87729b8db835acfeba4' as token_address, 'Kishu One' as token_name, 'Kishu One' as token_symbol, 18 as decimals
@@ -266,6 +271,7 @@ union select '0xc74eaf04777f784a7854e8950daeb27559111b85' as token_address, 'Jew
 union select '0x90ed822a5ca1e206b34c35464136f154183cef5e' as token_address, 'Defi Wars' as token_name, 'Wars' as token_symbol, 18 as decimals
 union select '0x130dd09cc743935f7c097e2ca9e77e69a6134404' as token_address, 'SWAGMI' as token_name, 'SWAGMI' as token_symbol, 18 as decimals
 union select '0xc18586b029412e7a8e6f64b269a32c9eeaf174e5' as token_address, 'Baby Heros' as token_name, 'BBHR' as token_symbol, 18 as decimals
+union select '0x3f56e0c36d275367b8c502090edf38289b3dea0d' as token_address, 'Mai Stablecoin' as token_name, 'MAI' as token_symbol, 18 as decimals
 union select '0x107fbfee852fe413ebaa1551015944d72f90767c' as token_address, 'ChadFinance Token' as token_name, 'CHAD' as token_symbol, 18 as decimals
 union select '0x9f6d97dd4f57b139a9c516a222fc78da751226cf' as token_address, 'Killer Shiba' as token_name, 'KILL' as token_symbol, 18 as decimals
 union select '0x0dd740db89b9fda3baadf7396ddad702b6e8d6f5' as token_address, 'MochiSwap Token' as token_name, 'hMOCHI' as token_symbol, 18 as decimals

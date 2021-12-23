@@ -45,14 +45,4 @@ from {{ deduped_txs("harmony_txs") }} q
 -- Incrementaly load new data so that we don't do a full refresh each time
 -- we run `dbt run` see the macro `macros/incremental_utils.sql` 
 -- or https://docs.getdbt.com/docs/building-a-dbt-project/building-models/configuring-incremental-models
-/* {{ incremental_load_filter("block_timestamp") }} */
-
--- other "AND" conditions
-where event_inputs is not null
-
-/* how to promote from simple sql to prod */
-/*
-1. uncomment this above -> {{ incremental_load_filter("block_timestamp") }}
-2. remove any limits LIMIT 1000
-3. fix the incremental load filter as it has the where clause..
-*/
+where {{ incremental_load_filter("block_timestamp") }}

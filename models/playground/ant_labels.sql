@@ -1,4 +1,4 @@
-{{ config(materialized='incremental', unique_key="CONCAT_WS('-', contract_name, contract_address)", tags=['playground', 'ant_labels']) }}
+{{ config(materialized='table', unique_key="CONCAT_WS('-', contract_name, contract_address)", tags=['playground', 'ant_labels']) }}
 
 -- https://github.com/DefiKingdoms/contracts
 -- https://discord.com/channels/861728723991527464/896870883468136469/896870927382507531
@@ -32,9 +32,9 @@ union select 'Serendale_Banker'                        as contract_name, 'defi-k
 union select 'Serendale_MasterGardener'                as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0xdb30643c71ac9e2122ca0341ed77d09d5f99f924') as contract_address
 union select 'Serendale_Airdrop'                       as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0xa678d193fecc677e137a00fefb43a9ccffa53210') as contract_address
 union select 'Serendale_Profiles'                      as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0xabd4741948374b1f5dd5dd7599ac1f85a34cacdd') as contract_address
-union select 'Serendale_Hero'                          as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0x5f753dcdf9b1ad9aabc1346614d1f4746fd6ce5c') as contract_address
+union select 'Serendale_Hero'                          as contract_name, 'defi-kingdoms' as organization,'dfk-hero'     as sub_type, lower('0x5f753dcdf9b1ad9aabc1346614d1f4746fd6ce5c') as contract_address
 union select 'Serendale_DFKGold'                       as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0x3a4edcf3312f44ef027acfd8c21382a5259936e7') as contract_address
-union select 'Serendale_AuctionHouse'                  as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0x13a65b9f8039e2c032bc022171dc05b30c3f2892') as contract_address
+union select 'Serendale_AuctionHouse'                  as contract_name, 'defi-kingdoms' as organization,'dfk-auction'  as sub_type, lower('0x13a65b9f8039e2c032bc022171dc05b30c3f2892') as contract_address
 union select 'Serendale_summoning'                     as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0x65dea93f7b886c33a78c10343267dd39727778c2') as contract_address
 union select 'Serendale_ShvasRune'                     as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0x66f5bfd910cd83d3766c4b39d13730c911b2d286') as contract_address
 union select 'Serendale_MeditationCircle'              as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, lower('0x0594d86b2923076a2316eaea4e1ca286daa142c1') as contract_address

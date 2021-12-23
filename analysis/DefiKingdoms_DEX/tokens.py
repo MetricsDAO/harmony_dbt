@@ -9,10 +9,20 @@ dups = []
 def replaceQuotes(buf):
     return buf.replace("'","")
 
+doOnceFlag = True
+def doOnce(firstTime, repeatedTimes):
+    global doOnceFlag
+    if doOnceFlag == True:
+        doOnceFlag = False
+        return firstTime
+    return repeatedTimes
+
+print("{{ config(materialized='table', unique_key=\"CONCAT_WS('-', token_address, token_name)\", tags=['playground', 'ant_labels', 'ant_tokens2']) }}")
+
 for lpPool in y["data"]["pairs"]:
     #print(lpPool["id"] + ":" + lpPool["token0"]["name"] + "-" + lpPool["token1"]["name"] + " LP")
     if (lpPool["token0"]["id"] in dups) == False:
-        print("union select '" + lpPool["token0"]["id"] + "' as token_address, '" + replaceQuotes(lpPool["token0"]["name"]) + "' as token_name, '" + lpPool["token0"]["symbol"] + "' as token_symbol, " + lpPool["token0"]["decimals"] + " as decimals")
+        print(doOnce("      ", "union ") + "select '" + lpPool["token0"]["id"] + "' as token_address, '" + replaceQuotes(lpPool["token0"]["name"]) + "' as token_name, '" + lpPool["token0"]["symbol"] + "' as token_symbol, " + lpPool["token0"]["decimals"] + " as decimals")
         dups.append(lpPool["token0"]["id"])
         
     if (lpPool["token1"]["id"] in dups) == False:
