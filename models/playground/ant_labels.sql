@@ -50,5 +50,11 @@ union select 'Tailchakra'                              as contract_name, 'defi-k
 union select 'Payment service team and contractors'    as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0x6ca68d6df270a047b12ba8405ec688b5df42d50c') as contract_address
 union select 'Cross-Chain Liquidity Fund'              as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0xa3f87fbcc69d2f97f528266c35b713e4bb12f962') as contract_address
 
+-- gardening
+union select 'Green Pet Egg'                           as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0x6d605303e9ac53c59a3da1ece36c9660c7a71da5') as contract_address
+union select 'Blue Stem'                               as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0xac5c49ff7e813de1947dc74bbb1720c353079ac9') as contract_address
+union select 'Milkweed'                                as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0xc0214b37fcd01511e6283af5423cf24c96bb9808') as contract_address
+union select 'Spiderfruit'                             as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0x19b9f05cde7a61ab7aae5b0ed91aa62ff51cf881') as contract_address
+
 -- TOOD WRITE MORE STUFFS
 union select 'antonyip'                                as contract_name, 'undefined'     as organization,'user-address' as sub_type, '' as misc, lower('0x0ba43bae4613e03492e4c17af3b014b6c3202b9d') as contract_address

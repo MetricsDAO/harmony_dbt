@@ -31,4 +31,16 @@ for lpPool in y["data"]["pairs"]:
 
 ## Additional tables
 if ('0x9edb3da18be4b03857f3d39f83e5c6aad67bc148' in dups) == False:
-    print("union select '0x9edb3da18be4b03857f3d39f83e5c6aad67bc148' as token_address, 'Golden Egg' as token_name, 'DFKGOLDEGG' as token_symbol, 0 as decimals")
+    print("union select '0x9edb3da18be4b03857f3d39f83e5c6aad67bc148' as token_address, 'Golden Egg' as token_name, 'TMP_DFKGOLDEGG' as token_symbol, 0 as decimals")
+
+if ('0x6d605303e9ac53c59a3da1ece36c9660c7a71da5' in dups) == False:
+    print("union select '0x6d605303e9ac53c59a3da1ece36c9660c7a71da5' as token_address, 'Green Pet Egg' as token_name, 'TMP_DFKGRNEGG' as token_symbol, 0 as decimals")
+
+if ('0xac5c49ff7e813de1947dc74bbb1720c353079ac9' in dups) == False:
+    print("union select '0xac5c49ff7e813de1947dc74bbb1720c353079ac9' as token_address, 'Blue Stem' as token_name, 'TMP_DFKBLUESTEM' as token_symbol, 0 as decimals")
+
+if ('0xc0214b37fcd01511e6283af5423cf24c96bb9808' in dups) == False:
+    print("union select '0xc0214b37fcd01511e6283af5423cf24c96bb9808' as token_address, 'Milkweed' as token_name, 'TMP_DFKMILKWEED' as token_symbol, 0 as decimals")
+
+if ('0x19b9f05cde7a61ab7aae5b0ed91aa62ff51cf881' in dups) == False:
+    print("union select '0x19b9f05cde7a61ab7aae5b0ed91aa62ff51cf881' as token_address, 'Spiderfruit' as token_name, 'TMP_DFKSPIDERFRUIT' as token_symbol, 0 as decimals")
