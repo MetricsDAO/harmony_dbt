@@ -343,3 +343,4 @@ union select '0x7b315dc0b7a517013427037a27539833ddba5903' as token_address, 'Smu
 union select '0x7eb2cfb5ed99a552cb1389cdac3d5c20c4fb23e5' as token_address, 'Warena' as token_name, 'Warena' as token_symbol, 18 as decimals
 union select '0xa2194737594e1c34dddfe20e2d8a1835b54f4734' as token_address, 'SmugDoge.com' as token_name, 'SMUG' as token_symbol, 9 as decimals
 union select '0x0a0314d170033ad63a23ab3311ecb0d8a545a45c' as token_address, 'HIM' as token_name, 'HE' as token_symbol, 18 as decimals
+union select '0x9edb3da18be4b03857f3d39f83e5c6aad67bc148' as token_address, 'Golden Egg' as token_name, 'DFKGOLDEGG' as token_symbol, 0 as decimals
