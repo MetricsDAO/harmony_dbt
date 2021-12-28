@@ -2,7 +2,7 @@
     config(
         materialized='incremental', 
         unique_key='block_id', 
-        tags=['core']
+        tags=['core'],
         cluster_by=['block_timestamp']
     ) 
 }}
