@@ -3,6 +3,7 @@
         materialized='incremental', 
         unique_key='block_id', 
         tags=['core']
+        cluster_by=['block_timestamp']
     ) 
 }}
 
@@ -21,4 +22,3 @@ select
     header:receipts_root::string as receipts_root
 from {{ deduped_blocks("harmony_blocks") }}
 where {{ incremental_load_filter("block_timestamp") }}
-order by block_timestamp
