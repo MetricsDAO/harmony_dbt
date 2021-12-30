@@ -10,37 +10,45 @@ models:
         tests:
           - unique
           - not_null
+
       - name: block_timestamp
         description: The time the block was minted
         tests:
           - unique
           - not_null
+
       - name: block_hash
         description: The hash of the block
         tests:
           - unique
           - not_null
+
       - name: block_parent_hash
         description: The hash of the parent block
         tests:
           - unique
           - not_null
+
       - name: gas_limit
         description: The gas limit for the block
         tests:
           - not_null
+
       - name: gas_used
         description: The amount of gas used by the block
         tests:
           - not_null
+
       - name: miner
         description: The miner that minted this block
         tests:
           - not_null
+
       - name: miner
         description: The size of the block
         tests:
           - not_null
+
       - name: tx_count
         description: The number of transactions in this block.
 
@@ -51,58 +59,71 @@ models:
         description: "The time when the block was mined."
         tests:
           - not_null
+
       - name: nonce
         description: "The number of transactions made by the sender prior to this one."
         tests:
-          - unique
+          - not_null
+
       - name: index
         description: "Integer of the transactions index position in the block. null when its pending"
-        tests:
+
       - name: native_from_address
         description: "Native Harmony address of the sender"
         tests:
           - not_null
+
       - name: native_to_address
         description: "Native Harmony address of the reciever"
         tests:
           - not_null
+
       - name: from_address
         description: "The Ethereum address of the sender"
         tests:
           - not_null
+
       - name: to_address
         description: "The Ethereum address of the reciever"
         tests:
           - not_null
+          
       - name: value
         description: "The value transfered in ATTO format (a factor of 10^18)"
         tests:
           - not_null
+
       - name: block_number
         description: "Block number where this transaction was in. null when its pending."
         tests:
           - not_null
+
       - name: block_hash
         description: "Hash of the block where this transaction was in. null when its pending."
         tests:
           - not_null
+
       - name: gas_price
         description: "Gas price provided by the sender."
         tests:
           - not_null
+
       - name: gas
         description: "Gas provided by the sender."
         tests:
           - not_null
+
       - name: hash
         description: "The hash of the transaction, this is the primary key for this table"
         tests:
           - not_null
           - unique
+
       - name: data
         description: "Bytecode"
         tests:
           - not_null
+
       - name: status
         description: "True or False"
         tests:
