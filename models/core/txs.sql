@@ -1,7 +1,8 @@
 {{ config(
     materialized = 'incremental',
     unique_key = 'hash',
-    tags = ['core']
+    tags = ['core'],
+    cluster_by = ['block_timestamp']
 ) }}
 
 select
@@ -22,7 +23,8 @@ select
     case
         when tx :receipt :status :: string = '0x0' then FALSE
         else TRUE
-    end as status
+    end as "status"
 from
     {{ deduped_txs("harmony_txs") }}
+where
     {{ incremental_load_filter("block_timestamp") }}
