@@ -52,7 +52,7 @@ models:
       - name: tx_count
         description: The number of transactions in this block.
 
-  - name: txs
+  - name: txs_mr
     description: "Harmony Transactions"
     columns:
       - name: block_timestamp

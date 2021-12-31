@@ -1,6 +1,6 @@
 {{ config(
     materialized = 'incremental',
-    unique_key = 'hash',
+    unique_key = 'HASH',
     tags = ['core'],
     cluster_by = ['block_timestamp']
 ) }}
@@ -8,22 +8,22 @@
 select
     block_timestamp,
     tx :nonce :: string as nonce,
-    tx_block_index as tx_index,
+    tx_block_index as "INDEX",
     tx :bech32_from :: string as native_from_address,
     tx :bech32_to :: string as native_to_address,
-    tx :from :: string as eth_from_address,
-    tx :to :: string as eth_to_address,
-    tx :value as "value",
+    tx :from :: string as from_address,
+    tx :to :: string as to_address,
+    tx :value as "VALUE",
     tx :block_number as block_number,
     tx :block_hash :: string as block_hash,
     tx :gas_price as gas_price,
     tx :gas as gas,
-    tx_id as "hash",
-    tx :input :: string as data,
+    tx_id as "HASH",
+    tx :input :: string as "DATA",
     case
         when tx :receipt :status :: string = '0x0' then FALSE
         else TRUE
-    end as "status"
+    end as "STATUS"
 from
     {{ deduped_txs("harmony_txs") }}
 where
