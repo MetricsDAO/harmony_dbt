@@ -22,5 +22,4 @@ select
     tx :input :: string as "DATA",
     tx:receipt:status::string = '0x1'  as "STATUS"
 from {{ deduped_txs("harmony_txs") }}
-where
-    {{ incremental_load_filter("block_timestamp") }}
+where {{ incremental_load_filter("block_timestamp") }}
