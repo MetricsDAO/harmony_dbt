@@ -20,10 +20,7 @@ select
     tx :gas as gas,
     tx_id as "HASH",
     tx :input :: string as "DATA",
-    case
-        when tx :receipt :status :: string = '0x0' then FALSE
-        else TRUE
-    end as "STATUS"
+    tx:receipt:status::string = '0x1'  as "STATUS"
 from
     {{ deduped_txs("harmony_txs") }}
 where
