@@ -69,15 +69,3 @@ models:
         description: The root hash that stores receipts of all transactions included in the block.
         tests:
           - not_null
-
-
-  - name: txs
-    description: |- 
-      Harmony Transactions
-
-    columns:
-      - name: tx_id
-        description: The primary key for this table
-        tests:
-          - unique
-          - not_null
