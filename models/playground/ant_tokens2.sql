@@ -348,3 +348,8 @@ union select '0x6d605303e9ac53c59a3da1ece36c9660c7a71da5' as token_address, 'Gre
 union select '0xac5c49ff7e813de1947dc74bbb1720c353079ac9' as token_address, 'Blue Stem' as token_name, 'TMP_DFKBLUESTEM' as token_symbol, 0 as decimals
 union select '0xc0214b37fcd01511e6283af5423cf24c96bb9808' as token_address, 'Milkweed' as token_name, 'TMP_DFKMILKWEED' as token_symbol, 0 as decimals
 union select '0x19b9f05cde7a61ab7aae5b0ed91aa62ff51cf881' as token_address, 'Spiderfruit' as token_name, 'TMP_DFKSPIDERFRUIT' as token_symbol, 0 as decimals
+union select '0x2789f04d22a845dc854145d3c289240517f2bcf0' as token_address, 'Serendale_Health Potion'                 as token_name, 'TMP_HP_POT' as token_symbol, 0 as decimals
+union select '0x87361363a75c9a6303ce813d0b2656c34b68ff52' as token_address, 'Serendale_Full Health Potion'            as token_name, 'TMP_FULL_HP_POT' as token_symbol, 0 as decimals
+union select '0x19b020001ab0c12ffa93e1fdef90c7c37c8c71ef' as token_address, 'Serendale_Mana Potion'                   as token_name, 'TMP_MP_POT' as token_symbol, 0 as decimals
+union select '0xdc2c698af26ff935cd1c50eef3a4a933c62af18d' as token_address, 'Serendale_Full Mana Potion'              as token_name, 'TMP_FULL_MP_POT' as token_symbol, 0 as decimals
+union select '0x959ba19508827d1ed2333b1b503bd5ab006c710e' as token_address, 'Serendale_Stamina Potion'                as token_name, 'TMP_STAM_POT' as token_symbol, 0 as decimals
