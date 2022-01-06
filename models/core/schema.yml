@@ -89,7 +89,7 @@ models:
           - not_null
           
       - name: value
-        description: "The value transfered in ATTO format (a factor of 10^18)"
+        description: "The value transfered in ATTO format (a factor of 10^18)."
         tests:
           - not_null
 
