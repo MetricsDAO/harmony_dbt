@@ -7,7 +7,7 @@
 
 select
     block_timestamp,
-    tx :nonce :: string as nonce,
+    tx:nonce::string as nonce,
     tx_block_index as "INDEX",
     tx :bech32_from :: string as native_from_address,
     tx :bech32_to :: string as native_to_address,
