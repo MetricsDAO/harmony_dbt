@@ -94,7 +94,7 @@ models:
           - not_null
 
       - name: block_number
-        description: "Block number where this transaction was in. null when its pending."
+        description: "Block number where this transaction was in. `null` when it's pending."
         tests:
           - not_null
 
