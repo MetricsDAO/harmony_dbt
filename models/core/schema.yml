@@ -120,7 +120,7 @@ models:
           - unique
 
       - name: data
-        description: "Bytecode"
+        description: "Bytecode of the data sent along with the transaction."
         tests:
           - not_null
 
