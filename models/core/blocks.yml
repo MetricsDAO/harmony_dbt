@@ -65,7 +65,7 @@ models:
         tests:
           - not_null
 
-      - name: recepits_root
+      - name: receipts_root
         description: The root hash that stores receipts of all transactions included in the block.
         tests:
           - not_null
