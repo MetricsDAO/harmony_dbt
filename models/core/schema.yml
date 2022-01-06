@@ -79,7 +79,7 @@ models:
           - not_null
 
       - name: from_address
-        description: "The Ethereum address of the sender"
+        description: "The Ethereum address of the sender."
         tests:
           - not_null
 
