@@ -1,0 +1,8 @@
+
+version: 2
+
+models:
+  - name: logs
+  description: "Harmony Logs"
+  columns:
+    - name: block_id
