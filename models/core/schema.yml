@@ -125,7 +125,7 @@ models:
           - not_null
 
       - name: status
-        description: "True or False"
+        description: "Boolean representing whether the transaction is successful or not."
         tests:
           - not_null
           
