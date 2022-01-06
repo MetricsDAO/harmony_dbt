@@ -74,7 +74,7 @@ models:
           - not_null
 
       - name: native_to_address
-        description: "Native Harmony address of the reciever"
+        description: "Native Harmony address of the receiver."
         tests:
           - not_null
 
