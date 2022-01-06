@@ -66,7 +66,7 @@ models:
           - not_null
 
       - name: index
-        description: "Integer of the transactions index position in the block. null when its pending"
+        description: "Integer of the transactions index position in the block. `null` when its pending".
 
       - name: native_from_address
         description: "Native Harmony address of the sender"
