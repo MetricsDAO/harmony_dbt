@@ -1,6 +1,6 @@
 {{ config(
     materialized = 'incremental',
-    unique_key = 'HASH',
+    unique_key = 'tx_hash',
     tags = ['core'],
     cluster_by = ['block_timestamp']
 ) }}
