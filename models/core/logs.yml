@@ -45,12 +45,10 @@ models:
       - name: contract_name
         description: Name of the contract called.
         tests:
-          - not_null
 
       - name: event_name
         description: Name of the event executed.
         tests:
-          - not_null
 
       - name: event_inputs
         description: Parameter inputs for the event called.
