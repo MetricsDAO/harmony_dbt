@@ -18,7 +18,7 @@ select
     tx:block_hash::string as block_hash,
     tx:gas_price as gas_price,
     tx:gas as gas,
-    tx_id as "HASH",
+    tx_id as tx_hash,
     tx :input::string as data,
     tx:receipt:status::string = '0x1'  as status
 from {{ deduped_txs("harmony_txs") }}
