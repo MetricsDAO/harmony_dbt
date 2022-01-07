@@ -3,6 +3,62 @@ version: 2
 
 models:
   - name: logs
-  description: "Harmony Logs"
-  columns:
-    - name: block_id
+    description: "Harmony Logs"
+
+    columns:
+      - name: block_id
+        description: The block number.
+        tests:
+          - not_null
+
+      - name: block_timestamp
+        description: The timestamp for when the block was collated.
+        tests:
+          - not_null
+
+      - name: tx_hash
+        description: Hash of the transaction (32 Bytes).
+        tests:
+          - not_null
+
+      - name: event_index
+        description: Integer of of the log position in the block.
+        tests:
+          - not_null
+
+      - name: native_contract_address
+        description: Native Harmony address of the contract.
+        tests:
+          - not_null
+
+      - name: evm_contract_address
+        description: EVM address of the contract.
+        tests:
+          - not_null
+
+      - name: contract_name
+        description: Name of the contract called.
+        tests:
+
+      - name: event_name
+        description: Name of the event executed.
+        tests:
+
+      - name: event_inputs
+        description: Parameter inputs for the event called.
+        tests:
+
+      - name: topics
+        description: Array of 0 to 4 32 Bytes data of indexed log arguments.
+        tests:
+          - not_null
+
+      - name: data
+        description: Contains the non-indexed arguments of the log.
+        tests:
+          - not_null
+
+      - name: event_removed
+        description: True when the log was removed, due to a chain reorganization. false if its a valid log.
+        tests:
+          - not_null
