@@ -2,10 +2,16 @@
 version: 2
 
 models:
-  - name: logs
+  - name: test_logs
     description: "Harmony Logs"
 
     columns:
+      - name: log_id
+        description: Log identifier composed of tx_hash-event_index
+        tests:
+          - unique
+          - not_null
+
       - name: block_id
         description: The block number.
         tests:
@@ -39,10 +45,12 @@ models:
       - name: contract_name
         description: Name of the contract called.
         tests:
+          - not_null
 
       - name: event_name
         description: Name of the event executed.
         tests:
+          - not_null
 
       - name: event_inputs
         description: Parameter inputs for the event called.

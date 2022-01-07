@@ -1,14 +1,16 @@
 {{
     config(
         materialized='incremental',
-        tags=['core'],
+        unique_key = 'log_id',
+        tags=['core', 'logs'],
         cluster_by=['block_timestamp']
     )
 }}
 
-with harmony_txs as (
+with base_txs as (
 
-  select * from {{ source("chainwalkers", "harmony_txs") }}
+  -- likely reconfigure to depend on pre-deduped table
+  select * from {{ deduped_txs("harmony_txs") }}
 
 ),
 
@@ -21,7 +23,8 @@ logs_raw as (
         tx_id as tx_hash,
         tx:receipt:logs as full_logs
 
-    from harmony_txs
+    from base_txs
+    where {{ incremental_load_filter("block_timestamp") }}
 
 ),
 
@@ -32,8 +35,6 @@ logs as (
     block_id,
     block_timestamp,
     tx_hash,
-    -- full_logs,
-    -- value,
     value:logIndex as event_index,
     value:bech32_address as native_contract_address,
     value:address as evm_contract_address,
@@ -47,6 +48,17 @@ logs as (
   from logs_raw,
   lateral flatten ( input => full_logs )
 
+),
+
+final as (
+
+  select
+
+    concat_ws('-', tx_hash, event_index) as log_id,
+    *
+
+    from logs
+
 )
 
-select * from logs
+select * from final
