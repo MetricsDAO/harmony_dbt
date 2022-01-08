@@ -9,7 +9,7 @@
 
 with base_txs as (
 
-    select * from {{ deduped_blocks("harmony_txs") }}
+    select * from {{ deduped_txs("harmony_txs") }}
 
 ),
 
