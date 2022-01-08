@@ -62,7 +62,7 @@ models:
         tests:
           - not_null
 
-      - name: hash
+      - name: tx_hash
         description: The hash of the transaction, this is the primary key for this table.
         tests:
           - not_null
