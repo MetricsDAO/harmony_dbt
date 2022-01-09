@@ -47,6 +47,21 @@
         }
       },
       {
+        "id": "0x0150df6cd775b5509a1f11fd76e1ca78188151e4",
+        "token0": {
+          "decimals": "18",
+          "id": "0x05ce07282be640608bb14d5b5aa04a4b57ba9865",
+          "name": "QUARTZ",
+          "symbol": "QUARTZ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x224e64ec1bdce3870a6a6c777edd450454068fec",
+          "name": "Wrapped UST Token",
+          "symbol": "UST"
+        }
+      },
+      {
         "id": "0x01dbf3053152a23c60cb1c106b94d2959b3cf7cc",
         "token0": {
           "decimals": "18",
@@ -137,6 +152,21 @@
         }
       },
       {
+        "id": "0x02dffc64dab50d82cecb315f853c51f56deb3c6a",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "9",
+          "id": "0xf4d43c2d6bfadbed33e6ce28b40d1c2995f07c4c",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
+        }
+      },
+      {
         "id": "0x03dec16996f0f6ac0d020ff319607e438d9f140c",
         "token0": {
           "decimals": "18",
@@ -194,6 +224,21 @@
           "id": "0x7bf379fcb16b4a6f648371cd72d9d443ef24168f",
           "name": "Amethyst",
           "symbol": "AME"
+        }
+      },
+      {
+        "id": "0x05b2b2139fcbf6e3501f826d40390703c4c27556",
+        "token0": {
+          "decimals": "18",
+          "id": "0x9427a2a738affbc5880f0646b5251069c022e525",
+          "name": "Global Transaction Payment Solution",
+          "symbol": "GTPS"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -362,6 +407,21 @@
         }
       },
       {
+        "id": "0x0b1edc4713324e3c0ba0d35bb40081430e5dd416",
+        "token0": {
+          "decimals": "9",
+          "id": "0x1971b39937cda498e8085dc0da6e59f99bb68176",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x0b202d1f4e0db08d61554c1d92180cbf1e0c9530",
         "token0": {
           "decimals": "18",
@@ -383,6 +443,21 @@
           "id": "0x094243dfabfbb3e6f71814618ace53f07362a84c",
           "name": "Redleaf",
           "symbol": "DFKRDLF"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
+        "id": "0x0c1e4507d91a2bc281b1bf1a4cb68c4c56856b91",
+        "token0": {
+          "decimals": "18",
+          "id": "0x698027fee7e35691d17881abdd69d625b0b63f04",
+          "name": "Rock$tar",
+          "symbol": "Rock"
         },
         "token1": {
           "decimals": "18",
@@ -512,6 +587,21 @@
         }
       },
       {
+        "id": "0x0fba566ad5ad17b8a147cb2d0a7b108bbfc7aab5",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xd41605a6ac77b5878cf7af849ef6663feaed1cd0",
+          "name": "Tamam Finance",
+          "symbol": "Tmm"
+        }
+      },
+      {
         "id": "0x1089c5e8d3de892bc5d355ea25d3a21baff1b1c2",
         "token0": {
           "decimals": "18",
@@ -524,6 +614,21 @@
           "id": "0x3c2b8be99c50593081eaa2a724f0b8285f5aba8f",
           "name": "Tether USD",
           "symbol": "1USDT"
+        }
+      },
+      {
+        "id": "0x108e567f77d4548cc71b9286c1be13803e4e5734",
+        "token0": {
+          "decimals": "18",
+          "id": "0x60e0d939d4b0c71918088278bcf600470a6c8f26",
+          "name": "Jewel LP Token",
+          "symbol": "JEWEL-LP"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -554,6 +659,36 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x1106785f1ce557fdcbf2bf890e917a88f958825b",
+        "token0": {
+          "decimals": "18",
+          "id": "0xbd4e27c26a9924abe7c19a365fbc65825d2bf103",
+          "name": "QSHARE",
+          "symbol": "QSHARE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x11beab7f090d769c9d75443a92644a5cee0e51fe",
+        "token0": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xb80a07e13240c31ec6dc0b5d72af79d461da3a70",
+          "name": "Sailfish",
+          "symbol": "DFKSAILFISH"
         }
       },
       {
@@ -632,6 +767,66 @@
         }
       },
       {
+        "id": "0x1383b4e5f5ce72656144a26f2710c2bd3a2efd9a",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xeb579ddcd49a7beb3f205c9ff6006bb6390f138f",
+          "name": "Jewel LP Token",
+          "symbol": "JEWEL-LP"
+        }
+      },
+      {
+        "id": "0x138f1e26a3990c80c1d97dac7b07fe4e703bb13a",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0d0b0f01d7fe83bd34326459e052ff74d4245daf",
+          "name": "LAO",
+          "symbol": "LAO"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x224e64ec1bdce3870a6a6c777edd450454068fec",
+          "name": "Wrapped UST Token",
+          "symbol": "UST"
+        }
+      },
+      {
+        "id": "0x13a3e43c3db30bf20cb049b8ac37fd7151502ac8",
+        "token0": {
+          "decimals": "18",
+          "id": "0x1cb71fdd770131cbaedfa179553dd3a1ce12f66b",
+          "name": "TSD Stablecoin",
+          "symbol": "TSD"
+        },
+        "token1": {
+          "decimals": "8",
+          "id": "0xbaf7c8149d586055ed02c286367a41e0ada96b7c",
+          "name": "unknown",
+          "symbol": "unknown"
+        }
+      },
+      {
+        "id": "0x1409d8e63c17acd2377da3c1fc216ddcc03a8928",
+        "token0": {
+          "decimals": "18",
+          "id": "0x00360781af99c7e4dca2ec757e1350a8d5c5a1bd",
+          "name": "LemonDao Token",
+          "symbol": "LDT"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x1473e871eca7ddd96ced4b83148edb99f97752ed",
         "token0": {
           "decimals": "18",
@@ -698,6 +893,21 @@
           "id": "0x68ea4640c5ce6cc0c9a1f17b7b882cb1cbeaccd7",
           "name": "Darkweed",
           "symbol": "DFKDRKWD"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x1679684318f505c047041932b208c60d5df9cd52",
+        "token0": {
+          "decimals": "18",
+          "id": "0xa71ebb88d300d4ab9fd16e8c587a2799b0f0e71f",
+          "name": "Warm Home",
+          "symbol": "HOME"
         },
         "token1": {
           "decimals": "18",
@@ -887,6 +1097,21 @@
         }
       },
       {
+        "id": "0x1bbdf69fe69f294349acbd095fa03e63685b3bf9",
+        "token0": {
+          "decimals": "18",
+          "id": "0x39ab439897380ed10558666c4377facb0322ad48",
+          "name": "Fantom Token",
+          "symbol": "1FTM"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0x1c6e9c992850fedb89e59849f9605b2addcf85c2",
         "token0": {
           "decimals": "9",
@@ -899,6 +1124,21 @@
           "id": "0xea589e93ff18b1a1f1e9bac7ef3e86ab62addc79",
           "name": "Viper",
           "symbol": "VIPER"
+        }
+      },
+      {
+        "id": "0x1d0384e07b9670c372b6a2af657062251b54ac0c",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xd7c79a7adc49e1b3033e7615a7d740a7a5b82fd4",
+          "name": "QUARTZ",
+          "symbol": "QUARTZ"
         }
       },
       {
@@ -932,6 +1172,21 @@
         }
       },
       {
+        "id": "0x1e1cdc3e483f290fc72946f8b4c334d713c17ee5",
+        "token0": {
+          "decimals": "18",
+          "id": "0x224e64ec1bdce3870a6a6c777edd450454068fec",
+          "name": "Wrapped UST Token",
+          "symbol": "UST"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xce7404a0aa0ab60ee707ff29facad55f450fcf16",
+          "name": "BACA",
+          "symbol": "BACA"
+        }
+      },
+      {
         "id": "0x1e1de8f45c7ff4dc59a5492c3b0a23858538eb76",
         "token0": {
           "decimals": "10",
@@ -944,6 +1199,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x1e24efc6ea9054a9471bea2c2c9f491acac28263",
+        "token0": {
+          "decimals": "0",
+          "id": "0x2789f04d22a845dc854145d3c289240517f2bcf0",
+          "name": "Health",
+          "symbol": "DFKHLTHPTN"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
         }
       },
       {
@@ -1007,6 +1277,36 @@
         }
       },
       {
+        "id": "0x20c88c4f0b2f1486704e8da023fdbb14b89cfb47",
+        "token0": {
+          "decimals": "18",
+          "id": "0x550d9923693998a6fe20801abe3f1a78e0d75089",
+          "name": "Immortl",
+          "symbol": "IMRTL"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x20eea5660e6b150e80081337def9bae27c7fec0a",
+        "token0": {
+          "decimals": "18",
+          "id": "0x4cec7eed8a4dcfd5c9f4ae5bc97f0772048b09f2",
+          "name": "LMAO",
+          "symbol": "LMAO"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x210bcb194dca071ba8c39512d231b174eb27e7d4",
         "token0": {
           "decimals": "0",
@@ -1022,6 +1322,21 @@
         }
       },
       {
+        "id": "0x211682a6214c535ff1bdede887babba184e6db86",
+        "token0": {
+          "decimals": "0",
+          "id": "0xcdffe898e687e941b124dfb7d24983266492ef1d",
+          "name": "Swift-Thistle",
+          "symbol": "DFKSWFTHSL"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xd74433b187cf0ba998ad9be3486b929c76815215",
+          "name": "Artemis",
+          "symbol": "MIS"
+        }
+      },
+      {
         "id": "0x211e3fe09ab2b3657810de1b16b3ed8aa9e49ff0",
         "token0": {
           "decimals": "3",
@@ -1034,6 +1349,36 @@
           "id": "0x66f5bfd910cd83d3766c4b39d13730c911b2d286",
           "name": "Shvas rune",
           "symbol": "DFKSHVAS"
+        }
+      },
+      {
+        "id": "0x2182db75d7916e2e09a202027ee3809e3ca58961",
+        "token0": {
+          "decimals": "18",
+          "id": "0x26de0a4b61cbd1b32f9caff8510118accf8b50cc",
+          "name": "Wrapped sCHEEZ",
+          "symbol": "wsCHEEZ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
+        "id": "0x2194c7fe1c3936e0b035b1b59eeef763ae812091",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xc5891912718ccffcc9732d1942ccd98d5934c2e1",
+          "name": "Redgill",
+          "symbol": "DFKREDGILL"
         }
       },
       {
@@ -1247,6 +1592,51 @@
         }
       },
       {
+        "id": "0x25c0107602655a505972dc4eadd2b7d57b7a6f72",
+        "token0": {
+          "decimals": "9",
+          "id": "0x2259597c30f2053b1d68630621871c3057f86bb3",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x25d3f2c1af94c6ade354d22bcbacc8bfd670701f",
+        "token0": {
+          "decimals": "0",
+          "id": "0x24ea0d436d3c2602fbfefbe6a16bbc304c963d04",
+          "name": "Gaia's Tears",
+          "symbol": "DFKTEARS"
+        },
+        "token1": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        }
+      },
+      {
+        "id": "0x25d79d38090106e8ec48a3827b1af9c4050516dc",
+        "token0": {
+          "decimals": "18",
+          "id": "0x985afaaa0c6f10a5ab969d29e59acaa16ad2b79a",
+          "name": "quartz.defi",
+          "symbol": "QUARTZ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x264dbf83f1745eda6ba9ecc0309e6cdeb398aac4",
         "token0": {
           "decimals": "18",
@@ -1262,12 +1652,42 @@
         }
       },
       {
+        "id": "0x26603a5135c8c8ce2ff6f1503fc1b11c969d0302",
+        "token0": {
+          "decimals": "0",
+          "id": "0x19b9f05cde7a61ab7aae5b0ed91aa62ff51cf881",
+          "name": "Spiderfruit",
+          "symbol": "DFKSPIDRFRT"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x2668f1fcebe435813722b940ffe6d8d9a170c479",
         "token0": {
           "decimals": "18",
           "id": "0x1a42e415cc9ea3b7e86cc5f9720fa823ebe1e3a4",
           "name": "Heroes",
           "symbol": "HE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x26691c8e112f2f5ecd7d615b7658a78253298cc6",
+        "token0": {
+          "decimals": "18",
+          "id": "0x05ce07282be640608bb14d5b5aa04a4b57ba9865",
+          "name": "QUARTZ",
+          "symbol": "QUARTZ"
         },
         "token1": {
           "decimals": "18",
@@ -1352,6 +1772,51 @@
         }
       },
       {
+        "id": "0x2a05975d649b027b71ac4d49e6d9e899e5f632a7",
+        "token0": {
+          "decimals": "18",
+          "id": "0x70831ee5f8a0434bd2ddb1e45ed24cbca8b41fec",
+          "name": "BABYJEWEL",
+          "symbol": "BABYJEWEL"
+        },
+        "token1": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        }
+      },
+      {
+        "id": "0x2a75b3acfa6427bb1738138210e9f30d71e12709",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "9",
+          "id": "0xf3634a52f5fb74fd7475454e61ee291a1edf6f2a",
+          "name": "tsj1",
+          "symbol": "tsj1"
+        }
+      },
+      {
+        "id": "0x2acba5fdce37705602b47a1a36beaa64733f685c",
+        "token0": {
+          "decimals": "18",
+          "id": "0x224e64ec1bdce3870a6a6c777edd450454068fec",
+          "name": "Wrapped UST Token",
+          "symbol": "UST"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xd7c79a7adc49e1b3033e7615a7d740a7a5b82fd4",
+          "name": "QUARTZ",
+          "symbol": "QUARTZ"
+        }
+      },
+      {
         "id": "0x2b416ecdc4adcfdc3356c32aea473da48afb3d29",
         "token0": {
           "decimals": "18",
@@ -1379,6 +1844,21 @@
           "id": "0xd6d5936f9323c6fd8c578d10e1a6a9c63a308d85",
           "name": "VIP Steak",
           "symbol": "VIP"
+        }
+      },
+      {
+        "id": "0x2c2a3699e8b9741f9a7a80b0a260f6b7c205581d",
+        "token0": {
+          "decimals": "18",
+          "id": "0xb211780d2cb2180247da7c1c7984923c2a60f372",
+          "name": "Dusya",
+          "symbol": "DSU"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xe4cfee5bf05cef3418da74cfb89727d8e4fee9fa",
+          "name": "Ironscale",
+          "symbol": "DFKIRONSCALE"
         }
       },
       {
@@ -1457,6 +1937,21 @@
         }
       },
       {
+        "id": "0x2ccd614b058c349e5f95f5e05a3b84698f76b42c",
+        "token0": {
+          "decimals": "18",
+          "id": "0x9315957edbda2bfa05c9b32f81eb4ad194295c75",
+          "name": "QSHARE",
+          "symbol": "QSHARE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x2cfffd606a79955f367721ec11fa87b936bb0164",
         "token0": {
           "decimals": "17",
@@ -1499,6 +1994,21 @@
           "id": "0x881e949183f067a1649ebbaea15de40db67d00e7",
           "name": "JERA UNIVERSE",
           "symbol": "JRU"
+        }
+      },
+      {
+        "id": "0x2dc21f84447a3680c0ffc47baa6ccbc9334368ea",
+        "token0": {
+          "decimals": "9",
+          "id": "0x8d9e5ace618f032dab74d51ce3b1cfac71ec1da0",
+          "name": "Affinityfinance",
+          "symbol": "AFNTY"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -1562,6 +2072,21 @@
         }
       },
       {
+        "id": "0x2f79ed531be2877e7f47952b3617ddd212cb2384",
+        "token0": {
+          "decimals": "18",
+          "id": "0xbcf24ddcef450915279c5e72e88ca8ee5db7615d",
+          "name": "NAKATAKE",
+          "symbol": "NKTK"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x3021b7564d29390086d3ab480f0c919682218248",
         "token0": {
           "decimals": "9",
@@ -1604,6 +2129,21 @@
           "id": "0xef977d2f931c1978db5f6747666fa1eacb0d0339",
           "name": "Dai Stablecoin",
           "symbol": "1DAI"
+        }
+      },
+      {
+        "id": "0x310cbf57640461101d83fb2c3a075b63b5d5816d",
+        "token0": {
+          "decimals": "0",
+          "id": "0x24ea0d436d3c2602fbfefbe6a16bbc304c963d04",
+          "name": "Gaia's Tears",
+          "symbol": "DFKTEARS"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x6983d1e6def3690c4d616b13597a09e6193ea013",
+          "name": "ETH",
+          "symbol": "1ETH"
         }
       },
       {
@@ -1667,6 +2207,21 @@
         }
       },
       {
+        "id": "0x33bbc2faca8c3bff57d7bde9fda845d94b8fe592",
+        "token0": {
+          "decimals": "18",
+          "id": "0x224e64ec1bdce3870a6a6c777edd450454068fec",
+          "name": "Wrapped UST Token",
+          "symbol": "UST"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x985afaaa0c6f10a5ab969d29e59acaa16ad2b79a",
+          "name": "quartz.defi",
+          "symbol": "QUARTZ"
+        }
+      },
+      {
         "id": "0x347ae8ccf933b425818168b219bed48336c7a52a",
         "token0": {
           "decimals": "18",
@@ -1694,6 +2249,21 @@
           "id": "0x6bac77af0cedd50356c90302993b67fea677570d",
           "name": "ChadFinance Token",
           "symbol": "CHAD"
+        }
+      },
+      {
+        "id": "0x352c159860f2b89a9e36c7e9bf9a9a262cba0244",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xac5c49ff7e813de1947dc74bbb1720c353079ac9",
+          "name": "Bluestem",
+          "symbol": "DFKBLUESTEM"
         }
       },
       {
@@ -1757,6 +2327,21 @@
         }
       },
       {
+        "id": "0x3758e6b7881407702b45d5ca505775907702b0f5",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0d625029e21540abdfafa3bfc6fd44fb4e0a66d0",
+          "name": "ColonyToken",
+          "symbol": "CLNY"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0x376224d625719a054258b66df7045458b20f7f29",
         "token0": {
           "decimals": "18",
@@ -1784,6 +2369,21 @@
           "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
           "name": "Binance USD",
           "symbol": "BUSD"
+        }
+      },
+      {
+        "id": "0x379e280eee34efd911aaeae7e0bb40aade291cd3",
+        "token0": {
+          "decimals": "18",
+          "id": "0x22d62b19b7039333ad773b7185bb61294f3adc19",
+          "name": "Staked One",
+          "symbol": "stONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xd74433b187cf0ba998ad9be3486b929c76815215",
+          "name": "Artemis",
+          "symbol": "MIS"
         }
       },
       {
@@ -1862,6 +2462,21 @@
         }
       },
       {
+        "id": "0x3a1720345f603e70aa21eacda0177e1b855074c5",
+        "token0": {
+          "decimals": "18",
+          "id": "0x1383b4e5f5ce72656144a26f2710c2bd3a2efd9a",
+          "name": "Jewel LP Token",
+          "symbol": "JEWEL-LP"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x3a6a6fa046e2e4bebfb5d471313b73cd7e25a955",
         "token0": {
           "decimals": "18",
@@ -1919,6 +2534,21 @@
           "id": "0xcda2fdeee5c382e401c04dc929e53ababf6c8109",
           "name": "Eight",
           "symbol": "EIGHT"
+        }
+      },
+      {
+        "id": "0x3b200557a1884ff3ee21486d4250a9571be6f81e",
+        "token0": {
+          "decimals": "18",
+          "id": "0x550d9923693998a6fe20801abe3f1a78e0d75089",
+          "name": "Immortl",
+          "symbol": "IMRTL"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xd74433b187cf0ba998ad9be3486b929c76815215",
+          "name": "Artemis",
+          "symbol": "MIS"
         }
       },
       {
@@ -1997,6 +2627,21 @@
         }
       },
       {
+        "id": "0x3d54c6179e8a2af4f203ced279d9e9e7e1f9c412",
+        "token0": {
+          "decimals": "18",
+          "id": "0x470c5c081a6db3cc84364d2741e66b5f351081ee",
+          "name": "spready",
+          "symbol": "spy"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x3d864c9cdc9d5ef3ef78ddfa0f1514f98313dc5c",
         "token0": {
           "decimals": "0",
@@ -2009,6 +2654,36 @@
           "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
           "name": "Jewels",
           "symbol": "JEWEL"
+        }
+      },
+      {
+        "id": "0x3d86694ba5e2551d7b66aedb5d66009a12ae8f9a",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0e4676368c925faaee37f8ddfbaf13c8311a632e",
+          "name": "Shitzu",
+          "symbol": "SHIT"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb12c13e66ade1f72f71834f2fc5082db8c091358",
+          "name": "Avalanche",
+          "symbol": "AVAX"
+        }
+      },
+      {
+        "id": "0x3da0ff86b4216863a20f7b6d37522a4b9c1701cb",
+        "token0": {
+          "decimals": "18",
+          "id": "0xb9b5c4e428ab8b0d37d9b6ff742dca7696b9367c",
+          "name": "Boob Coin",
+          "symbol": "BOOB"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -2162,6 +2837,21 @@
         }
       },
       {
+        "id": "0x422a9ff25a356525b8188c3c7074e0b0a345279d",
+        "token0": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb12c13e66ade1f72f71834f2fc5082db8c091358",
+          "name": "Avalanche",
+          "symbol": "AVAX"
+        }
+      },
+      {
         "id": "0x428b176b0573e37119f4d209b0bb20f93879c2de",
         "token0": {
           "decimals": "18",
@@ -2174,6 +2864,21 @@
           "id": "0x70831ee5f8a0434bd2ddb1e45ed24cbca8b41fec",
           "name": "BABYJEWEL",
           "symbol": "BABYJEWEL"
+        }
+      },
+      {
+        "id": "0x43094fd518324331920426c14fa41f8b2a6a0fbe",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xf02373d73ed1a18cfccc1dea1ea73cc8efa54132",
+          "name": "BSHARE",
+          "symbol": "BSHARE"
         }
       },
       {
@@ -2252,6 +2957,21 @@
         }
       },
       {
+        "id": "0x44f1506bcab94ced103411f4593e7fb8b9057874",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xdc2c698af26ff935cd1c50eef3a4a933c62af18d",
+          "name": "Full Mana",
+          "symbol": "DFKFMNPTN"
+        }
+      },
+      {
         "id": "0x45321c30953624f29bb73be8f6b7ee03783ac78f",
         "token0": {
           "decimals": "18",
@@ -2267,6 +2987,21 @@
         }
       },
       {
+        "id": "0x4578e86751c4a098fd5d77100f9b56b35a6cb138",
+        "token0": {
+          "decimals": "9",
+          "id": "0x4c1d614d21e354b1c407dfb8b171adc72f0db127",
+          "name": "ReBOA",
+          "symbol": "$RBOA"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0x462eb4be76dfabeb25ad8582a23b0c93ded36cf1",
         "token0": {
           "decimals": "18",
@@ -2279,6 +3014,21 @@
           "id": "0x7ca9c1d0bb11f1b7c31ee5538d7a75aaf2d8e2fc",
           "name": "CryptoPigs Token",
           "symbol": "COINKX"
+        }
+      },
+      {
+        "id": "0x467d0715bdbb5420e8ab1a235aba20c73b7f0374",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xbec775cb42abfa4288de81f387a9b1a3c4bc552a",
+          "name": "SushiToken",
+          "symbol": "1SUSHI"
         }
       },
       {
@@ -2312,6 +3062,36 @@
         }
       },
       {
+        "id": "0x471812d1d5e2406b32e7499b6552d17230aea87e",
+        "token0": {
+          "decimals": "8",
+          "id": "0x3095c7557bcb296ccc6e363de01b760ba031f2d9",
+          "name": "Wrapped BTC",
+          "symbol": "1WBTC"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x4af9d99aa232ef73b65cbd0a8e77be102029852e",
+          "name": "bomb.money",
+          "symbol": "BOMB"
+        }
+      },
+      {
+        "id": "0x4758f4d2097aa2bd8f575c345d64abecfd552e4b",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0x95d02c1dc58f05a015275eb49e107137d9ee81dc",
+          "name": "Grey Egg",
+          "symbol": "DFKGREGG"
+        }
+      },
+      {
         "id": "0x4779f6cd92e22d3afd5291922dc4b9f3e7e26ec9",
         "token0": {
           "decimals": "9",
@@ -2339,6 +3119,36 @@
           "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
           "name": "Binance USD",
           "symbol": "BUSD"
+        }
+      },
+      {
+        "id": "0x488680312905963b6a4301cf848b22e2a1400420",
+        "token0": {
+          "decimals": "9",
+          "id": "0x79aa5b36bdfca067c7201a32b8c716a3210f16ca",
+          "name": "SANTALONMUSK",
+          "symbol": "SMUSK"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x4921220050af22111a61aa0b150d9373279d73af",
+        "token0": {
+          "decimals": "18",
+          "id": "0x6983d1e6def3690c4d616b13597a09e6193ea013",
+          "name": "ETH",
+          "symbol": "1ETH"
+        },
+        "token1": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
         }
       },
       {
@@ -2399,6 +3209,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x4affa1302878f9ddc7fb8013beaeffda6768752c",
+        "token0": {
+          "decimals": "0",
+          "id": "0x094243dfabfbb3e6f71814618ace53f07362a84c",
+          "name": "Redleaf",
+          "symbol": "DFKRDLF"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb211780d2cb2180247da7c1c7984923c2a60f372",
+          "name": "Dusya",
+          "symbol": "DSU"
         }
       },
       {
@@ -2567,6 +3392,36 @@
         }
       },
       {
+        "id": "0x4eaa9ab548921e76c4da36015c064eacf4754e04",
+        "token0": {
+          "decimals": "18",
+          "id": "0xda7fe71960cd1c19e1b86d6929efd36058f60a03",
+          "name": "LUMEN",
+          "symbol": "LUMEN"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
+          "name": "Binance USD",
+          "symbol": "BUSD"
+        }
+      },
+      {
+        "id": "0x4eada5f7ff698720a39a717ed7ce4892fb314e37",
+        "token0": {
+          "decimals": "18",
+          "id": "0x7dacb1e271926ae41ad45e9b785156ebfbd86bb4",
+          "name": "QSHARE",
+          "symbol": "QSHARE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x4f19e30b8a0a5f16d070a10ab1660eced438ec93",
         "token0": {
           "decimals": "18",
@@ -2594,6 +3449,21 @@
           "id": "0xee38eb21d928ba43adcbd2efd4550cc764bf8567",
           "name": "UFO Farm",
           "symbol": "UFO"
+        }
+      },
+      {
+        "id": "0x4f812e04caccf9f5e680d35a8d4cb26fa2db5c46",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0d0b0f01d7fe83bd34326459e052ff74d4245daf",
+          "name": "LAO",
+          "symbol": "LAO"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -2729,6 +3599,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x528b3241a5de4a13e277199bf12f6d26f44d43d0",
+        "token0": {
+          "decimals": "0",
+          "id": "0x3f868f4553b8d5a09ee120d6d96936e77fce5fa2",
+          "name": "unknown",
+          "symbol": "unknown"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xc778417e063141139fce010982780140aa0cd5ab",
+          "name": "unknown",
+          "symbol": "unknown"
         }
       },
       {
@@ -2972,6 +3857,21 @@
         }
       },
       {
+        "id": "0x56ff504f42a5df05d6d7f74912f2dfa85f737365",
+        "token0": {
+          "decimals": "0",
+          "id": "0x043f9bd9bb17dfc90de3d416422695dd8fa44486",
+          "name": "Ragweed",
+          "symbol": "DFKRGWD"
+        },
+        "token1": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        }
+      },
+      {
         "id": "0x573dde4bfd787584408594c78dc56ebe6bb2fe1f",
         "token0": {
           "decimals": "18",
@@ -3119,6 +4019,21 @@
           "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
           "name": "Binance USD",
           "symbol": "BUSD"
+        }
+      },
+      {
+        "id": "0x59fb09d3c7a3d58d93a84f9e1a3ddf5241c89480",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0159ed2e06ddcd46a25e74eb8e159ce666b28687",
+          "name": "FarmersOnly Token2",
+          "symbol": "FOX"
+        },
+        "token1": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
         }
       },
       {
@@ -3287,6 +4202,21 @@
         }
       },
       {
+        "id": "0x5f5bd91d4133c76824798c74e725d6e74c41246a",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "9",
+          "id": "0xd500a99ccc0039e3a8c58308e731fab779a60367",
+          "name": "Max supply is literally 1 ",
+          "symbol": "ONE "
+        }
+      },
+      {
         "id": "0x5f7dae16df10c93474d0955cc30591c3f8124973",
         "token0": {
           "decimals": "9",
@@ -3302,6 +4232,21 @@
         }
       },
       {
+        "id": "0x5fc8efba2c25ad68ca0290fa84441958e4a39171",
+        "token0": {
+          "decimals": "0",
+          "id": "0xc778417e063141139fce010982780140aa0cd5ab",
+          "name": "unknown",
+          "symbol": "unknown"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xe614af4e77f7f2d8e5d3d12fe82d4b718423ff1b",
+          "name": "unknown",
+          "symbol": "unknown"
+        }
+      },
+      {
         "id": "0x5ffa3f76b9095eb2c93692ab21c9fd7f64bdfdaa",
         "token0": {
           "decimals": "18",
@@ -3314,6 +4259,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x604435ddba566668331653512af8e77e06bc2213",
+        "token0": {
+          "decimals": "18",
+          "id": "0x22d62b19b7039333ad773b7185bb61294f3adc19",
+          "name": "Staked One",
+          "symbol": "stONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
         }
       },
       {
@@ -3482,6 +4442,21 @@
         }
       },
       {
+        "id": "0x61c42ceeaf8c3b375ed7ff11a9bbdce9f2f2c9c9",
+        "token0": {
+          "decimals": "0",
+          "id": "0x043f9bd9bb17dfc90de3d416422695dd8fa44486",
+          "name": "Ragweed",
+          "symbol": "DFKRGWD"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb211780d2cb2180247da7c1c7984923c2a60f372",
+          "name": "Dusya",
+          "symbol": "DSU"
+        }
+      },
+      {
         "id": "0x62188e5456a2659430ef07bf66d24f0b7408bb64",
         "token0": {
           "decimals": "18",
@@ -3524,6 +4499,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x62bbf689c042f13cee1269d001e2ae9168f1010f",
+        "token0": {
+          "decimals": "18",
+          "id": "0x01a7e9a6bd623a85a1b1736c9b889bbb8feea867",
+          "name": "QSHARE",
+          "symbol": "QSHARE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x224e64ec1bdce3870a6a6c777edd450454068fec",
+          "name": "Wrapped UST Token",
+          "symbol": "UST"
         }
       },
       {
@@ -3572,6 +4562,21 @@
         }
       },
       {
+        "id": "0x651633d92b3fc28f8bbdd485fb8cf6464ba43fd1",
+        "token0": {
+          "decimals": "18",
+          "id": "0x6f84e837a6465b0dc7fde46b29ff5d9d9d7791a8",
+          "name": "TSD Stablecoin",
+          "symbol": "TSD"
+        },
+        "token1": {
+          "decimals": "8",
+          "id": "0xbaf7c8149d586055ed02c286367a41e0ada96b7c",
+          "name": "unknown",
+          "symbol": "unknown"
+        }
+      },
+      {
         "id": "0x6685546299adb10e83db1a4313c14bdc353a7b8c",
         "token0": {
           "decimals": "18",
@@ -3587,6 +4592,21 @@
         }
       },
       {
+        "id": "0x66a51fbef2ecb1780ba6e7fb7db680e0825cd325",
+        "token0": {
+          "decimals": "9",
+          "id": "0x8d9e5ace618f032dab74d51ce3b1cfac71ec1da0",
+          "name": "Affinityfinance",
+          "symbol": "AFNTY"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xef977d2f931c1978db5f6747666fa1eacb0d0339",
+          "name": "Dai Stablecoin",
+          "symbol": "1DAI"
+        }
+      },
+      {
         "id": "0x66c17f5381d7821385974783be34c9b31f75eb78",
         "token0": {
           "decimals": "6",
@@ -3599,6 +4619,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x670d315e685c4d2a6f39472cc83bd17a78973d94",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "9",
+          "id": "0xfe3e6889ea7a7fe54c45d023a4958b9ee06376cf",
+          "name": "rfJEWEL",
+          "symbol": "rfJEWEL"
         }
       },
       {
@@ -3707,6 +4742,21 @@
         }
       },
       {
+        "id": "0x6a36a214f07ff53c8285541d086e3a94a98cccb9",
+        "token0": {
+          "decimals": "18",
+          "id": "0x6983d1e6def3690c4d616b13597a09e6193ea013",
+          "name": "ETH",
+          "symbol": "1ETH"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb12c13e66ade1f72f71834f2fc5082db8c091358",
+          "name": "Avalanche",
+          "symbol": "AVAX"
+        }
+      },
+      {
         "id": "0x6a85e72b4401ae06dc637ee7bbe2c156a65cb364",
         "token0": {
           "decimals": "3",
@@ -3728,6 +4778,21 @@
           "id": "0x8db4cb67c86440ef4d6abfe7b7c344bb92f9dcc3",
           "name": "ONE METAVERSE INDEX",
           "symbol": "OMI"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x6b83335be8a212f327e5ac98d56e572298683776",
+        "token0": {
+          "decimals": "9",
+          "id": "0x6e9fb6b80d0af0b461f4525e554cd8b999bbdab8",
+          "name": "tstAV",
+          "symbol": "tstAV"
         },
         "token1": {
           "decimals": "18",
@@ -3917,6 +4982,21 @@
         }
       },
       {
+        "id": "0x70414b1ac0a71ea836a968656af2ed074be360e3",
+        "token0": {
+          "decimals": "0",
+          "id": "0x6b10ad6e3b99090de20bf9f95f960addc35ef3e2",
+          "name": "Rockroot",
+          "symbol": "DFKRCKRT"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb211780d2cb2180247da7c1c7984923c2a60f372",
+          "name": "Dusya",
+          "symbol": "DSU"
+        }
+      },
+      {
         "id": "0x70d507acb16e0354365d751a42874a4c0333600e",
         "token0": {
           "decimals": "0",
@@ -3962,6 +5042,21 @@
         }
       },
       {
+        "id": "0x7198d017d1728ee976439e1bf3611363065a29ee",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x959ba19508827d1ed2333b1b503bd5ab006c710e",
+          "name": "Stamina Potion",
+          "symbol": "DFKSTMNPTN"
+        }
+      },
+      {
         "id": "0x71d579ca702c5fc92c48661f2ce82fa8586e6398",
         "token0": {
           "decimals": "18",
@@ -3974,6 +5069,36 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x72a8285f6d6581da7134f744ce66482d9bbb9920",
+        "token0": {
+          "decimals": "18",
+          "id": "0x22423c420d976ce91ab5d91285b14129eb6c3489",
+          "name": "Champ Coin",
+          "symbol": "CHP"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x735bdd8a3e002b6134a3130caf991130664dd3e0",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "9",
+          "id": "0xd63d68818a56c6a8e8777446d0dda72ed792866c",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
         }
       },
       {
@@ -4079,6 +5204,51 @@
           "id": "0xd74433b187cf0ba998ad9be3486b929c76815215",
           "name": "Artemis",
           "symbol": "MIS"
+        }
+      },
+      {
+        "id": "0x75a305136d8ab65d1b47d2298412d4df8f65a606",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb211780d2cb2180247da7c1c7984923c2a60f372",
+          "name": "Dusya",
+          "symbol": "DSU"
+        }
+      },
+      {
+        "id": "0x75eee84a1e6dc3d6c390632bd563944a35b40ca7",
+        "token0": {
+          "decimals": "0",
+          "id": "0x8bf4a0888451c6b5412bcad3d9da3dcf5c6ca7be",
+          "name": "Lantern-Eye",
+          "symbol": "DFKLANTERNEYE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb211780d2cb2180247da7c1c7984923c2a60f372",
+          "name": "Dusya",
+          "symbol": "DSU"
+        }
+      },
+      {
+        "id": "0x75f12283248a553b43c12d05219891204a054044",
+        "token0": {
+          "decimals": "18",
+          "id": "0x044246137670a03ca790d7ed20af0c552c88117c",
+          "name": "Arbiter",
+          "symbol": "ARB"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x7ca9c1d0bb11f1b7c31ee5538d7a75aaf2d8e2fc",
+          "name": "CryptoPigs Token",
+          "symbol": "COINKX"
         }
       },
       {
@@ -4217,6 +5387,21 @@
         }
       },
       {
+        "id": "0x79ff1c352b684f7efca1f3f807c71caf6fd2305a",
+        "token0": {
+          "decimals": "0",
+          "id": "0x043f9bd9bb17dfc90de3d416422695dd8fa44486",
+          "name": "Ragweed",
+          "symbol": "DFKRGWD"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x9b68bf4bf89c115c721105eaf6bd5164afcc51e4",
+          "name": "Freyala",
+          "symbol": "XYA"
+        }
+      },
+      {
         "id": "0x7a16b6d01f96fdc5dd085c686806ba20aece99ea",
         "token0": {
           "decimals": "18",
@@ -4244,6 +5429,21 @@
           "id": "0xd6ca29f43ece5e5367b2147655b76310cbeb66c3",
           "name": "NyanToken",
           "symbol": "HNYAN"
+        }
+      },
+      {
+        "id": "0x7a6c703cf10e3c4d1cf53426b8ef7aa59240839f",
+        "token0": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xe7bbe0e193fdfe95d2858f5c46d036065f8f735c",
+          "name": "Boss",
+          "symbol": "BOSS"
         }
       },
       {
@@ -4277,6 +5477,36 @@
         }
       },
       {
+        "id": "0x7b4ee8c85d88b8343a06fdc000d042c1253ab1d5",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xda7fe71960cd1c19e1b86d6929efd36058f60a03",
+          "name": "LUMEN",
+          "symbol": "LUMEN"
+        }
+      },
+      {
+        "id": "0x7b977eb6be2d9a94a5ba499085120f2811049c84",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xdc2c698af26ff935cd1c50eef3a4a933c62af18d",
+          "name": "Full Mana",
+          "symbol": "DFKFMNPTN"
+        }
+      },
+      {
         "id": "0x7bb644f94ce63574678321c493d50cc56649f769",
         "token0": {
           "decimals": "18",
@@ -4307,6 +5537,21 @@
         }
       },
       {
+        "id": "0x7be9c65fef4946f1e9f4822b3fb66ae22974b42a",
+        "token0": {
+          "decimals": "0",
+          "id": "0x78aed65a2cc40c7d8b0df1554da60b38ad351432",
+          "name": "Bloater",
+          "symbol": "DFKBLOATER"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xb211780d2cb2180247da7c1c7984923c2a60f372",
+          "name": "Dusya",
+          "symbol": "DSU"
+        }
+      },
+      {
         "id": "0x7c0e36ca3d1ae25d26e259c3f19fef610f4a2ed2",
         "token0": {
           "decimals": "18",
@@ -4319,6 +5564,21 @@
           "id": "0xd74433b187cf0ba998ad9be3486b929c76815215",
           "name": "Artemis",
           "symbol": "MIS"
+        }
+      },
+      {
+        "id": "0x7c482a78754e251375039f2b3c993d07616f1537",
+        "token0": {
+          "decimals": "18",
+          "id": "0x892d81221484f690c0a97d3dd18b9144a3ecdfb7",
+          "name": "Magic",
+          "symbol": "MAGIC"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x9b68bf4bf89c115c721105eaf6bd5164afcc51e4",
+          "name": "Freyala",
+          "symbol": "XYA"
         }
       },
       {
@@ -4559,6 +5819,21 @@
           "id": "0xbda99c8695986b45a0dd3979cc6f3974d9753d30",
           "name": "unknown",
           "symbol": "LOOT"
+        }
+      },
+      {
+        "id": "0x7ff8e341e9434025f0717bb91fbfc9f28933e834",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0x78aed65a2cc40c7d8b0df1554da60b38ad351432",
+          "name": "Bloater",
+          "symbol": "DFKBLOATER"
         }
       },
       {
@@ -4862,6 +6137,21 @@
         }
       },
       {
+        "id": "0x86cae9c031fe789811e86ea334290aa0a0a01f19",
+        "token0": {
+          "decimals": "18",
+          "id": "0x10010078a54396f62c96df8532dc2b4847d47ed3",
+          "name": "Hundred Finance",
+          "symbol": "HND"
+        },
+        "token1": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        }
+      },
+      {
         "id": "0x87ed827418aa0d9106c02e1fad55a97cb7cda229",
         "token0": {
           "decimals": "18",
@@ -4967,6 +6257,36 @@
         }
       },
       {
+        "id": "0x8a1ef2510d69b8e955ad60171fe922e78a7b6b63",
+        "token0": {
+          "decimals": "18",
+          "id": "0x6b53ca1ed597ed7ccd5664ec9e03329992c2ba87",
+          "name": "SushiSwap LP Token",
+          "symbol": "SLP"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x9b68bf4bf89c115c721105eaf6bd5164afcc51e4",
+          "name": "Freyala",
+          "symbol": "XYA"
+        }
+      },
+      {
+        "id": "0x8a93a4ec3f749b247aa843fc8095b2867a5ba1c6",
+        "token0": {
+          "decimals": "9",
+          "id": "0x7ba36d67023e3a7e3ec5416cbc6b0b078d2b53c7",
+          "name": "rfAVAX",
+          "symbol": "rfAVAX"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x8b98ae00e4b3a7f3f93d22fdb90a10a0769f7005",
         "token0": {
           "decimals": "18",
@@ -5012,6 +6332,21 @@
         }
       },
       {
+        "id": "0x8cb5066cdf806b30d7b15aa950ccc27ce9fb9609",
+        "token0": {
+          "decimals": "9",
+          "id": "0xad29422c14757a8193ea96ebc8662a5a9636129e",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x8cbd25098f963edf2745e9e7ea6e59f5d7669bfe",
         "token0": {
           "decimals": "18",
@@ -5042,6 +6377,21 @@
         }
       },
       {
+        "id": "0x8cdecbf618e7c836c0922d6305b82e3bfa85888e",
+        "token0": {
+          "decimals": "18",
+          "id": "0x5925452ac02ba74ddf5584fbe7ac0fd0b50ce1fd",
+          "name": "Silver Swords",
+          "symbol": "DFKSSWORD"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0x8cec6786cb40b1f6a6a5a548c6773f86597bb06d",
         "token0": {
           "decimals": "18",
@@ -5069,6 +6419,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x8e11d3ef01646d3ee596bce7db2bd31321da49dc",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xf720b7910c6b2ff5bd167171ada211e226740bfe",
+          "name": "Wrapped Ether",
+          "symbol": "1WETH"
         }
       },
       {
@@ -5282,6 +6647,21 @@
         }
       },
       {
+        "id": "0x93eddd3c70620e7aa411933b48db741a7f9dca87",
+        "token0": {
+          "decimals": "18",
+          "id": "0x6a421a60b873e231ecc0932701e569cc4b5404e2",
+          "name": "JewelPrinter",
+          "symbol": "JEWELp"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x940fa364b25a5048ee9f8319961ec1b5d1234bfc",
         "token0": {
           "decimals": "18",
@@ -5327,6 +6707,21 @@
         }
       },
       {
+        "id": "0x94ca1c472f862ca01c942d0b5424061870e2a1db",
+        "token0": {
+          "decimals": "18",
+          "id": "0x44ced87b9f1492bf2dcf5c16004832569f7f6cba",
+          "name": "USD Coin",
+          "symbol": "bscUSDC"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
+          "name": "Binance USD",
+          "symbol": "BUSD"
+        }
+      },
+      {
         "id": "0x959ca3e4f2699c14895d34b3576ee90a4be63f72",
         "token0": {
           "decimals": "18",
@@ -5339,6 +6734,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x95c2ea9624d1a9871bd8ad47b0ba5babc8cb0f6c",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xb80a07e13240c31ec6dc0b5d72af79d461da3a70",
+          "name": "Sailfish",
+          "symbol": "DFKSAILFISH"
         }
       },
       {
@@ -5399,6 +6809,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0x9801cdda56e7e8297bcbc7ab20eff81bfd75fa68",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xcdffe898e687e941b124dfb7d24983266492ef1d",
+          "name": "Swift-Thistle",
+          "symbol": "DFKSWFTHSL"
         }
       },
       {
@@ -5552,6 +6977,21 @@
         }
       },
       {
+        "id": "0x9bc58dde636c24a5bf7d1c66be650e5e2af05e41",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0f3ba759332197b09b892b9405cf64287a2ec0fa",
+          "name": "QUARTZ",
+          "symbol": "QUARTZ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0x9c3677d0e759c576082544fd1a8c89f28a614806",
         "token0": {
           "decimals": "18",
@@ -5609,6 +7049,21 @@
           "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
           "name": "Binance USD",
           "symbol": "BUSD"
+        }
+      },
+      {
+        "id": "0x9e9774013edb8758c3d94049dc3c80d1605703b7",
+        "token0": {
+          "decimals": "18",
+          "id": "0x22d62b19b7039333ad773b7185bb61294f3adc19",
+          "name": "Staked One",
+          "symbol": "stONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -5717,6 +7172,21 @@
         }
       },
       {
+        "id": "0xa1c6ea4c6b9ea2cf0a8b48a3218656fbfb91c209",
+        "token0": {
+          "decimals": "0",
+          "id": "0x2493cfdacc0f9c07240b5b1c4be08c62b8eeff69",
+          "name": "Silverfin",
+          "symbol": "DFKSILVERFIN"
+        },
+        "token1": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        }
+      },
+      {
         "id": "0xa2a98c792a27425e9dff208d7111c0e0cf70d2ae",
         "token0": {
           "decimals": "18",
@@ -5732,6 +7202,21 @@
         }
       },
       {
+        "id": "0xa2aed082276fbbef61009edfacbba2898e656ee0",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xf720b7910c6b2ff5bd167171ada211e226740bfe",
+          "name": "Wrapped Ether",
+          "symbol": "1WETH"
+        }
+      },
+      {
         "id": "0xa2f0665ca48e8c864f623af9d963274672f29c95",
         "token0": {
           "decimals": "18",
@@ -5744,6 +7229,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xa33e424bb04119513078943307782d8daf8e6e91",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0e4676368c925faaee37f8ddfbaf13c8311a632e",
+          "name": "Shitzu",
+          "symbol": "SHIT"
+        },
+        "token1": {
+          "decimals": "9",
+          "id": "0xd3a50c0dce15c12fe64941ffd2b864e887c9b9e1",
+          "name": "HarmonApe",
+          "symbol": "APE"
         }
       },
       {
@@ -5774,6 +7274,21 @@
           "id": "0xed0b4b0f0e2c17646682fc98ace09feb99af3ade",
           "name": "Reverse Token",
           "symbol": "RVRS"
+        }
+      },
+      {
+        "id": "0xa451d7f38afe886797c0fa13e27ccd0a7bd42ab0",
+        "token0": {
+          "decimals": "9",
+          "id": "0x232804a29173d6e2e1068f28a9c754b2229c5203",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -5822,6 +7337,21 @@
         }
       },
       {
+        "id": "0xa553d0f2e5baf7648809548c4a67a0b5b4cd8323",
+        "token0": {
+          "decimals": "9",
+          "id": "0x4ad61ab2c06a67a3ca0b579f00b2f8e103357bde",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0xa55cbc1791dfbcb9a5854cfb282c8070e63c51d6",
         "token0": {
           "decimals": "9",
@@ -5837,12 +7367,57 @@
         }
       },
       {
+        "id": "0xa58bba55d028d969b6ebedd105dcb41a26eeaa3a",
+        "token0": {
+          "decimals": "18",
+          "id": "0x224e64ec1bdce3870a6a6c777edd450454068fec",
+          "name": "Wrapped UST Token",
+          "symbol": "UST"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xafcbe85ddaf079526b4ae235452a95ba05fad712",
+          "name": "quartz.money",
+          "symbol": "QUARTZ"
+        }
+      },
+      {
+        "id": "0xa60b25af230995c198449f221ffcec1e839ec606",
+        "token0": {
+          "decimals": "0",
+          "id": "0x3f868f4553b8d5a09ee120d6d96936e77fce5fa2",
+          "name": "unknown",
+          "symbol": "unknown"
+        },
+        "token1": {
+          "decimals": "8",
+          "id": "0xbaf7c8149d586055ed02c286367a41e0ada96b7c",
+          "name": "unknown",
+          "symbol": "unknown"
+        }
+      },
+      {
         "id": "0xa6ca6dbcc1defaaa5fddeed32bc3978bac68051a",
         "token0": {
           "decimals": "18",
           "id": "0x6ffc62c16b6f88e0eef4fcf71c84c68e9651df22",
           "name": "CatMoon",
           "symbol": "CatMoon"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xa6df2509af67ad4b17c5bbe5460539343c5023da",
+        "token0": {
+          "decimals": "18",
+          "id": "0xce7404a0aa0ab60ee707ff29facad55f450fcf16",
+          "name": "BACA",
+          "symbol": "BACA"
         },
         "token1": {
           "decimals": "18",
@@ -6152,6 +7727,21 @@
         }
       },
       {
+        "id": "0xaeff67d4cad866fca2de4268e52f2c502828ae8c",
+        "token0": {
+          "decimals": "18",
+          "id": "0x3faf707671cff93cc552588f2bdb119fae3bfb70",
+          "name": "Goku",
+          "symbol": "GOKU"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0xaf05a6622682921ded40c60864eb60ad1d4d8583",
         "token0": {
           "decimals": "18",
@@ -6179,6 +7769,21 @@
           "id": "0x4970417a897cc7ae812b9b8db34bb44833c26739",
           "name": "Piggybankone",
           "symbol": "COINK"
+        }
+      },
+      {
+        "id": "0xaf569bc90aefa3de3659d4b9b807d564913ca4d8",
+        "token0": {
+          "decimals": "18",
+          "id": "0xafcbe85ddaf079526b4ae235452a95ba05fad712",
+          "name": "quartz.money",
+          "symbol": "QUARTZ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -6212,6 +7817,36 @@
         }
       },
       {
+        "id": "0xb0d156673a835142f2fbebca1d50e3ac5ae1977b",
+        "token0": {
+          "decimals": "18",
+          "id": "0x8c961802f6864cdb4916b1b5188a5580b6afc7dc",
+          "name": "QSHARE",
+          "symbol": "QSHARE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xb0d83f1b22d1cf5b579d56492cf0cb9d52e73769",
+        "token0": {
+          "decimals": "18",
+          "id": "0x9e37acd65b7620a387d3a1cfaf187f50c3bb6b19",
+          "name": "TSD Stablecoin",
+          "symbol": "TSD"
+        },
+        "token1": {
+          "decimals": "8",
+          "id": "0xbaf7c8149d586055ed02c286367a41e0ada96b7c",
+          "name": "unknown",
+          "symbol": "unknown"
+        }
+      },
+      {
         "id": "0xb0ec3efdb3fe8f4082bbb92a8a3d4da266e6c8ba",
         "token0": {
           "decimals": "18",
@@ -6224,6 +7859,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xb18deb969d65752e6eed48c7532de49588b9770f",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xac5c49ff7e813de1947dc74bbb1720c353079ac9",
+          "name": "Bluestem",
+          "symbol": "DFKBLUESTEM"
         }
       },
       {
@@ -6287,6 +7937,21 @@
         }
       },
       {
+        "id": "0xb242948936523b26799876b10ac0af2443ff63fd",
+        "token0": {
+          "decimals": "8",
+          "id": "0xbaf7c8149d586055ed02c286367a41e0ada96b7c",
+          "name": "unknown",
+          "symbol": "unknown"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xf085686545ad9b6f2df711898814207bfa20fa8a",
+          "name": "TSD Stablecoin",
+          "symbol": "TSD"
+        }
+      },
+      {
         "id": "0xb249cb4d902b50d402893c28185a472a671f9da0",
         "token0": {
           "decimals": "18",
@@ -6299,6 +7964,21 @@
           "id": "0xc18586b029412e7a8e6f64b269a32c9eeaf174e5",
           "name": "Baby Heros",
           "symbol": "BBHR"
+        }
+      },
+      {
+        "id": "0xb25860b85a9f033e888200a3931a89cefda701c8",
+        "token0": {
+          "decimals": "9",
+          "id": "0x63cc356046b9d1d0a02c7114651feb17c851af7b",
+          "name": "unknown",
+          "symbol": "unknown"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xef977d2f931c1978db5f6747666fa1eacb0d0339",
+          "name": "Dai Stablecoin",
+          "symbol": "1DAI"
         }
       },
       {
@@ -6329,6 +8009,21 @@
           "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
           "name": "USD Coin",
           "symbol": "1USDC"
+        }
+      },
+      {
+        "id": "0xb3047ba9fa95b0cfdbfdd90f1e12dc878c338fbf",
+        "token0": {
+          "decimals": "0",
+          "id": "0x19b9f05cde7a61ab7aae5b0ed91aa62ff51cf881",
+          "name": "Spiderfruit",
+          "symbol": "DFKSPIDRFRT"
+        },
+        "token1": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
         }
       },
       {
@@ -6377,6 +8072,21 @@
         }
       },
       {
+        "id": "0xb3928f8193b54896107256ff38b752c9f663abeb",
+        "token0": {
+          "decimals": "18",
+          "id": "0x3e9d32580b0bf3ae72afcbebc68710d2fd9a18f0",
+          "name": "PancakeSwap Token",
+          "symbol": "bscCake"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0xb44863511a1b8b160e435a7cd5f2df5d89e6aff3",
         "token0": {
           "decimals": "18",
@@ -6422,6 +8132,21 @@
         }
       },
       {
+        "id": "0xb594e4ad29d7e114c876ca1b444c225e4979a348",
+        "token0": {
+          "decimals": "0",
+          "id": "0x372caf681353758f985597a35266f7b330a2a44d",
+          "name": "ShimmerSkin",
+          "symbol": "DFKSHIMMERSKIN"
+        },
+        "token1": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        }
+      },
+      {
         "id": "0xb5ba2a4c89e3d3950ffe7a75dbf5bb3b23b07b81",
         "token0": {
           "decimals": "18",
@@ -6434,6 +8159,21 @@
           "id": "0xed0b4b0f0e2c17646682fc98ace09feb99af3ade",
           "name": "Reverse Token",
           "symbol": "RVRS"
+        }
+      },
+      {
+        "id": "0xb6a51bfeeeeafcf669e76ead260d3ae135257499",
+        "token0": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xc0214b37fcd01511e6283af5423cf24c96bb9808",
+          "name": "Milkweed",
+          "symbol": "DFKMILKWEED"
         }
       },
       {
@@ -6647,6 +8387,21 @@
         }
       },
       {
+        "id": "0xbafd34eaa242354307bdaf6e913c85c208d55e07",
+        "token0": {
+          "decimals": "18",
+          "id": "0x4970417a897cc7ae812b9b8db34bb44833c26739",
+          "name": "Piggybankone",
+          "symbol": "COINK"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x7ca9c1d0bb11f1b7c31ee5538d7a75aaf2d8e2fc",
+          "name": "CryptoPigs Token",
+          "symbol": "COINKX"
+        }
+      },
+      {
         "id": "0xbb116c290c4a7fc2cbb923f686167254df2bd5ff",
         "token0": {
           "decimals": "18",
@@ -6698,6 +8453,21 @@
           "id": "0xcf1709ad76a79d5a60210f23e81ce2460542a836",
           "name": "Tranquil",
           "symbol": "TRANQ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xbbd7f1e4ba9491046470cde33bc102acb0fcc8ae",
+        "token0": {
+          "decimals": "18",
+          "id": "0x2cebbfe67d772329e1e4544390c31e45d6f3eb93",
+          "name": "QUARTZ",
+          "symbol": "QUARTZ"
         },
         "token1": {
           "decimals": "18",
@@ -6902,6 +8672,21 @@
         }
       },
       {
+        "id": "0xc278423df7cdebbde2a0260d0bdbc755e10be8a0",
+        "token0": {
+          "decimals": "18",
+          "id": "0x40f0b1b2a249347532c76b3b34d89b0e15221b40",
+          "name": "Boner Coin",
+          "symbol": "BONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0xc27b24a008eadd95c2c8be04bd5d3e06ee0492c4",
         "token0": {
           "decimals": "18",
@@ -6989,6 +8774,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xc578c6a826f4c8db59797cf1271833c35a9161a7",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xc0214b37fcd01511e6283af5423cf24c96bb9808",
+          "name": "Milkweed",
+          "symbol": "DFKMILKWEED"
         }
       },
       {
@@ -7157,6 +8957,36 @@
         }
       },
       {
+        "id": "0xc9a6f8ecf49a67be99730826aef8fe3e6131cf07",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0x68ea4640c5ce6cc0c9a1f17b7b882cb1cbeaccd7",
+          "name": "Darkweed",
+          "symbol": "DFKDRKWD"
+        }
+      },
+      {
+        "id": "0xc9bbb6a05a6d96c8a4f7214c16f7c37158b83df5",
+        "token0": {
+          "decimals": "18",
+          "id": "0x22423c420d976ce91ab5d91285b14129eb6c3489",
+          "name": "Champ Coin",
+          "symbol": "CHP"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0xc9d4786b600873ef0f4cbe60474563fe55ec2320",
         "token0": {
           "decimals": "18",
@@ -7169,6 +8999,21 @@
           "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
           "name": "Binance USD",
           "symbol": "BUSD"
+        }
+      },
+      {
+        "id": "0xca42493afe860e7508363b56c611a84efc861668",
+        "token0": {
+          "decimals": "0",
+          "id": "0x094243dfabfbb3e6f71814618ace53f07362a84c",
+          "name": "Redleaf",
+          "symbol": "DFKRDLF"
+        },
+        "token1": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
         }
       },
       {
@@ -7307,6 +9152,21 @@
         }
       },
       {
+        "id": "0xce5512923f7a9a244fe97ef71f8050fb1c90cc74",
+        "token0": {
+          "decimals": "18",
+          "id": "0x9f3824ab6b76eb4b9ee312a5c73375cf21819f13",
+          "name": "MultiRoleTalentFanToken",
+          "symbol": "MRTFT"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0xcee2cbe424f6d53cdaa5cb63ce3a965f0b61f485",
         "token0": {
           "decimals": "18",
@@ -7364,6 +9224,21 @@
           "id": "0xcda2fdeee5c382e401c04dc929e53ababf6c8109",
           "name": "Eight",
           "symbol": "EIGHT"
+        }
+      },
+      {
+        "id": "0xcf3bb98be8b5a9401416d4e595b1288415597608",
+        "token0": {
+          "decimals": "18",
+          "id": "0x698d07ed9f25d683864e20c7dd1cfba70d0e53a2",
+          "name": "JewelPrinter",
+          "symbol": "JewelP"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -7487,6 +9362,21 @@
         }
       },
       {
+        "id": "0xd1bd6eb809d2322fbc47f63fbfb58d731913103f",
+        "token0": {
+          "decimals": "18",
+          "id": "0x4c1e2b2bcfb107ab1453e3e42732500a3bc48fd6",
+          "name": "PolyShield",
+          "symbol": "SHI3LD"
+        },
+        "token1": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        }
+      },
+      {
         "id": "0xd21ceb7995c49807ecd2aaf9491b4b4e358a2d53",
         "token0": {
           "decimals": "18",
@@ -7499,6 +9389,21 @@
           "id": "0xf04d2605b3644db7a407f033e6ff72f3aa7bd50f",
           "name": "HarmoNeon",
           "symbol": "HNeon"
+        }
+      },
+      {
+        "id": "0xd2239146b69bfe5dbfe78ad69c4b435365ddefd1",
+        "token0": {
+          "decimals": "0",
+          "id": "0x19b9f05cde7a61ab7aae5b0ed91aa62ff51cf881",
+          "name": "Spiderfruit",
+          "symbol": "DFKSPIDRFRT"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
         }
       },
       {
@@ -7547,6 +9452,21 @@
         }
       },
       {
+        "id": "0xd49d876b70679fce70d883782b19081592eb4c5a",
+        "token0": {
+          "decimals": "8",
+          "id": "0xbaf7c8149d586055ed02c286367a41e0ada96b7c",
+          "name": "unknown",
+          "symbol": "unknown"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xe614af4e77f7f2d8e5d3d12fe82d4b718423ff1b",
+          "name": "unknown",
+          "symbol": "unknown"
+        }
+      },
+      {
         "id": "0xd4e87c695c254be51f59bee6b2987cf8fc7d4d21",
         "token0": {
           "decimals": "9",
@@ -7589,6 +9509,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xd5b4c7d21fbac6dada04c60912ef0640408af9af",
+        "token0": {
+          "decimals": "18",
+          "id": "0xda7fe71960cd1c19e1b86d6929efd36058f60a03",
+          "name": "LUMEN",
+          "symbol": "LUMEN"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xea589e93ff18b1a1f1e9bac7ef3e86ab62addc79",
+          "name": "Viper",
+          "symbol": "VIPER"
         }
       },
       {
@@ -7682,6 +9617,21 @@
         }
       },
       {
+        "id": "0xd7b9dae672db98ad33633e3141c9c15164eee7a3",
+        "token0": {
+          "decimals": "0",
+          "id": "0xc3dc73f7e9ac7d8e39838ced250d0baa9f3fc45f",
+          "name": "JGOD",
+          "symbol": "JGOD"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0xd7ef803ad48654016890dda9f12d709f87c79cd9",
         "token0": {
           "decimals": "0",
@@ -7709,6 +9659,21 @@
           "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
           "name": "USD Coin",
           "symbol": "1USDC"
+        }
+      },
+      {
+        "id": "0xd924e16757f2e4bbac3cda766e26373a17ad2d50",
+        "token0": {
+          "decimals": "9",
+          "id": "0x541353da92016a4fa37699ad7091aa71bbb9e4af",
+          "name": "SANTALONMUSK",
+          "symbol": "SMUSK"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -7787,6 +9752,21 @@
         }
       },
       {
+        "id": "0xdb523e4d1baa44b7472e75d278e4370f95f8d925",
+        "token0": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0xc5891912718ccffcc9732d1942ccd98d5934c2e1",
+          "name": "Redgill",
+          "symbol": "DFKREDGILL"
+        }
+      },
+      {
         "id": "0xdbca95ad31cf30abc4a255eb9f3673a22dfc910f",
         "token0": {
           "decimals": "18",
@@ -7799,6 +9779,21 @@
           "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
           "name": "USD Coin",
           "symbol": "1USDC"
+        }
+      },
+      {
+        "id": "0xdbfcf667c14bdd7c6427af8349017d166d5e3945",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0f3ba759332197b09b892b9405cf64287a2ec0fa",
+          "name": "QUARTZ",
+          "symbol": "QUARTZ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x224e64ec1bdce3870a6a6c777edd450454068fec",
+          "name": "Wrapped UST Token",
+          "symbol": "UST"
         }
       },
       {
@@ -7823,6 +9818,21 @@
           "id": "0x8cf631cdda31ebe5840ed75a471032e695be2e4b",
           "name": "Testicles",
           "symbol": "TEST"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xdc9e9c17013e4e8794cf0026d84e649430f5c08d",
+        "token0": {
+          "decimals": "18",
+          "id": "0x01a7e9a6bd623a85a1b1736c9b889bbb8feea867",
+          "name": "QSHARE",
+          "symbol": "QSHARE"
         },
         "token1": {
           "decimals": "18",
@@ -7859,6 +9869,21 @@
           "id": "0xd74433b187cf0ba998ad9be3486b929c76815215",
           "name": "Artemis",
           "symbol": "MIS"
+        }
+      },
+      {
+        "id": "0xde361693fa218a3a6480b34ff42ef5d1d8c71e70",
+        "token0": {
+          "decimals": "18",
+          "id": "0x4af9d99aa232ef73b65cbd0a8e77be102029852e",
+          "name": "bomb.money",
+          "symbol": "BOMB"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -8012,6 +10037,21 @@
         }
       },
       {
+        "id": "0xe272592f4adce4ae120d6738451d6a13816c76ab",
+        "token0": {
+          "decimals": "18",
+          "id": "0x03c2d64ca41d833404bc802ca556e688e2c86dbf",
+          "name": "Wrapped sCHEEZ",
+          "symbol": "wsCHEEZ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0xe292005652714bc308a65325af8c4babc096c51e",
         "token0": {
           "decimals": "18",
@@ -8024,6 +10064,21 @@
           "id": "0xed0b4b0f0e2c17646682fc98ace09feb99af3ade",
           "name": "Reverse Token",
           "symbol": "RVRS"
+        }
+      },
+      {
+        "id": "0xe29eaa59bfb4ce291dcf47a1e1e03ff9744f52e5",
+        "token0": {
+          "decimals": "9",
+          "id": "0x63cc356046b9d1d0a02c7114651feb17c851af7b",
+          "name": "unknown",
+          "symbol": "unknown"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -8189,6 +10244,21 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xe645123af1dfc598655ffae85f56c3d7e723c6ba",
+        "token0": {
+          "decimals": "9",
+          "id": "0x7ba36d67023e3a7e3ec5416cbc6b0b078d2b53c7",
+          "name": "rfAVAX",
+          "symbol": "rfAVAX"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
+          "name": "Binance USD",
+          "symbol": "BUSD"
         }
       },
       {
@@ -8372,6 +10442,21 @@
         }
       },
       {
+        "id": "0xeb81bca59fbd48a1aa629d86fa33fc758b86dad0",
+        "token0": {
+          "decimals": "18",
+          "id": "0x0d625029e21540abdfafa3bfc6fd44fb4e0a66d0",
+          "name": "ColonyToken",
+          "symbol": "CLNY"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        }
+      },
+      {
         "id": "0xeb94042f24fa3704d34202904c3ee772bb1295ed",
         "token0": {
           "decimals": "18",
@@ -8414,6 +10499,21 @@
           "id": "0xebceb7a8cb42f4babe43006ee9724fa5f2a260c3",
           "name": "BABYJEWEL",
           "symbol": "BABYJEWEL"
+        }
+      },
+      {
+        "id": "0xec4b66a10580f2c1568bb17fd62d6c9423106bf6",
+        "token0": {
+          "decimals": "9",
+          "id": "0x8e1588805a72d455deef4797568757730611fba8",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
         }
       },
       {
@@ -8597,6 +10697,21 @@
         }
       },
       {
+        "id": "0xf11934e9adc4354a33322807c3529f2e17a81b04",
+        "token0": {
+          "decimals": "0",
+          "id": "0x19b020001ab0c12ffa93e1fdef90c7c37c8c71ef",
+          "name": "Mana",
+          "symbol": "DFKMNPTN"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
+        }
+      },
+      {
         "id": "0xf1557dc29e6d46741f4b6ca2d1b5cd4a87c48f37",
         "token0": {
           "decimals": "18",
@@ -8642,6 +10757,51 @@
         }
       },
       {
+        "id": "0xf2b444959ea557062c649788c367011627921b41",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xebcb76cd65138c1fb827d4cc8dec7a0cf2fe2069",
+          "name": "QSHARE",
+          "symbol": "QSHARE"
+        }
+      },
+      {
+        "id": "0xf2d4c052059518a2bbc556135b1121e88ca16e38",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0x6e1bc01cc52d165b357c42042cf608159a2b81c1",
+          "name": "Ambertaffy",
+          "symbol": "DFKAMBRTFY"
+        }
+      },
+      {
+        "id": "0xf33ee94922326d7c1d220298cc9428a1fd15daea",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xda7fe71960cd1c19e1b86d6929efd36058f60a03",
+          "name": "LUMEN",
+          "symbol": "LUMEN"
+        }
+      },
+      {
         "id": "0xf3706de051aefe7dd6db05bf17079be81a3ddbb2",
         "token0": {
           "decimals": "18",
@@ -8654,6 +10814,36 @@
           "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
           "name": "Wrapped ONE",
           "symbol": "WONE"
+        }
+      },
+      {
+        "id": "0xf3e11ee14790cfb92efd04fff0ea6c74c9f87d83",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0x6b10ad6e3b99090de20bf9f95f960addc35ef3e2",
+          "name": "Rockroot",
+          "symbol": "DFKRCKRT"
+        }
+      },
+      {
+        "id": "0xf4bcc87101b019eb666d862a02be9747a0ff4449",
+        "token0": {
+          "decimals": "3",
+          "id": "0x3a4edcf3312f44ef027acfd8c21382a5259936e7",
+          "name": "Gold",
+          "symbol": "DFKGOLD"
+        },
+        "token1": {
+          "decimals": "0",
+          "id": "0x87361363a75c9a6303ce813d0b2656c34b68ff52",
+          "name": "Full Health",
+          "symbol": "DFKFHLTHPTN"
         }
       },
       {
@@ -8717,6 +10907,21 @@
         }
       },
       {
+        "id": "0xf720cde599a3d95b5813ded5bd1a197a3ab59287",
+        "token0": {
+          "decimals": "18",
+          "id": "0x95ce547d730519a90def30d647f37d9e5359b6ae",
+          "name": "Wrapped LUNA Token",
+          "symbol": "LUNA"
+        },
+        "token1": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
+        }
+      },
+      {
         "id": "0xf7a8d813505f5ee98889902dd9011991bcae527c",
         "token0": {
           "decimals": "18",
@@ -8774,6 +10979,21 @@
           "id": "0xd74433b187cf0ba998ad9be3486b929c76815215",
           "name": "Artemis",
           "symbol": "MIS"
+        }
+      },
+      {
+        "id": "0xf902617b20f63a728c764eed40d1817ae7fd50a9",
+        "token0": {
+          "decimals": "18",
+          "id": "0x2cebbfe67d772329e1e4544390c31e45d6f3eb93",
+          "name": "QUARTZ",
+          "symbol": "QUARTZ"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0x72cb10c6bfa5624dd07ef608027e366bd690048f",
+          "name": "Jewels",
+          "symbol": "JEWEL"
         }
       },
       {
@@ -8942,6 +11162,21 @@
         }
       },
       {
+        "id": "0xfd3ab633de7a747ceacafdad6575df1d737d659e",
+        "token0": {
+          "decimals": "18",
+          "id": "0xd74433b187cf0ba998ad9be3486b929c76815215",
+          "name": "Artemis",
+          "symbol": "MIS"
+        },
+        "token1": {
+          "decimals": "18",
+          "id": "0xda7fe71960cd1c19e1b86d6929efd36058f60a03",
+          "name": "LUMEN",
+          "symbol": "LUMEN"
+        }
+      },
+      {
         "id": "0xfdab6b23053e22b74f21ed42834d7048491f8f32",
         "token0": {
           "decimals": "18",
@@ -8969,6 +11204,21 @@
           "id": "0x86c602b59fe35e18f22ed4d7557bf75ec53e9c1f",
           "name": "Artemis",
           "symbol": "MIS"
+        }
+      },
+      {
+        "id": "0xfe3a808436b9ab89c5e132aa54532048d14ed641",
+        "token0": {
+          "decimals": "18",
+          "id": "0xcf664087a5bb0237a0bad6742852ec6c8d69a27a",
+          "name": "Wrapped ONE",
+          "symbol": "WONE"
+        },
+        "token1": {
+          "decimals": "9",
+          "id": "0xe3f7af01534b1102ecbe075341050690121295b3",
+          "name": "SmugDoge.com",
+          "symbol": "SMUG"
         }
       },
       {
@@ -9029,6 +11279,21 @@
           "id": "0xe176ebe47d621b984a73036b9da5d834411ef734",
           "name": "Binance USD",
           "symbol": "BUSD"
+        }
+      },
+      {
+        "id": "0xff6c57eef0de103e91e46f5a396f1d9794c24cfa",
+        "token0": {
+          "decimals": "18",
+          "id": "0x22423c420d976ce91ab5d91285b14129eb6c3489",
+          "name": "Champ Coin",
+          "symbol": "CHP"
+        },
+        "token1": {
+          "decimals": "6",
+          "id": "0x985458e523db3d53125813ed68c274899e9dfab4",
+          "name": "USD Coin",
+          "symbol": "1USDC"
         }
       },
       {
