@@ -45,11 +45,5 @@ sources:
             description: The blockchain network (i.e. mainnet, testnet, etc.)
           - name: chain_id
             description: Synonmous with blockchain name for Harmony
-          - name: tx_count
-            description: The number of transactions in the block
-          - name: header
-            description: A json column containing the blocks header information
-          - name: tx
-            description: A json object containing the tx and any decoded logs
           - name: ingested_at
             description: The time this row was ingested by Chainwalkers

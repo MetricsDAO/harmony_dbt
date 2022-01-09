@@ -7,7 +7,7 @@
         )
 }}
 
-with dedupped_raw_txs as (
+with deduped_raw_txs as (
 
     select 
     *
@@ -17,4 +17,4 @@ with dedupped_raw_txs as (
 
 )
 
-select * from dedupped_raw_txs
+select * from deduped_raw_txs
