@@ -65,6 +65,7 @@ union select 'Serendale_Full Health Potion'            as contract_name, 'defi-k
 union select 'Serendale_Mana Potion'                   as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0x19b020001AB0C12Ffa93e1FDeF90c7C37C8C71ef') as contract_address
 union select 'Serendale_Full Mana Potion'              as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0xDc2C698aF26Ff935cD1c50Eef3a4A933C62AF18D') as contract_address
 union select 'Serendale_Stamina Potion'                as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0x959ba19508827d1ed2333B1b503Bd5ab006C710e') as contract_address
+union select 'Serendale_CraftingContract'              as contract_name, 'defi-kingdoms' as organization,'dfk-market'   as sub_type, '' as misc, lower('0x87cba8f998f902f2fff990effa1e261f35932e57') as contract_address
 
 -- test accounts
 union select 'antonyip'                                as contract_name, 'undefined'     as organization,'user-address' as sub_type, '' as misc, lower('0x0ba43bae4613e03492e4c17af3b014b6c3202b9d') as contract_address
