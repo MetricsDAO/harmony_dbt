@@ -37,7 +37,7 @@ models:
         description: The miner that minted this block
         tests:
           - not_null
-      - name: miner
+      - name: block_size
         description: The size of the block
         tests:
           - not_null
