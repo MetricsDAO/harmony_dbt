@@ -35,10 +35,11 @@ clean-targets:         # directories to be removed by `dbt clean`
     # example:
       # +materialized: view
 
+# TODO configure project
 models:
   harmony:
     core:
       +materialized: table
+      blocks:
       logs:
-        # reconfigure to prod on final commit
-        schema: dev
+      txs:
