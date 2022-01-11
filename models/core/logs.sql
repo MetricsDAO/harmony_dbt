@@ -9,8 +9,7 @@
 
 with base_txs as (
 
-  -- likely reconfigure to depend on pre-deduped table
-  select * from {{ deduped_txs("harmony_txs") }}
+  select * from {{ ref("txs_deduped") }}
 
 ),
 
