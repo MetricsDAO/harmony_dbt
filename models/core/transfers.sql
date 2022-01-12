@@ -22,7 +22,7 @@ transfers as (
     block_id,
     tx_hash,
     block_timestamp,
-    evm_contract_address as contract_address,
+    evm_contract_address::string as contract_address,
     event_inputs:from::string as from_address,
     event_inputs:to::string as to_address,
     event_inputs:value::float as raw_amount
