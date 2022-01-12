@@ -12,6 +12,7 @@ with
 base_txs as (
 
   select * from {{ ref("txs_deduped") }}
+  where {{ incremental_load_filter("block_timestamp") }}
 
 ),
 
@@ -25,7 +26,6 @@ logs_raw as (
         tx:receipt:logs as full_logs
 
     from base_txs
-    where {{ incremental_load_filter("block_timestamp") }}
 
 ),
 
