@@ -7,7 +7,9 @@
     )
 }}
 
-with base_txs as (
+with
+
+base_txs as (
 
   select * from {{ ref("txs_deduped") }}
 
