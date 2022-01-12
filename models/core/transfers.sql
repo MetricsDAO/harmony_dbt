@@ -12,7 +12,7 @@ with logs as (
     q.block_timestamp, 
     q.tx_hash,
     q.evm_contract_address, 
-    q.eventName, 
+    q.event_name, 
     q.event_inputs
   from 
     {{ ref('logs') }} q
@@ -29,7 +29,7 @@ transfers as (
   from 
     logs
   where 
-    eventName::string = 'Transfer'
+    event_name::string = 'Transfer'
   and 
     event_inputs:value is not null
 ) 
