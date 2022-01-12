@@ -1,19 +1,20 @@
-{{ 
+{{
     config(
         materialized='incremental',
         unique_key='tx_id',
-        tags=['core'],
+        tags=['core', 'transactions'],
         cluster_by=['block_timestamp']
         )
 }}
 
-with deduped_raw_txs as (
+with
 
-    select 
-    *
-    from {{ source("chainwalkers", "harmony_txs" ) }}
+deduped_raw_txs as (
+
+    select
+        *
+    from {{ deduped_txs("harmony_txs") }}
     where {{ incremental_load_filter("block_timestamp") }}
-    qualify row_number() over (partition by tx_id order by ingested_at desc) = 1
 
 )
 
