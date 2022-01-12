@@ -39,7 +39,3 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   harmony:
     core:
-      +materialized: table
-      blocks:
-      logs:
-      txs:
