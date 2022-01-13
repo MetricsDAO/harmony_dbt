@@ -1,16 +1,14 @@
 {{ 
     config(
         materialized='incremental', 
-        unique_key= "CONCAT_WS('-', 'log_id', 'block_id', 'tx_hash', coalesce('from_address',''), coalesce('to_address',''), coalesce('contract_address',''), coalesce('raw_amount',-1))",
+        unique_key= 'log_id',
         incremental_strategy = 'delete+insert',
         tags=['core'],
         cluster_by = ['block_timestamp']
     ) 
 }}
 
-with 
-
-logs as (
+with logs as (
 
   select 
 
@@ -42,7 +40,7 @@ transfers as (
 
   from logs
   where event_name::string = 'Transfer'
-  and event_inputs:value is not null
+  and raw_amount is not null
 
 ) 
 
