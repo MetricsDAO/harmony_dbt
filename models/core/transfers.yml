@@ -3,34 +3,46 @@ version: 2
 
 models:
   - name: transfers
-    description: "Harmony transfer events"
+    description: "Harmony transfer events."
+
     columns:
+      - name: log_id
+        description: Log identifier composed of tx_hash-event_index.
+        tests:
+          - unique
+          - not_null
+
       - name: block_id
-        description: The block ID
+        description: The block ID.
         tests:
           - not_null
+
       - name: tx_hash
-        description: The transaction hash
+        description: The transaction hash.
         tests:
         - not_null
+
       - name: block_timestamp
-        description: The time the block was minted
+        description: The time the block was minted.
         tests:
           - not_null
-      - name: chain_id
+
       - name: contract_address
-        description: The address of the transferred token
+        description: The address of the transferred token.
         tests:
           - not_null
+
       - name: from_address
-        description: The address sent the token
+        description: The address sent the token.
         tests:
           - not_null
+
       - name: to_address
-        description: The address received the token
+        description: The address received the token.
         tests:
           - not_null
+          
       - name: raw_amount
-        description: The token's raw amount
+        description: The token's raw amount.
         tests:
           - not_null
