@@ -9,8 +9,8 @@
 
 with base_blocks as (
 
-    select * from {{ deduped_blocks("harmony_blocks") }}
-
+    select * from {{ ref("blocks_deduped") }}
+    where {{ incremental_load_filter("block_timestamp") }}
 ),
 
 final as (
@@ -31,7 +31,6 @@ final as (
         header:receipts_root::string as receipts_root
 
     from base_blocks
-    where {{ incremental_load_filter("block_timestamp") }}
 )
 
 select * from final

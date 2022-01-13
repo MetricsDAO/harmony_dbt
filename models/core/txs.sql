@@ -9,8 +9,8 @@
 
 with base_txs as (
 
-    select * from {{ deduped_txs("harmony_txs") }}
-
+    select * from {{ ref("txs_deduped") }}
+    where {{ incremental_load_filter("block_timestamp") }}
 ),
 
 final as (
@@ -34,7 +34,7 @@ final as (
         tx:receipt:status::string = '0x1'  as status
     
     from base_txs
-where {{ incremental_load_filter("block_timestamp") }}
+
 )
 
 select * from final
