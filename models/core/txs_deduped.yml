@@ -1,5 +1,7 @@
 version: 2
-models: 
+
+models:
+
   - name: txs_deduped
     description: |-
       Transactions from the Harmony chain shard 0. Duplicates have been removed.
@@ -43,7 +45,7 @@ models:
         description: Synonmous with blockchain name for Harmony.
         tests:
           - not_null
-         
+
       - name: ingested_at
         description: The time this row was ingested by Chainwalkers.
         tests:
