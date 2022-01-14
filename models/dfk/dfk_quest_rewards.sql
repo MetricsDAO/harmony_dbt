@@ -11,7 +11,7 @@
 with
 
 all_quest_rewards as (
-    select 
+    select
         tx_hash as quest_tx
     from {{ ref('txs') }}
     where substr(data,0,10) = '0x528be0a9' -- collect quest rewards
