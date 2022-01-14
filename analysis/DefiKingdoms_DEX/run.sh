@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 tokens.py > ant_tokens2.sql
-python3 liqpools.py > ant_dex_lp_labels.sql
+python3 tokens.py > dfk_tokens.csv
+python3 liqpools.py > dfk_dex_lp_labels.csv
