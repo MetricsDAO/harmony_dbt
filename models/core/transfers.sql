@@ -39,7 +39,7 @@ transfers as (
     event_inputs:value::float as raw_amount
 
   from logs
-  where event_name::string = 'Transfer'
+  where event_name = 'Transfer'
   and raw_amount is not null
 
 ) 
