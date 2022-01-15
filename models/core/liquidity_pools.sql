@@ -7,7 +7,7 @@
         )
 }}
 
-WITH
+with
 
 dfk_lp as (
     select
@@ -25,15 +25,15 @@ tranq_lp as (
         TOKEN1 as token1
     from {{ ref('dfk_dex_lp_labels') }}
     where 1=0 -- to select nothing for now
-)
+),
 
-, final as (
+final as (
 
     select
         * 
     from dfk_lp
 
-    UNION
+    union
 
     select
         * 

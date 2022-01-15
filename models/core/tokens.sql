@@ -7,7 +7,7 @@
         )
 }}
 
-WITH
+with
 
 dfk_tokens as (
     select
@@ -25,9 +25,9 @@ tranq_tokens as (
         DECIMALS as decimals
     from {{ ref('dfk_tokens') }}
     where 1=0 -- to select nothing for now
-)
+),
 
-, final as (
+final as (
 
     select
         * 

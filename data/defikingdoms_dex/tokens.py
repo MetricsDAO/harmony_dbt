@@ -1,12 +1,12 @@
 import json
 
-f = open('liquidity_pools.json')
-y = json.loads(f.read())
+file = open("liquidity_pools.json")
+data = json.loads(file.read())
 
 dups = []
 
 print("token_address,token_name,token_symbol,decimals")
-for lpPool in y["data"]["pairs"]:
+for lpPool in data["data"]["pairs"]:
     if (lpPool["token0"]["id"] in dups) == False:
         print(lpPool["token0"]["id"]+","+lpPool["token0"]["name"]+","+lpPool["token0"]["symbol"]+","+lpPool["token0"]["decimals"])
         dups.append(lpPool["token0"]["id"])
