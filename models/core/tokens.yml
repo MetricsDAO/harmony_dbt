@@ -7,7 +7,7 @@ models:
 
     columns:
       - name: token_address
-        description: The token's contract_address.
+        description: The token's `contract_address`.
         tests:
           - unique
           - not_null
