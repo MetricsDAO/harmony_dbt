@@ -40,4 +40,4 @@ final as (
     from tranq_lp
 )
 
-select distinct * from final
+select * from final

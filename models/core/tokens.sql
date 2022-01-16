@@ -33,11 +33,11 @@ final as (
         * 
     from dfk_tokens
 
-    UNION
+    union
 
     select
         * 
     from tranq_tokens
 )
 
-select distinct * from final
+select * from final

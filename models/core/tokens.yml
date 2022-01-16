@@ -14,8 +14,6 @@ models:
 
       - name: token_name
         description: The token's name as read from the blockchain.
-        tests:
-          - not_null
 
       - name: token_symbol
         description: The token's symbol (e.g WONE) as read from the blockchain.
