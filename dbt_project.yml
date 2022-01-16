@@ -39,3 +39,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   harmony:
     core:
+
+seeds:
+  +quote_columns: false

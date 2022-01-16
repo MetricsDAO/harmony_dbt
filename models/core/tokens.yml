@@ -1,0 +1,27 @@
+
+version: 2
+
+models:
+  - name: tokens
+    description: "Harmony Tokens"
+
+    columns:
+      - name: token_address
+        description: The token's `contract_address`.
+        tests:
+          - unique
+          - not_null
+
+      - name: token_name
+        description: The token's name as read from the blockchain.
+
+      - name: token_symbol
+        description: The token's symbol (e.g WONE) as read from the blockchain.
+        tests:
+          - not_null
+
+      - name: decimals
+        description: The token's decimals as read from the blockchain.
+        tests:
+          - not_null
+
