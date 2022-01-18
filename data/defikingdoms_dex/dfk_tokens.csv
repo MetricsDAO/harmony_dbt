@@ -428,3 +428,8 @@ token_address,token_name,token_symbol,decimals
 0x7eb2cfb5ed99a552cb1389cdac3d5c20c4fb23e5,Warena,Warena,18
 0xa2194737594e1c34dddfe20e2d8a1835b54f4734,SmugDoge.com,SMUG,9
 0x0a0314d170033ad63a23ab3311ecb0d8a545a45c,HIM,HE,18
+0xa1f8b0e88c51a45e152934686270ddf4e3356278,Anti-Poison Potion,DFKANTPSN,0
+0x1771dec8d9a29f30d82443de0a69e7b6824e2f53,Anti-Blind Potion,DFKANTBLND,0
+0x7e120334d9affc0982719a4eacc045f78bf41c68,Magic Resistance Potion,DFKMGCRSPTN,0
+0xfb03c364969a0bb572ce62b8cd616a7ddeb4c09a,Toughness Potion,DFKTFNSPTN,0
+0x872dd1595544ce22ad1e0174449c7ece6f0bb01b,Swiftness Potion,DFKSWFTPTN,0
