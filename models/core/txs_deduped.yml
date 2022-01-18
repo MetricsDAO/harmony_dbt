@@ -1,5 +1,7 @@
 version: 2
+
 models:
+
   - name: txs_deduped
     description: |-
       Transactions from the Harmony chain shard 0. Duplicates have been removed.

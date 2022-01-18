@@ -42,3 +42,4 @@ models:
 
 seeds:
   harmony:
+  +quote_columns: false
