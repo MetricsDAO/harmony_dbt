@@ -14,9 +14,9 @@ all_quest_rewards as (
     select
         tx_hash as quest_tx
     from {{ ref('txs') }}
-    where substr(data,0,10) = '0x528be0a9' -- collect quest rewards
+    where {{ incremental_load_filter("block_timestamp") }}
     and to_address = '0x5100bd31b822371108a0f63dcfb6594b9919eaf4' -- quest_contract
-    and {{ incremental_load_filter("block_timestamp") }}
+    and substr(data,0,10) = '0x528be0a9' -- collect quest rewards
 ),
 
 final as (
@@ -24,11 +24,13 @@ final as (
         l.log_id,
         l.block_timestamp,
         l.evm_contract_address,
-        al.contract_name,
+        al.token_name,
         l.event_inputs:from as from_address,
         l.event_inputs:to as to_address,
         CASE
+            -- jewels
             WHEN l.evm_contract_address = '0x72cb10c6bfa5624dd07ef608027e366bd690048f' THEN l.event_inputs:value/pow(10,18)
+            -- dfkgold
             WHEN l.evm_contract_address = '0x3a4edcf3312f44ef027acfd8c21382a5259936e7' THEN l.event_inputs:value/pow(10,3)
             ELSE l.event_inputs:value
         END as calculated_value,
@@ -41,13 +43,14 @@ final as (
             ELSE nvl(calculated_value*p2g.gold*g.price,0)
         END as amount_usd
     from {{ ref('logs') }} l
-    LEFT JOIN harmony.dev.ant_labels al on l.evm_contract_address = al.contract_address
+    LEFT JOIN {{ ref('tokens') }} al on l.evm_contract_address = al.token_address
     LEFT JOIN harmony.dev.ant_view_token_price_jewel j on date(l.block_timestamp) = date(j.timestamp)
     LEFT JOIN harmony.dev.ant_view_token_price_gaia tear on date(l.block_timestamp) = date(tear.timestamp)
     LEFT JOIN harmony.dev.ant_view_token_price_dfkgold g on date(l.block_timestamp) = date(g.timestamp)
     LEFT JOIN harmony.dev.ant_view_token_price_shvasrune shva on date(l.block_timestamp) = date(shva.timestamp)
     LEFT JOIN harmony.dev.ant_price_item_to_dfkgold p2g on l.evm_contract_address = p2g.contract_address
-    where l.tx_hash in (select quest_tx from all_quest_rewards)
+    where {{ incremental_load_filter("block_timestamp") }}
+    and l.tx_hash in (select quest_tx from all_quest_rewards)
     and event_name = 'Transfer'
     order by block_timestamp asc
 )
