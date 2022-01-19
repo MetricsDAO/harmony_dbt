@@ -15,7 +15,7 @@ coin_list = "https://api.coingecko.com/api/v3/coins/list?include_platform=true"
 response = requests.get(coin_list)
 response = response.json()
 df1 = pd.json_normalize(response)
-df1.head()
+
 
 #Isolating to just the Harmony Contracts we need
 df2 = df1.dropna(subset = ["platforms.harmony-shard-0"])
@@ -117,8 +117,10 @@ df2 = df2.transpose()
 df2 = df2.reset_index()
 df2 = df2.rename(columns= {"index": "address", 0: "usd_price"})
 df2["address"] = df2["address"].str[:42]
-df2["timestamp"] = dt.datetime.now(timezone.utc)
+df2["timestamp"] = dt.datetime.utcnow().strftime('%Y-%m-%d %r')
+#df2["timestamp"] = df2['timestamp'].strftime('%Y-%m-%d %r')
 
+#Writing into the snowflake - need to fix datetime issues. Address & Price work
 conn = sf.connect(
     user = os.getenv('SF_USERNAME'),
     password = os.getenv('SF_PASSWORD'),
@@ -128,7 +130,8 @@ conn = sf.connect(
     schema = os.getenv('SF_SCHEMA')
 )
 cs = conn.cursor()
-print(df2)
+df2_datatypes = df2.dtypes
+print(df2_datatypes)
 try:
     print('writing into db')
     success, nchunks, nrows, _ = write_pandas(conn, df2, "TOKEN_USD_PRICES_MR", quote_identifiers=False)
