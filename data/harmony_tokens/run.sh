@@ -39,4 +39,3 @@ curl -H 'Content-Type:application/json' -X POST "https://api.harmony.one" --data
 #     ],
 #     "id": 1
 # }'
-# 
