@@ -1,8 +1,14 @@
    
-from importlib.resources import path
+
 import pandas as pd
 import requests
 import datetime as dt
+import os
+import snowflake.connector as sf
+from snowflake.connector.pandas_tools import write_pandas
+
+
+#will need to install pandas on the docker image
 
 #Grabbing all of the contracts available on coingecko and the platforms the exist on
 coin_list = "https://api.coingecko.com/api/v3/coins/list?include_platform=true"
@@ -87,7 +93,7 @@ df4 = df2.drop(
  'platforms.openledger',
  'platforms.vite']
  ,axis=1
-)
+ )
 
 #Taking the contracts and putting them into a list to set up the price API Query
 contract_address_list = []
@@ -110,5 +116,23 @@ df2 = pd.json_normalize(response)
 df2 = df2.transpose()
 df2 = df2.reset_index()
 df2 = df2.rename(columns= {"index": "address", 0: "usd_price"})
-df2['address'] = df2["address"].str[:42]
-df2['timestamp'] = dt.datetime.now()
+df2["address"] = df2["address"].str[:42]
+df2["timestamp"] = dt.datetime.now(timezone.utc)
+
+conn = sf.connect(
+    user = os.getenv('SF_USERNAME'),
+    password = os.getenv('SF_PASSWORD'),
+    account = os.getenv('SF_ACCOUNT'),
+    warehouse = os.getenv('SF_WAREHOUSE'),
+    database = os.getenv('SF_DATABASE'),
+    schema = os.getenv('SF_SCHEMA')
+)
+cs = conn.cursor()
+print(df2)
+try:
+    print('writing into db')
+    success, nchunks, nrows, _ = write_pandas(conn, df2, "TOKEN_USD_PRICES_MR", quote_identifiers=False)
+finally:
+    cs.close()
+conn.close()
+
