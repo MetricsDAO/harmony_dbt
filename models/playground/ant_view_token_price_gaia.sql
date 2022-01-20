@@ -17,7 +17,7 @@ select
 , java_hextoint(substr(data,3+64,64)) as amount1In
 , java_hextoint(substr(data,3+64+64,64)) as amount0Out
 , java_hextoint(substr(data,3+64+64+64,64)) as amount1Out
-from harmony.dev.logs
+from harmony.prod.logs
 where topics[0] = '0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822' -- Swap
 and evm_contract_address = '0xc79245ba0248abe8a385d588c0a9d3db261b453c' -- DFKTEARS-JEWEL Pool
 )
