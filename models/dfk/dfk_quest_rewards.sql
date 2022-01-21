@@ -22,7 +22,7 @@ all_quest_rewards as (
 jewel_price as (
     select 
         date_trunc('day',block_timestamp) as timestamp,
-        div0(sum(amount1In+amount1Out), sum(amount0In+amount0Out)) / pow(10,12) as price
+        1/(div0(sum(amount0In+amount0Out), sum(amount1In+amount1Out)) / pow(10,12)) as price
     from {{ ref('swaps') }}
     where {{ incremental_load_filter("block_timestamp") }}
     and token1_symbol = '1USDC'
@@ -70,17 +70,17 @@ gold_price as (
     select 
         i.timestamp as timestamp,
         i.ratio_jewel as ratio_jewel,
-        jp.price * ratio_jewel as price
-        from (
-            select 
-                date_trunc('day',block_timestamp) as timestamp,
-                div0(sum(amount1In+amount1Out) , sum(amount0In+amount0Out)) / pow(10,15) as ratio_jewel
-            from {{ ref('swaps') }} s
-            where {{ incremental_load_filter("block_timestamp") }}
-            and token0_symbol = 'DFKGOLD'
-            and token1_symbol = 'JEWEL'
-            group by 1
-            ) i
+        jp.price * i.ratio_jewel as price
+    from (
+        select 
+            date_trunc('day',block_timestamp) as timestamp,
+            div0(sum(amount1In+amount1Out) , sum(amount0In+amount0Out)) / pow(10,15) as ratio_jewel
+        from {{ ref('swaps') }} s
+        where {{ incremental_load_filter("block_timestamp") }}
+        and token0_symbol = 'DFKGOLD'
+        and token1_symbol = 'JEWEL'
+        group by 1
+        ) i
     left join jewel_price jp on jp.timestamp = i.timestamp
 ),
 
@@ -88,7 +88,7 @@ final as (
     select
         l.log_id,
         l.block_timestamp,
-        l.evm_contract_address::string,
+        l.evm_contract_address,
         al.token_name,
         l.event_inputs:from as from_address,
         l.event_inputs:to as to_address,

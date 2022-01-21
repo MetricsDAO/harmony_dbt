@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: dfk_quest_rewards
+    description: "Defi-Kingdoms Quest Rewards"
+    columns:
+      - name: log_id
+        description: Unique ID.
+        tests:
+          - not_null
+          - unique
+
+      - name: block_timestamp
+        description: Block Timestamp.
+        tests:
+          - not_null
+
+      - name: evm_contract_address
+        description: Contract address of the Rewards.
+        tests:
+          - not_null
+
+      - name: token_name
+        description: Name of the Reward.
+        tests:
+          - not_null
+
+      - name: from_address
+        description: Where the reward came from.
+        tests:
+          - not_null
+
+      - name: to_address
+        description: Who the reward is going to.
+        tests:
+          - not_null
+
+      - name: calculated_value
+        description: raw_amount / token.decimals.
+        tests:
+          - not_null
+
+      - name: tx_hash
+        description: Transaction hash.
+        tests:
+          - not_null
+
+      - name: amount_usd
+        description: Value in USD.
+        tests:
+          - not_null
