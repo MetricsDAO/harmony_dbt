@@ -14,8 +14,8 @@ NPC_VERSION column is an internal column I added for the future if DFK decides t
 Should be able to do something like
 
 ```
-CASE WHEN
-block_number < 21900000 THEN '1' -- which npc price version to use
-END as price_to_use,
-CASE WHEN price_to_use = '1' THEN (select price where version='1' and contract_address = <contract_address>) * item END
+case when
+block_number < 21900000 then '1' -- which npc price version to use
+end as price_to_use,
+case when price_to_use = '1' then (select price where version='1' and contract_address = <contract_address>) * item end
 ```
