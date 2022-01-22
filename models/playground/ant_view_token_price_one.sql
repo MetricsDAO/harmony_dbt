@@ -1,4 +1,11 @@
-{{ config(materialized='view', tags=['playground', 'ant_views', 'ant_tokens']) }}
+{{ 
+    config(
+        materialized='incremental',
+        unique_key = 'timestamp',
+        tags=['playground', 'ant_views', 'ant_tokens'],
+        cluster_by=['timestamp']
+    )
+}}
 
 WITH
 historical_prices as (
