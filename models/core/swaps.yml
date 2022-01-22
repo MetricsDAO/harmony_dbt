@@ -1,0 +1,82 @@
+
+version: 2
+
+models:
+  - name: swaps
+    description: "Harmony Swaps"
+
+    columns:
+      - name: block_timestamp
+        description: When the trade was made.
+        tests:
+          - not_null
+
+      - name: log_id
+        description: The unique id.
+        tests:
+          - not_null
+          - unique
+
+      - name: tx_hash
+        description: The transaction hash.
+        tests:
+          - not_null
+
+      - name: pool_address
+        description: The pool address that the swap was conducted in.
+        tests:
+          - not_null
+
+      - name: token0_address
+        description: The `token0` address.
+        tests:
+
+      - name: token0_name
+        description: The `token0` name.
+        tests:
+
+      - name: token0_symbol
+        description: The `token0` symbol.
+        tests:
+
+      - name: amount0In
+        description: The amount of `token0` that went into the swap.
+        tests:
+          - not_null
+
+      - name: amount0Out
+        description: The amount of `token0` that came out from the swap.
+        tests:
+          - not_null
+
+      - name: token1_address
+        description: The `token1` address.
+        tests:
+
+      - name: token1_name
+        description: The `token1` name.
+        tests:
+
+      - name: token1_symbol
+        description: The `token1` symbol.
+        tests:
+
+      - name: amount1In
+        description: The amount of `token1` that went into the swap.
+        tests:
+          - not_null
+
+      - name: amount1Out
+        description: The amount of `token` that came out from the swap.
+        tests:
+          - not_null
+
+      - name: from_address
+        description: The address that triggered the swap.
+        tests:
+          - not_null
+
+      - name: to_address
+        description: The address that the out tokens go to.
+        tests:
+          - not_null
