@@ -15,7 +15,7 @@ Should be able to do something like
 
 ```
 case when
-block_number < 21900000 THEN '1' -- which npc price version to use
+block_number < 21900000 then '1' -- which npc price version to use
 end as price_to_use,
 case when price_to_use = '1' then (select price where version='1' and contract_address = <contract_address>) * item end
 ```
