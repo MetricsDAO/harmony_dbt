@@ -39,6 +39,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   harmony:
     core:
+    tokenprice:
+      +pre-hook: "{{ create_java_to_hex() }}"
+
 
 seeds:
   +quote_columns: false
