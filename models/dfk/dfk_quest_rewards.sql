@@ -3,7 +3,7 @@
         materialized='incremental',
         unique_key='log_id',
         incremental_strategy = 'delete+insert',
-        tags=['dfk', 'dfk_quest_rewards'],
+        tags=['dfk'],
         cluster_by=['block_timestamp']
         ) 
 }}
