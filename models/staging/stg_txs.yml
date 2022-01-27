@@ -2,7 +2,7 @@ version: 2
 
 models:
 
-  - name: txs_deduped
+  - name: stg_txs
     description: |-
       Transactions from the Harmony chain shard 0. Duplicates have been removed.
     columns:

@@ -1,6 +1,6 @@
 version: 2
 models: 
-  - name: blocks_deduped
+  - name: stg_blocks
     description: |-
       Blocks from the Harmony chain shard 0. Duplicates have been removed.
     columns:
