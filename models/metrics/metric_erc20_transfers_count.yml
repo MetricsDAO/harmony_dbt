@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: metric_erc20_transfers_count
+    description: "The distinct number of miners within a given period"
+    columns:
+      - name: metric_date
+        description: The date the metric occurred
+        tests:
+          - not_null
+      - name: metric_period
+        description: i.e. Hourly, Daily, etc.
+        tests:
+          - not_null
+      - name: transfers_count
+        description: The amount erc20 transfers in that period.
+        tests:
+          - not_null
