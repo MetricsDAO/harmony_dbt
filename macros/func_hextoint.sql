@@ -1,4 +1,3 @@
-
 {% macro create_java_to_hex() -%}
 create or replace function java_hextoint (s string)
 returns string
