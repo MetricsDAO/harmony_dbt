@@ -13,6 +13,9 @@ curl -H 'Content-Type:application/json' -X POST "https://api.harmony.one" --data
     ],
     "id": 1
 }'
+
+# 0x18160ddd -- total supply
+
 # echo "token_symbol"
 # curl -H 'Content-Type:application/json' -X POST "https://api.harmony.one" --data '{
 #     "jsonrpc": "2.0",
