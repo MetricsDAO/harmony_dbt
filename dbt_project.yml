@@ -41,6 +41,8 @@ models:
     core:
     tokenprice:
       +pre-hook: "{{ create_java_to_hex() }}"
+    dfk:
+      +pre-hook: "{{ create_java_to_hex() }}"
 
 
 seeds:
