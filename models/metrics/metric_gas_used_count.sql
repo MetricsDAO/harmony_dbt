@@ -18,7 +18,7 @@ daily as (
         sum(gas_used) as gas_count
     from {{ ref("blocks") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
-    group by 1
+    group by 1, 2
 
 ),
 
@@ -30,7 +30,7 @@ hourly as (
         sum(gas_used) as gas_count
     from {{ ref("blocks") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
-    group by 1
+    group by 1, 2
 
 ),
 
@@ -42,7 +42,7 @@ minute as (
         sum(gas_used) as gas_count
     from {{ ref("blocks") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
-    group by 1
+    group by 1, 2
 
 ),
 
