@@ -17,7 +17,7 @@ daily as (
         count(1) as txs_count
     from {{ ref("txs") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
-    group by 1
+    group by 1, 2
 ),
 
 hourly as (
@@ -27,7 +27,7 @@ hourly as (
         count(1) as txs_count
     from {{ ref("txs") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
-    group by 1
+    group by 1, 2
 ),
 
 minute as (
@@ -37,7 +37,7 @@ minute as (
         count(1) as txs_count
     from {{ ref("txs") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
-    group by 1
+    group by 1, 2
 ),
 
 final as (
