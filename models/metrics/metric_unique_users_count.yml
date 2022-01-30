@@ -16,3 +16,7 @@ models:
         description: The distinct count of unique users in that period.
         tests:
           - not_null
+      - name: unique_users_cumulative
+        description: The sum of unique users in that period.
+        tests:
+          - not_null

@@ -23,9 +23,10 @@ daily as (
     select
         date_trunc('day', min_timestamp) as metric_date,
         'daily' as metric_period,
-        count(from_address) as unique_users_count
+        count(from_address) as unique_users_count,
+        sum(count(from_address)) over (order by metric_date) as unique_users_cumulative
     from min_address
-    group by 1
+    group by 1, 2
 
 ),
 
@@ -34,9 +35,10 @@ hourly as (
     select
         date_trunc('hour', min_timestamp) as metric_date,
         'hourly' as metric_period,
-        count(from_address) as unique_users_count
+        count(from_address) as unique_users_count,
+        sum(count(from_address)) over (order by metric_date) as unique_users_cumulative
     from min_address
-    group by 1
+    group by 1, 2
 
 ),
 
@@ -45,9 +47,10 @@ minute as (
     select
         date_trunc('minute', min_timestamp) as metric_date,
         'minute' as metric_period,
-        count(from_address) as unique_users_count
+        count(from_address) as unique_users_count,
+        sum(count(from_address)) over (order by metric_date) as unique_users_cumulative
     from min_address
-    group by 1
+    group by 1, 2
 
 ),
 

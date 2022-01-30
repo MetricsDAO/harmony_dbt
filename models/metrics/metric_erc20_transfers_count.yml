@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: metric_erc20_transfers_count
-    description: "The distinct number of miners within a given period"
+    description: "The count of erc20 transfers within a given period"
     columns:
       - name: metric_date
         description: The date the metric occurred
