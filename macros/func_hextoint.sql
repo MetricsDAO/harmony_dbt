@@ -1,5 +1,5 @@
-{% macro create_java_to_hex() %}
-create or replace function {{ target.database }}.{{ target.schema }}.java_hextoint (s string)
+{% macro create_java_to_hex() -%}
+create or replace function java_hextoint (s string)
 returns string
 language java
 handler='MyClass.x'
@@ -12,4 +12,4 @@ class MyClass {
   }
 }
 $$;
-{% endmacro %}
+{%- endmacro %}
