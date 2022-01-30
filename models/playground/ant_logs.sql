@@ -17,7 +17,7 @@ evm_contract_address as eth_contract_address, -- this is the contract address(0x
 contract_name, -- decoded contract name, if it exists
 event_name as event_emitted_name, -- decoded event name that was emitted, if it exists
 event_inputs, -- decoded event_inputs, if it exists
-event_index -- event_index of the whole tx
+event_index, -- event_index of the whole tx
 topics,
 data as value -- log output field
 from {{ ref("logs") }}
