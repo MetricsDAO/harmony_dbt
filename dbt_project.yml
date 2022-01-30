@@ -40,9 +40,9 @@ models:
   harmony:
     core:
     tokenprice:
-      +pre-hook: "{{ create_java_to_hex() }}"
+      +pre-hook: "{{ create_java_hextoint() }}"
     dfk:
-      +pre-hook: "{{ create_java_to_hex() }}"
+      +pre-hook: "{{ create_java_hextoint() }}"
 
 
 seeds:
