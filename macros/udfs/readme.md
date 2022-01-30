@@ -1,0 +1,1 @@
+You can see what functions have been registered on the snowflake database with the command `SHOW USER FUNCTIONS`

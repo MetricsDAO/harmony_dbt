@@ -1,5 +1,5 @@
 {% macro create_java_hextoint() -%}
-create or replace function {{ target.database }}.{{ target.schema }}.dbt java_hextoint (s string)
+create or replace function {{ target.database }}.{{ target.schema }}.java_hextoint (s string)
 returns string
 language java
 handler='MyClass.x'
