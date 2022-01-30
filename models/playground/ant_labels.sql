@@ -50,6 +50,8 @@ union select 'Tailchakra'                              as contract_name, 'defi-k
 union select 'Payment service team and contractors'    as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0x6ca68d6df270a047b12ba8405ec688b5df42d50c') as contract_address
 union select 'Cross-Chain Liquidity Fund'              as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0xa3f87fbcc69d2f97f528266c35b713e4bb12f962') as contract_address
 union select 'Gen 0 Summon'                            as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0xdf0bf714e80f5e6c994f16b05b7ffcbcb83b89e9') as contract_address
+union select 'Land Sale'                               as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0x77d991987ca85214f9686131c58c1abe4c93e547') as contract_address
+
 -- gardening
 union select 'Serendale_Green Pet Egg'                 as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0x6d605303e9ac53c59a3da1ece36c9660c7a71da5') as contract_address
 union select 'Serendale_Blue Stem'                     as contract_name, 'defi-kingdoms' as organization,'dfk-items'    as sub_type, '' as misc, lower('0xac5c49ff7e813de1947dc74bbb1720c353079ac9') as contract_address
