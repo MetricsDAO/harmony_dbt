@@ -39,6 +39,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   harmony:
     core:
+    tokenprice:
+      +pre-hook: "{{ create_java_hextoint() }}"
+    dfk:
+      +pre-hook: "{{ create_java_hextoint() }}"
+
 
 seeds:
   +quote_columns: false
