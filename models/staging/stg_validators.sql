@@ -13,7 +13,7 @@ with
 source as (
     select 
         ingest_timestamp,
-        parse_json(ingest_data) as parsed_data
+        try_parse_json(ingest_data) as parsed_data
     from harmony.dev.ant_ingest
     where {{ incremental_load_filter("ingest_timestamp") }}
 ),
@@ -24,7 +24,8 @@ final as (
         parsed_data:data:result as active_validators,
         array_size(parsed_data:data:result) as active_validators_count
     from source
-    where parsed_data:type = 'hmy_getAllValidatorAddresses'
+    where parsed_data is not null
+        and parsed_data:type = 'hmy_getAllValidatorAddresses'
 )
 
 select * from final

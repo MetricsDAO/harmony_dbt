@@ -13,7 +13,7 @@ with
 source as (
     select 
         ingest_timestamp,
-        parse_json(ingest_data) as parsed_data
+        try_parse_json(ingest_data) as parsed_data
     from harmony.dev.ant_ingest
     where {{ incremental_load_filter("ingest_timestamp") }}
 ),
@@ -27,7 +27,8 @@ final as (
         parsed_data:data:result:"total-staking"::float as total_staking,
         parsed_data:data:result:"total-supply"::float as total_supply
     from source
-    where parsed_data:type = 'hmy_getStakingNetworkInfo'
+    where parsed_data is not null
+        and parsed_data:type = 'hmy_getStakingNetworkInfo'
 )
 
 select * from final
