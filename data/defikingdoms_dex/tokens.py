@@ -42,3 +42,7 @@ if not ('0x6d605303e9ac53c59a3da1ece36c9660c7a71da5' in dups):
     
 if not ('0x3db1fd0ad479a46216919758144fd15a21c3e93c' in dups):
     print('0x3db1fd0ad479a46216919758144fd15a21c3e93c,Yellow Egg,DFKYELOWEGG,0')
+
+if not ('0x9edb3da18be4b03857f3d39f83e5c6aad67bc148' in dups):
+    print('0x9edb3da18be4b03857f3d39f83e5c6aad67bc148,Golden Egg,DFKGOLDEGG,0')
+    
