@@ -11,7 +11,7 @@
 with source_table as 
 (
     select
-        ingest_timestamp,
+        ingest_timestamp::timestamp as ingest_timestamp,
         try_parse_json(ingest_data) as parsed_data
     from harmony.dev.ant_ingest
     where {{ incremental_load_filter("ingest_timestamp") }}
@@ -28,9 +28,10 @@ subselect_source as (
 
 flattened_validators as (
     select
+        ingest_timestamp,
         date_trunc('day', ingest_timestamp) as day_date,
-        f.value:validator:address as validator_address, -- TODO: - convert to 0x
-        f.value:validator:identity as validator_identity, -- random name that people used
+        f.value:validator:address::string as validator_address, -- TODO: - convert to 0x
+        f.value:validator:identity::string as validator_identity, -- random name that people used
         f.value:"active-status"::string as active_status,
         f.value:"booted-status"::string as booted_status,
         f.value:validator:delegations as delegations,
