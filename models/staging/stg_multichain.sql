@@ -9,6 +9,7 @@
 }}
 
 -- https://github.com/DefiLlama/DefiLlama-Adapters/blob/main/projects/anyswap/index.js
+-- https://netapi.anyswap.net/bridge/v2/info
 
 with
 
