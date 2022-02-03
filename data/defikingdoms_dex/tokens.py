@@ -45,4 +45,9 @@ if not ('0x3db1fd0ad479a46216919758144fd15a21c3e93c' in dups):
 
 if not ('0x9edb3da18be4b03857f3d39f83e5c6aad67bc148' in dups):
     print('0x9edb3da18be4b03857f3d39f83e5c6aad67bc148,Golden Egg,DFKGOLDEGG,0')
-    
+
+if not ('0x27dc6aaad95580edf25f8b9676f1b984e09e413d' in dups):
+    print('0x27dc6aaad95580edf25f8b9676f1b984e09e413d,Atonement Crystal,DFKATONECR,0')
+
+if not ('0x27dc6aaad95580edf25f8b9676f1b984e09e413d' in dups):
+    print('0x1f3f655079b70190cb79ce5bc5ae5f19daf2a6cf,Lesser Atonement Crystal,DFKLATONECR,0')

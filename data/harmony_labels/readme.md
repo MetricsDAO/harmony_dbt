@@ -1,0 +1,6 @@
+ ## data input when trying to bridge into eth
+0xb6569195000000000000000000000000000000000000000000000000002386f26fc100000000000000000000000000000ba43bae4613e03492e4c17af3b014b6c3202b9d
+0xf9fb1c508ff49f78b60d3a96dea99fa5d7f3a8a6 -- contract address
+
+0x2dccdb493827e15a5dc8f8b72147e6c4a5620857 -- eth ??? erc20 token contract?
+the above points to 0x715CdDa5e9Ad30A0cEd14940F9997EE611496De6 as a wallet.. this wallet has events...
