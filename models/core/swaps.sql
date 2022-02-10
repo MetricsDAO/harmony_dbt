@@ -22,7 +22,7 @@ final as (
         l.block_timestamp,
         l.log_id,
         l.tx_hash,
-        p.pool_address as pool_address,
+        l.evm_contract_address as pool_address,
         p.token0 as token0_address,
         t0.token_name as token0_name,
         t0.token_symbol as token0_symbol,

@@ -9,7 +9,7 @@
 
 {% macro incremental_last_x_days(time_col, time_in_days) -%}
     {% if is_incremental() %}
-        {{ time_col }} >= current_date() - {{ time_in_days }}
+        {{ time_col }} >= current_date() - interval '{{ time_in_days }} day'
     {% else %}
         true
     {% endif %}  
