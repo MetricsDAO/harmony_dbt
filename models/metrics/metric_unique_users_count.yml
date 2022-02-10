@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: metric_unique_users_count
+    description: "The distinct number of unique users within a given period"
+    columns:
+      - name: metric_date
+        description: The date the metric occurred
+        tests:
+          - not_null
+      - name: metric_period
+        description: i.e. Hourly, Daily, etc.
+        tests:
+          - not_null
+      - name: unique_users_count
+        description: The distinct count of unique users in that period.
+        tests:
+          - not_null
+      - name: unique_users_cumulative
+        description: The sum of unique users in that period.
+        tests:
+          - not_null

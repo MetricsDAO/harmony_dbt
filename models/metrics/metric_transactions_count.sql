@@ -14,8 +14,8 @@ daily as (
     select 
         date_trunc('day', block_timestamp) as metric_date,
         'daily' as metric_period,
-        count(distinct miner) as miner_count
-    from {{ ref("blocks") }}
+        count(1) as txs_count
+    from {{ ref("txs") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
@@ -24,8 +24,8 @@ hourly as (
     select 
         date_trunc('hour', block_timestamp) as metric_date,
         'hourly' as metric_period,
-        count(distinct miner) as miner_count
-    from {{ ref("blocks") }}
+        count(1) as txs_count
+    from {{ ref("txs") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
@@ -34,8 +34,8 @@ minute as (
     select 
         date_trunc('minute', block_timestamp) as metric_date,
         'minute' as metric_period,
-        count(distinct miner) as miner_count
-    from {{ ref("blocks") }}
+        count(1) as txs_count
+    from {{ ref("txs") }}
     where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
