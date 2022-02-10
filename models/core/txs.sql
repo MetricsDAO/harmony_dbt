@@ -9,7 +9,7 @@
 
 with base_txs as (
 
-    select * from {{ ref("txs_deduped") }}
+    select * from {{ ref("stg_txs") }}
     where {{ incremental_load_filter("block_timestamp") }}
 ),
 
