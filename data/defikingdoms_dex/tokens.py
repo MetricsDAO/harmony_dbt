@@ -51,3 +51,6 @@ if not ('0x27dc6aaad95580edf25f8b9676f1b984e09e413d' in dups):
 
 if not ('0x1f3f655079b70190cb79ce5bc5ae5f19daf2a6cf' in dups):
     print('0x1f3f655079b70190cb79ce5bc5ae5f19daf2a6cf,Lesser Atonement Crystal,DFKLATONECR,0')
+
+if not ('0x6d4f4bc32df561a35c05866051cbe9c92759da29' in dups):
+    print('0x6d4f4bc32df561a35c05866051cbe9c92759da29,Lesser Chaos Stone,DFKLCHSST,0')
