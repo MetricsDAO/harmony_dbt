@@ -6,10 +6,15 @@ models:
     description: "Tranquil Deposits"
 
     columns:
+      - name: log_id
+        description: The Harmony log ID.
+        tests:
+          - unique
+          - not_null
+
       - name: tx_hash
         description: The Harmony transaction hash.
         tests:
-          - unique
           - not_null
 
       - name: block_timestamp
@@ -20,7 +25,7 @@ models:
       - name: block_id
         description: The block number.
         tests:
-          - unique
+          - not_null
 
       - name: user_address
         description: The account which deposited to Tranquil.

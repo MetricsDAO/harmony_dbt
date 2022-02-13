@@ -1,7 +1,7 @@
 {{
     config(
         materialized='table',
-        unique_key='tx_hash',
+        unique_key='log_id',
         tags=['core', 'defi', 'amm', 'lending']
         )
 }}
@@ -21,7 +21,8 @@ tranquil_contracts as (
 final as (
 
 select 
-    logs.tx_hash
+    logs.log_id
+    , logs.tx_hash
     , block_timestamp
     , block_id
     , event_inputs:minter::string as user_address
