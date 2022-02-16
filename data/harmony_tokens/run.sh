@@ -6,7 +6,7 @@ curl -H 'Content-Type:application/json' -X POST "https://api.harmony.one" --data
     "method": "hmy_call",
     "params": [
         {
-            "to": "0x6D4f4bC32df561a35C05866051CbE9C92759Da29",
+            "to": "0x17f3b5240c4a71a3bbf379710f6fa66b9b51f224",
             "data": "0x06fdde03"
         },
         "latest"
@@ -22,7 +22,7 @@ curl -H 'Content-Type:application/json' -X POST "https://api.harmony.one" --data
     "method": "hmy_call",
     "params": [
         {
-            "to": "0x6D4f4bC32df561a35C05866051CbE9C92759Da29",
+            "to": "0x17f3b5240c4a71a3bbf379710f6fa66b9b51f224",
             "data": "0x95d89b41"
         },
         "latest"
@@ -35,7 +35,7 @@ curl -H 'Content-Type:application/json' -X POST "https://api.harmony.one" --data
     "method": "hmy_call",
     "params": [
         {
-            "to": "0x6D4f4bC32df561a35C05866051CbE9C92759Da29",
+            "to": "0x17f3b5240c4a71a3bbf379710f6fa66b9b51f224",
             "data": "0x313ce567"
         },
         "latest"
