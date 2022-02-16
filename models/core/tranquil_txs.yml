@@ -2,8 +2,8 @@
 version: 2
 
 models:
-  - name: tranquil_deposits
-    description: "Tranquil Deposits"
+  - name: tranquil_txs
+    description: "Tranquil Finance Transactions"
 
     columns:
       - name: log_id
@@ -54,4 +54,10 @@ models:
 
       - name: amount_usd
         description: The transaction value converted to usd (approx)
+
+      - name: tx_type
+        description: The Tranquil transaction type (Deposit, Withdraw, Borrow, Repay)
+        tests:
+          - not_null
+
 
