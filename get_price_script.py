@@ -15,7 +15,7 @@ coin_list = "https://api.coingecko.com/api/v3/coins/list?include_platform=true"
 response = requests.get(coin_list)
 response = response.json()
 df1 = pd.json_normalize(response)
-df1.head()
+
 
 #Isolating to just the Harmony Contracts we need
 df2 = df1.dropna(subset = ["platforms.harmony-shard-0"])
@@ -117,8 +117,13 @@ df2 = df2.transpose()
 df2 = df2.reset_index()
 df2 = df2.rename(columns= {"index": "address", 0: "usd_price"})
 df2["address"] = df2["address"].str[:42]
+<<<<<<< HEAD
 df2["timestamp"] = dt.datetime.utcnow()
+=======
+df2["timestamp"] = dt.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
+>>>>>>> 87cfa72b0c06ec471d2a8013842754433ac92d5c
 
+#Writing into the snowflake - need to fix datetime issues. Address & Price work
 conn = sf.connect(
     user = os.getenv('SF_USERNAME'),
     password = os.getenv('SF_PASSWORD'),
@@ -128,10 +133,21 @@ conn = sf.connect(
     schema = os.getenv('SF_SCHEMA')
 )
 cs = conn.cursor()
+
 print(df2)
 try:
-    print('writing into db')
-    success, nchunks, nrows, _ = write_pandas(conn, df2, "TOKEN_USD_PRICES_MR", quote_identifiers=False)
+
+    # convert to a string list of tuples
+    df2 = str(list(df2.itertuples(index=False, name=None)))
+    # get rid of the list elements so it is a string tuple list
+    df2 = df2.replace('[','').replace(']','')
+    print(df2)    
+    # set up execute
+    cs.execute(
+         """ INSERT INTO """ + "TOKEN_USD_PRICES_MR" + """
+             VALUES """ + df2 + """
+
+         """)     
 finally:
     cs.close()
 conn.close()
