@@ -30,7 +30,7 @@ subselect_source as (
 
 final as (
   select
-        concat_ws('-', ingest_timestamp, t.token_name) as ukey
+        concat_ws('-', ingest_timestamp, t.token_name) as ukey,
         ingest_timestamp::timestamp as ingest_timestamp,
         java_hextoint(substr(parsed_data:data:result,3)) as supply,
         parsed_data:token as token_address,
