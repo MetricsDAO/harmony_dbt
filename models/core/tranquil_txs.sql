@@ -11,7 +11,7 @@ with
 tranquil_market_labels as (
     select
         *
-    from {{ ref('tranquil_market_labels') }}
+    from {{ ref('tokens') }}
 ),
 
 -- Tranquil contracts all have the same "Creator" or admin address
