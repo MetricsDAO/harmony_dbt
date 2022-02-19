@@ -11,7 +11,7 @@ with
 tranquil_market_labels as (
     select
         *
-    from {{ ref('tokens') }}
+    from {{ ref('tranquil_market_labels') }}
 ),
 
 -- Tranquil contracts all have the same "Creator" or admin address
@@ -21,12 +21,22 @@ tranquil_contracts as (
     where event_inputs:admin::string = '0x15424ab0bbab79bad32ce779197748485b5ae456'
 ), 
 
-token_price as (  
-    select 
-        block_date
-        , token_symbol
-        , usd_price
-    from tokenprice_swap_vwap_daily
+tranquil_markets_usd as (  
+    select 'ONE' as token_symbol, * from tokenprice_one
+    union all
+    select 'stONE' as token_symbol, * from tokenprice_stone
+    union all
+    select '1WBTC' as token_symbol, * from tokenprice_btc
+    union all
+    select '1BTC' as token_symbol, * from tokenprice_btc
+    union all
+    select '1ETH' as token_symbol, * from tokenprice_eth
+    union all
+    select '1USDC' as token_symbol, * from tokenprice_usd
+    union all
+    select '1USDT' as token_symbol, * from tokenprice_usd
+    union all
+    select '1DAI' as token_symbol, * from tokenprice_usd
 ),
 
 tranquil_deposits as (
@@ -131,11 +141,11 @@ combined as (
 final as (
     -- add in amount_usd lookup
     select c.*
-        , (tp.usd_price * c.token_amount) as amount_usd
+        , (usd.price * c.token_amount) as amount_usd
     from combined as c
-    left join token_price tp 
-        on date_trunc('day', c.block_timestamp) = tp.block_date
-        and c.token_symbol = tp.token_symbol
+    left join tranquil_markets_usd usd 
+        on date_trunc('day', c.block_timestamp) = usd.timestamp
+        and c.token_symbol = usd.token_symbol
 
 )
 
