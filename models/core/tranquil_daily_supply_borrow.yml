@@ -1,0 +1,48 @@
+
+version: 2
+
+models:
+  - name: tranquil_daily_supply_borrow
+    description: "Daily Supply and Borrow amounts and running totals in both token and USD denom for Tranquil Finance tokens"
+
+    columns:
+      - name: token_symbol
+        description: Token Symbol.
+        tests:
+          - not_null
+
+      - name: block_date
+        description: The price date
+        tests:
+          - not_null
+
+      - name: price
+        description: The USD VWAP for the token derived from popular LPs.
+        tests:
+          - not_null
+
+      - name: net_supplied_token_chg
+        description: The total token deposits minus withdrawls for the day
+
+      - name: net_borrowed_token_chg
+        description: The total token borrows minus repayments for the day
+
+      - name: running_total_supplied_token
+        description: The historical running total of tokens supplied
+
+      - name: running_total_borrowed_token
+        description: The historical running total of tokens borrowed
+
+      - name: net_supplied_usd_chg
+        description: The total deposits minus withdrawls for the day in USD
+
+      - name: net_borrowed_usd_chg
+        description: The total borrows minus repayments for the day in USD
+
+      - name: running_total_supplied_usd
+        description: The historical running total of supplied in USD
+
+      - name: running_total_borrowed_usd
+        description: The historical running total of borrowed in USD
+
+
