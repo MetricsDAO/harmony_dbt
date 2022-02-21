@@ -1,3 +1,12 @@
+{{ 
+    config(
+        materialized='table',
+        unique_key = 'tx_hash',
+        tags=['tokenprice'],
+        cluster_by=['block_timestamp']
+    )
+}}
+
 with
 summon_tx as (
     select 
@@ -64,14 +73,13 @@ final as (
     select
         logs.block_timestamp,
         --concat('0x',substr(logs.data,3,64)) as crystal_id,
-        java_hextoint(substr(summon_table.data,3+8,64)) as mainHeroID,
-        java_hextoint(substr(summon_table.data,3+8+64,64)) as rentedHeroID,
+        java_hextoint(substr(summon_table.data,3+8,64)) as main_hero_id,
+        java_hextoint(substr(summon_table.data,3+8+64,64)) as rented_hero_id,
         --summon_table.dlen,
         --summon_table.funcsig,
         t.amount / pow(10,18) as jewel_cost,
         nvl(r.amount,0) / pow(10,18) as rental_cost,
-        --jewel_cost - jewel_dfk_cost as rental_cost,
-        --summon_table.summoneer,
+        summon_table.summoneer,
         logs.tx_hash
     from harmony.dev.logs logs
     left join summon_tx as summon_table
@@ -85,14 +93,14 @@ final as (
         and logs.topics[0] = '0x4508aba30a57c0fc7f1d5da83dea7dd0c36368a7080d3a6652fcd5a58168f460'
 )
 
-select 
-    rentedHeroid,
-    count(rentedheroid) as c,
-    avg(rental_cost)
+select
+    block_timestamp,
+    tx_hash,
+    summoneer,
+    main_hero_id,
+    rented_hero_id,
+    jewel_cost,
+    rental_cost
 from final
-where rental_cost > 10
-and rental_cost < 60
-and rentedheroid > 2000
-group by 1
-order by c desc
+order by 1 desc
 
