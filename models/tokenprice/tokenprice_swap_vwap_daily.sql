@@ -70,11 +70,11 @@ bothswaps as (
 
 final as (
     select
-        block_date
-        , token_address
-        , token_symbol
-        , (sum(stable_amount_norm) / sum(token_amount_norm)) as usd_price
-        , sum(stable_amount_norm) as usd_24h_volume
+        block_date, 
+        token_address, 
+        token_symbol, 
+        (sum(stable_amount_norm) / sum(token_amount_norm)) as usd_price, 
+        sum(stable_amount_norm) as usd_24h_volume
     from bothswaps
     group by 1,2,3
     order by block_date

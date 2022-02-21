@@ -1,6 +1,6 @@
 {{
     config(
-        materialized='view',
+        materialized='table',
         unique_key="token_symbol||'-'||timestamp",
         tags=['core', 'defi', 'amm', 'lending']
         )
@@ -26,9 +26,4 @@ final as (
     select '1DAI' as token_symbol, * from tokenprice_usd
 )
 
-
 select * from final
-    
-
-
-

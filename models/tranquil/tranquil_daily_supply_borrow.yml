@@ -44,5 +44,3 @@ models:
 
       - name: running_total_borrowed_usd
         description: The historical running total of borrowed in USD
-
-

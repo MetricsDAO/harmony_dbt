@@ -20,4 +20,3 @@ models:
         description: The USD VWAP for the token derived from popular LPs.
         tests:
           - not_null
-

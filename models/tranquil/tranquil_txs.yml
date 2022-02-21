@@ -59,5 +59,3 @@ models:
         description: The Tranquil transaction type (Deposit, Withdraw, Borrow, Repay)
         tests:
           - not_null
-
-
