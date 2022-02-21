@@ -13,27 +13,27 @@ with
 -- Assuming these stables have USD value of 1
 stables as (
     select 
-        token_address
-        , token_symbol
-        , decimals
+        token_address,
+        token_symbol,
+        decimals
     from tokens 
     where token_symbol in  ('1USDC', '1USDT', '1DAI', 'UST', 'BUSD')
 ),
 
 swaps1 as (
     select 
-        log_id
-        , block_timestamp
-        , date_trunc('day',block_timestamp) as block_date
-        , tx_hash
-        , token0_address as token_address
-        , token0_symbol as token_symbol
-        , (amount0In + amount0Out) as token_amount_raw
-        , tokens.decimals as token_decimals
-        , ((amount0In + amount0Out) / pow(10, tokens.decimals)) as token_amount_norm
-        , (amount1In + amount1Out) as stable_amount_raw
-        , stables.decimals as stable_decimals
-        , ((amount1In + amount1Out) / pow(10, stables.decimals)) as stable_amount_norm
+        log_id,
+        block_timestamp,
+        date_trunc('day',block_timestamp) as block_date,
+        tx_hash,
+        token0_address as token_address,
+        token0_symbol as token_symbol,
+        (amount0In + amount0Out) as token_amount_raw,
+        tokens.decimals as token_decimals,
+        ((amount0In + amount0Out) / pow(10, tokens.decimals)) as token_amount_norm,
+        (amount1In + amount1Out) as stable_amount_raw,
+        stables.decimals as stable_decimals,
+        ((amount1In + amount1Out) / pow(10, stables.decimals)) as stable_amount_norm
     from swaps
     inner join stables
         on swaps.token1_address = stables.token_address
@@ -43,18 +43,18 @@ swaps1 as (
 
 swaps2 as (
     select 
-        log_id
-        , block_timestamp
-        , date_trunc('day',block_timestamp) as block_date
-        , tx_hash
-        , token1_address as token_address
-        , token1_symbol as token_symbol
-        , (amount1In + amount1Out) as token_amount_raw
-        , tokens.decimals as token_decimals
-        , ((amount1In + amount1Out) / pow(10, tokens.decimals)) as token_amount_norm
-        , (amount0In + amount0Out) as stable_amount_raw
-        , stables.decimals as stable_decimals
-        , ((amount0In + amount0Out) / pow(10, stables.decimals)) as stable_amount_norm
+        log_id,
+        block_timestamp,
+        date_trunc('day',block_timestamp) as block_date,
+        tx_hash,
+        token1_address as token_address,
+        token1_symbol as token_symbol,
+        (amount1In + amount1Out) as token_amount_raw,
+        tokens.decimals as token_decimals,
+        ((amount1In + amount1Out) / pow(10, tokens.decimals)) as token_amount_norm,
+        (amount0In + amount0Out) as stable_amount_raw,
+        stables.decimals as stable_decimals,
+        ((amount0In + amount0Out) / pow(10, stables.decimals)) as stable_amount_norm
     from swaps
     inner join stables
         on swaps.token0_address = stables.token_address
