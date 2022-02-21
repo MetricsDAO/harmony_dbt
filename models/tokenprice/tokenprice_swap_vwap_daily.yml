@@ -24,7 +24,7 @@ models:
         tests:
           - not_null
 
-      - name: usd_24hr_volume
+      - name: usd_24h_volume
         description: The amount of direct stablecoin swap volume the USD price is based on
         tests:
           - not_null
