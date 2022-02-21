@@ -12,7 +12,7 @@ models:
         description: i.e. Hourly, Daily, etc.
         tests:
           - not_null
-      - name: gas_count
+      - name: gas_total
         description: The amount of gas used in that period.
         tests:
           - not_null
