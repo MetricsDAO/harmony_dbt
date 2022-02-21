@@ -1,9 +1,8 @@
 
 {{
     config(
-        materialized='incremental',
-        unique_key="token_symbol||'-'||block_date",
-        incremental_strategy = 'delete+insert',
+        materialized='table',
+        unique_key="block_date||'-'||token_symbol",
         tags=['core', 'defi', 'amm', 'lending'],
         cluster_by=['block_date', 'token_symbol']
         )
@@ -17,7 +16,6 @@ tranquil_markets_usd as (
         timestamp as block_date,
         price
     from {{ ref("tranquil_markets_tokenprice") }}
-    where {{ incremental_last_x_days("timestamp", 3) }}
 ),
 
 txns as (
@@ -27,7 +25,6 @@ txns as (
         tx_type,
         sum(token_amount) as token_amount
     from {{ ref("tranquil_txs") }}
-    where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1,2,3
 ),
 
