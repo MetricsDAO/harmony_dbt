@@ -15,6 +15,12 @@ dfk_tokens as (
     from {{ ref('dfk_tokens') }}
 ),
 
+explorer_tokens as (
+    select 
+        *
+    from {{ ref('explorer_scraped_tokens') }}
+),
+
 -- this is an example of adding new protocols
 tranq_tokens as (
     -- this is an example of renaming columns, make sure the columns are in the right order
@@ -38,6 +44,12 @@ final as (
     select
         * 
     from tranq_tokens
+
+    union 
+
+    select 
+        * 
+    from explorer_tokens
 )
 
 select * from final
