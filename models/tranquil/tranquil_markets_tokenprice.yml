@@ -1,0 +1,22 @@
+
+version: 2
+
+models:
+  - name: tranquil_markets_tokenprice
+    description: "Daily USD prices for Tranquil Finance tokens"
+
+    columns:
+      - name: token_symbol
+        description: Token Symbol.
+        tests:
+          - not_null
+
+      - name: timestamp
+        description: The price date
+        tests:
+          - not_null
+
+      - name: price
+        description: The USD VWAP for the token derived from popular LPs.
+        tests:
+          - not_null
