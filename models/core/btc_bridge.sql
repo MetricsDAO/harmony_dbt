@@ -10,12 +10,12 @@
 -- Collateral is required to launch a vault
 with vaults as (
 
-select 
-  distinct event_inputs:_to::string as vault_address
-from {{ ref('logs') }}
-where 
-  evm_contract_address = '0xdc54046c0451f9269fee1840aec808d36015697d' -- HMY_ONE_BTC_CONTRACT
-  and event_name = 'IssueTokens'
+  select 
+    distinct event_inputs:_to::string as vault_address
+  from {{ ref('logs') }}
+  where 
+    evm_contract_address = '0xdc54046c0451f9269fee1840aec808d36015697d' -- HMY_ONE_BTC_CONTRACT
+    and event_name = 'IssueTokens'
 
 )
 
