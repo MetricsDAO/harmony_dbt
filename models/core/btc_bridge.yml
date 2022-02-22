@@ -1,0 +1,89 @@
+version: 2
+
+models:
+  - name: btc_bridge
+    description: |- 
+      "This table records BTC bridging activites to and out of Harmony."
+
+      ### Example Queries
+      ```sql
+      -- To find out how much BTC bridged to Harmony in the last 7 days
+      select
+        sum(raw_amount)/1e8 as btc_amount
+      from harmony.prod.btc_bridge
+      where 
+        block_timestamp > current_timestamp() - interval '7 days'
+        and tx_type = 'issue'
+      ```
+
+      ```sql
+      -- To find out TVL of BTC on Harmony
+      select 
+        sum(raw_amount)/1e8 as tvl
+      from (
+          select
+            date_trunc('day', block_timestamp) as day,
+            tx_type,
+            case 
+              when tx_type = 'redeem' then -1 * sum(raw_amount) 
+              else sum(raw_amount) end as raw_amount
+          from harmony.dev.btc_bridge
+          group by 1, 2
+      ) as x 
+      ```
+
+    columns:
+      - name: log_id
+        description: Log identifier composed of tx_hash-event_index.
+        tests:
+          - unique
+          - not_null
+
+      - name: block_id
+        description: The block ID.
+        tests:
+          - not_null
+
+      - name: tx_hash
+        description: The transaction hash.
+        tests:
+          - not_null
+
+      - name: block_timestamp
+        description: The time the block was minted.
+        tests:
+          - not_null
+
+      - name: contract_address
+        description: The address of the transferred token.
+        tests:
+          - not_null
+
+      - name: from_address
+        description: The address sent the token.
+        tests:
+          - not_null
+
+      - name: to_address
+        description: The address received the token.
+        tests:
+          - not_null
+
+      - name: tx_type
+        description: The type of transaction, including `issue` or `redeem`.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["issue", "redeem"]
+              quote: true
+              severity: warn
+
+      - name: is_vault
+        description: Whether the `to_address` that 1BTC token is issued to is a vault. This only applies to `issue` transaction type.
+        tests:
+          - not_null
+
+      - name: raw_amount
+        description: The 1BTC token's raw amount.
+        tests:
+          - not_null
