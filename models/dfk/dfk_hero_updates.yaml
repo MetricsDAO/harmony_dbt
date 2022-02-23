@@ -1,0 +1,361 @@
+models:
+  - name: dfk_hero_updates
+    description: "Defi Kingdom Hero Updates - one row will be generated for each time a hero is updated"
+
+    columns:
+      - name: block_timestamp
+        description: The time when the block was mined.
+        tests:
+          - not_null
+
+      - name: block_id
+        description: The id of the block.
+        tests:
+          - not_null
+
+      - name: log_id
+        description: The id of the log.
+        tests:
+          - unique
+          - not_null
+
+      - name: hero_id
+        description: Token id of the DFK Hero.
+        tests:
+          - not_null
+
+      - name: summoning_info_summonedTime
+        description: The time the hero was summoned.
+        tests:
+          - not_null
+
+      - name: summoning_info_nextSummonTime
+        description: The next available time the hero can summon an additional hero.
+        tests:
+          - not_null
+
+      - name: summoning_info_summonerId
+        description: The first parent of this hero.
+        tests:
+          - not_null
+
+      - name: summoning_info_assistantId
+        description: The second parent of this hero.
+        tests:
+          - not_null
+
+      - name: summoning_info_summons
+        description: The number of heroes this hero has already summoned.
+        tests:
+          - not_null
+
+      - name: summoning_info_maxSummons
+        description: The max number of heroes this hero can summon.
+        tests:
+          - not_null
+
+      - name: hero_info_statGenes
+        description: The hero's genes.
+        tests:
+          - not_null
+
+      - name: hero_info_visualGenes
+        description: The hero's visual genes.
+        tests:
+          - not_null
+
+      - name: hero_info_rarity
+        description: The hero's rarity.
+        tests:
+          - not_null
+
+      - name: hero_info_shiny
+        description: Whether or not the hero is a shiny.
+        tests:
+          - not_null
+
+      - name: hero_info_generation
+        description: The Gen of the hero.
+        tests:
+          - not_null
+
+      - name: hero_info_firstName
+        description: The hero's first name.
+        tests:
+          - not_null
+
+      - name: hero_info_lastName
+        description: The hero's first name.
+        tests:
+          - not_null
+
+      - name: hero_info_shinyStyle
+        description: If the hero is shiny.
+        tests:
+          - not_null
+
+      - name: hero_info_class
+        description: The class of the hero.
+        tests:
+          - not_null
+
+      - name: hero_info_subClass
+        description: The subclass of the hero.
+        tests:
+          - not_null
+
+      - name: hero_state_staminaFullAt
+        description: The hero's current max stamina.
+        tests:
+          - not_null
+
+      - name: hero_state_hpFullAt
+        description: The hero's current max hit points.
+        tests:
+          - not_null
+
+      - name: hero_state_mpFullAt
+        description: The hero's current max mana points.
+        tests:
+          - not_null
+
+      - name: hero_state_level
+        description: The hero's current level.
+        tests:
+          - not_null
+
+      - name: hero_state_xp
+        description: The hero's current xp.
+        tests:
+          - not_null
+
+      - name: hero_state_currentQuest
+        description: The current quest.
+        tests:
+          - not_null
+
+      - name: hero_state_sp
+        description: The hero's current SP.
+        tests:
+          - not_null
+
+      - name: hero_state_status
+        description: The hero's current status.
+        tests:
+          - not_null
+
+      - name: hero_stats_strength
+        description: The hero's current strength stat.
+        tests:
+          - not_null
+
+      - name: hero_stats_intelligence
+        description: The hero's current intelligence stat.
+        tests:
+          - not_null
+
+      - name: hero_stats_wisdom
+        description: The hero's current wisdom stat.
+        tests:
+          - not_null
+
+      - name: hero_stats_luck
+        description: The hero's current luck stat.
+        tests:
+          - not_null
+
+      - name: hero_stats_agility
+        description: The hero's current agility stat.
+        tests:
+          - not_null
+
+      - name: hero_stats_vitality
+        description: The hero's current vitality stat.
+        tests:
+          - not_null
+
+      - name: hero_stats_endurance
+        description: The hero's current endurance stat.
+        tests:
+          - not_null
+
+      - name: hero_stats_dexterity
+        description: The hero's current dexterity stat.
+        tests:
+          - not_null
+
+      - name: hero_stats_hp
+        description: The hero's current hit points.
+        tests:
+          - not_null
+
+      - name: hero_stats_mp
+        description: The hero's current mana points.
+        tests:
+          - not_null
+
+      - name: hero_stats_stamina
+        description: The hero's current stamina.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_strength
+        description: The current growth in the hero's Strength based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_intelligence
+        description: The current growth in the hero's Intelligence based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_wisdom
+        description: The current growth in the hero's Wisdom based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_luck
+        description: The current growth in the hero's Luck based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_agility
+        description: The current growth in the hero's Agility based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_vitality
+        description: The current growth in the hero's Vitality based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_endurance
+        description: The current growth in the hero's Endurance based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_dexterity
+        description: The current growth in the hero's Dexterity based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_hpSm
+        description: The current growth in the hero's Health Points (Small) based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_hpRg
+        description: The current growth in the hero's Health Points (Regular) based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_hpLg
+        description: The current growth in the hero's Health Points (Large) based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_mpSm
+        description: The current growth in the hero's Mana Points (Small) based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_mpRg
+        description: The current growth in the hero's Mana Points (Regular) based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_primary_stat_growth_mpLg
+        description: The current growth in the hero's Mana Points (Large) based on it's main class.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_strength
+        description: The current growth in the hero's Strength based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_intelligence
+        description: The current growth in the hero's Intelligence based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_wisdom
+        description: The current growth in the hero's Wisdom based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_luck
+        description: The current growth in the hero's Luck based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_agility
+        description: The current growth in the hero's Agility based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_vitality
+        description: The current growth in the hero's Vitality based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_endurance
+        description: The current growth in the hero's Endurance based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_dexterity
+        description: The current growth in the hero's Dexterity based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_hpSm
+        description: The current growth in the hero's Health Points (Small) based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_hpRg
+        description: The current growth in the hero's Health Points (Regular) based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_hpLg
+        description: The current growth in the hero's Health Points (Large) based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_mpSm
+        description: The current growth in the hero's Mana Points (Small) based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_mpRg
+        description: The current growth in the hero's Mana Points (Regular) based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_secondary_stat_growth_mpLg
+        description: The current growth in the hero's Mana Points (Large) based on it's subclass.
+        tests:
+          - not_null
+
+      - name: hero_professions_mining
+        description: The hero's current mining stat.
+        tests:
+          - not_null
+
+      - name: hero_professions_gardening
+        description: The hero's current gardening stat.
+        tests:
+          - not_null
+
+      - name: hero_professions_foraging
+        description: The hero's current foraging stat.
+        tests:
+          - not_null
+
+      - name: hero_professions_fishing
+        description: The hero's current fishing stat.
+        tests:
+          - not_null
+
