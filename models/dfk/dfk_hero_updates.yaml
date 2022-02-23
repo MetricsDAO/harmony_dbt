@@ -1,3 +1,5 @@
+version: 2
+
 models:
   - name: dfk_hero_updates
     description: "Defi Kingdom Hero Updates - one row will be generated for each time a hero is updated"
