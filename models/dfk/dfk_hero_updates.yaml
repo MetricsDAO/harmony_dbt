@@ -26,22 +26,22 @@ models:
         tests:
           - not_null
 
-      - name: summoning_info_summonedTime
+      - name: summoning_info_summonedtime
         description: The time the hero was summoned.
         tests:
           - not_null
 
-      - name: summoning_info_nextSummonTime
+      - name: summoning_info_nextsummontime
         description: The next available time the hero can summon an additional hero.
         tests:
           - not_null
 
-      - name: summoning_info_summonerId
+      - name: summoning_info_summonerid
         description: The first parent of this hero.
         tests:
           - not_null
 
-      - name: summoning_info_assistantId
+      - name: summoning_info_assistantid
         description: The second parent of this hero.
         tests:
           - not_null
@@ -51,17 +51,17 @@ models:
         tests:
           - not_null
 
-      - name: summoning_info_maxSummons
+      - name: summoning_info_maxsummons
         description: The max number of heroes this hero can summon.
         tests:
           - not_null
 
-      - name: hero_info_statGenes
+      - name: hero_info_statgenes
         description: The hero's genes.
         tests:
           - not_null
 
-      - name: hero_info_visualGenes
+      - name: hero_info_visualgenes
         description: The hero's visual genes.
         tests:
           - not_null
@@ -81,17 +81,17 @@ models:
         tests:
           - not_null
 
-      - name: hero_info_firstName
-        description: The hero's first name.
+      - name: hero_info_firstname
+        description: the hero's first name.
         tests:
           - not_null
 
-      - name: hero_info_lastName
-        description: The hero's first name.
+      - name: hero_info_lastname
+        description: the hero's first name.
         tests:
           - not_null
 
-      - name: hero_info_shinyStyle
+      - name: hero_info_shinystyle
         description: If the hero is shiny.
         tests:
           - not_null
@@ -101,22 +101,22 @@ models:
         tests:
           - not_null
 
-      - name: hero_info_subClass
+      - name: hero_info_subclass
         description: The subclass of the hero.
         tests:
           - not_null
 
-      - name: hero_state_staminaFullAt
+      - name: hero_state_staminafullat
         description: The hero's current max stamina.
         tests:
           - not_null
 
-      - name: hero_state_hpFullAt
+      - name: hero_state_hpfullat
         description: The hero's current max hit points.
         tests:
           - not_null
 
-      - name: hero_state_mpFullAt
+      - name: hero_state_mpfullat
         description: The hero's current max mana points.
         tests:
           - not_null
@@ -131,7 +131,7 @@ models:
         tests:
           - not_null
 
-      - name: hero_state_currentQuest
+      - name: hero_state_currentquest
         description: The current quest.
         tests:
           - not_null
@@ -241,32 +241,32 @@ models:
         tests:
           - not_null
 
-      - name: hero_primary_stat_growth_hpSm
+      - name: hero_primary_stat_growth_hpsm
         description: The current growth in the hero's Health Points (Small) based on it's main class.
         tests:
           - not_null
 
-      - name: hero_primary_stat_growth_hpRg
+      - name: hero_primary_stat_growth_hprg
         description: The current growth in the hero's Health Points (Regular) based on it's main class.
         tests:
           - not_null
 
-      - name: hero_primary_stat_growth_hpLg
+      - name: hero_primary_stat_growth_hplg
         description: The current growth in the hero's Health Points (Large) based on it's main class.
         tests:
           - not_null
 
-      - name: hero_primary_stat_growth_mpSm
+      - name: hero_primary_stat_growth_mpsm
         description: The current growth in the hero's Mana Points (Small) based on it's main class.
         tests:
           - not_null
 
-      - name: hero_primary_stat_growth_mpRg
+      - name: hero_primary_stat_growth_mprg
         description: The current growth in the hero's Mana Points (Regular) based on it's main class.
         tests:
           - not_null
 
-      - name: hero_primary_stat_growth_mpLg
+      - name: hero_primary_stat_growth_mplg
         description: The current growth in the hero's Mana Points (Large) based on it's main class.
         tests:
           - not_null
@@ -311,32 +311,32 @@ models:
         tests:
           - not_null
 
-      - name: hero_secondary_stat_growth_hpSm
+      - name: hero_secondary_stat_growth_hpsm
         description: The current growth in the hero's Health Points (Small) based on it's subclass.
         tests:
           - not_null
 
-      - name: hero_secondary_stat_growth_hpRg
+      - name: hero_secondary_stat_growth_hprg
         description: The current growth in the hero's Health Points (Regular) based on it's subclass.
         tests:
           - not_null
 
-      - name: hero_secondary_stat_growth_hpLg
+      - name: hero_secondary_stat_growth_hplg
         description: The current growth in the hero's Health Points (Large) based on it's subclass.
         tests:
           - not_null
 
-      - name: hero_secondary_stat_growth_mpSm
+      - name: hero_secondary_stat_growth_mpsm
         description: The current growth in the hero's Mana Points (Small) based on it's subclass.
         tests:
           - not_null
 
-      - name: hero_secondary_stat_growth_mpRg
+      - name: hero_secondary_stat_growth_mprg
         description: The current growth in the hero's Mana Points (Regular) based on it's subclass.
         tests:
           - not_null
 
-      - name: hero_secondary_stat_growth_mpLg
+      - name: hero_secondary_stat_growth_mplg
         description: The current growth in the hero's Mana Points (Large) based on it's subclass.
         tests:
           - not_null
