@@ -39,7 +39,7 @@ final as (
         * 
     from dfk_tokens
     -- this is used to filter duplicate / problematic tokens from the dfk list.
-    where TOKEN_ADDRESS not in (select token_address from harmony_explorer_tokens)
+    where token_address not in (select token_address from harmony_explorer_tokens)
 
     union
 
