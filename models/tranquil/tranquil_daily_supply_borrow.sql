@@ -100,7 +100,6 @@ running as (
                     and c.block_date >= d2.block_date
         ) as running_total_borrowed_token
     from add_backfill as c
-    --order by 1,2
 ),
 
 final as (
@@ -110,7 +109,6 @@ final as (
         (running_total_supplied_token * price) as running_total_supplied_usd,
         (running_total_borrowed_token * price) as running_total_borrowed_usd
     from running as r
-    --order by 1,2
 )
 
 select * from final
