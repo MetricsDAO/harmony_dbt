@@ -15,6 +15,12 @@ dfk_tokens as (
     from {{ ref('dfk_tokens') }}
 ),
 
+harmony_explorer_tokens as (
+    select
+        *
+    from {{ ref('harmony_explorer_tokens') }}
+),
+
 -- this is an example of adding new protocols
 tranq_tokens as (
     -- this is an example of renaming columns, make sure the columns are in the right order
@@ -32,6 +38,14 @@ final as (
     select
         * 
     from dfk_tokens
+    -- this is used to filter duplicate / problematic tokens from the dfk list.
+    where token_address not in (select token_address from harmony_explorer_tokens)
+
+    union
+
+    select
+        * 
+    from harmony_explorer_tokens
 
     union
 

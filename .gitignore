@@ -4,3 +4,5 @@ logs/
 .env
 .notes
 dbt_docs.sh
+dbt_docs
+.DS_Store

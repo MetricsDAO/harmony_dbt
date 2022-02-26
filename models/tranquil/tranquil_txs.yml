@@ -1,0 +1,61 @@
+
+version: 2
+
+models:
+  - name: tranquil_txs
+    description: "Tranquil Finance Transactions"
+
+    columns:
+      - name: log_id
+        description: The Harmony log ID.
+        tests:
+          - unique
+          - not_null
+
+      - name: tx_hash
+        description: The Harmony transaction hash.
+        tests:
+          - not_null
+
+      - name: block_timestamp
+        description: The timestamp for when the block was collated.
+        tests:
+          - not_null
+      
+      - name: block_id
+        description: The block number.
+        tests:
+          - not_null
+
+      - name: user_address
+        description: The account which deposited to Tranquil.
+        tests:
+          - not_null
+
+      - name: evm_contract_address
+        description: The contract that handles the token on Tranquil.
+        tests:
+          - not_null
+
+      - name: token_symbol
+        description: The token's symbol (e.g stONE).
+        tests:
+          - not_null
+
+      - name: token_amount_raw
+        description: The raw (integer) amount of tokens transacted.
+        tests:
+          - not_null
+
+      - name: token_amount
+        description: The amount of tokens transacted, adjusted for the specific token's decimals.
+        tests:
+          - not_null
+
+      - name: amount_usd
+        description: The transaction value converted to usd (approx)
+
+      - name: tx_type
+        description: The Tranquil transaction type (Deposit, Withdraw, Borrow, Repay)
+        tests:
+          - not_null
