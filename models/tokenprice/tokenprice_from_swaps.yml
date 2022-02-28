@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: tokenprice_from_swaps
+    description: "Volume-weighted average daily prices based on swap data, assuming curated stables = 1 USD"
+    columns:
+      - name: block_date
+        description: daily timestamp
+        tests:
+          - not_null
+
+      - name: token_address
+        description: HRC token EVM address
+        tests:
+          - not_null
+
+      - name: token_symbol
+        description: HRC token symbol
+        tests:
+          - not_null
+
+      - name: token_volume
+        description: The amount of tokens swapped on this date based on curated liquidity pool list
+        tests:
+          - not_null
+
+      - name: usd_volume
+        description: The USD-equivalent amount swapped on this date based on curated liquidity pool list
+        tests:
+          - not_null
+
+      - name: usd_price
+        description: Volume-weighted average price during the block_date
+        tests:
+          - not_null
