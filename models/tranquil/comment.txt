@@ -1,0 +1,6 @@
+I spent some time looking into using swaps data for USD pricing, and I think it needs:
+- Hard-coded list of stables (contract addresses) we assume to equal 1 (e.g. USDC, UST, USDT, DAI)
+- Hard-coded list of DEXs ("creator" contract addresses) that run the "CreatePair" type events - these will need decoding to identify this "CreatePair" function for each, e.g.
+        - Jewel LP Creator: https://explorer.harmony.one/address/0x9014b937069918bd319f80e8b3bb4a2cf6faa5f7
+        - Venom LP Creator: https://explorer.harmony.one/address/0x7d02c116b98d0965ba7b642ace0183ad8b8d2196
+- Back-fill of historical chain data so we can pull out the "CreatePair" type actions for each LP (or we hardcode those that were created prior to our data start date of Dec 8, 2021, and just union that with new markets from those events)

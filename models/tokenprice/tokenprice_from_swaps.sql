@@ -172,6 +172,7 @@ swaps_d0_d1 as (
   group by 1,2,3
 ),
 
+/*
 -- pull in tertiary markets - those that only have swaps through d1
 swaps_d2 as (
   select 
@@ -244,7 +245,7 @@ swaps_d0_d1_d2_d3 as (
     select * from swaps_d3)
   group by 1,2,3
 ),
-
+*/
 -- rename columns
 allswaps as (
   select 
@@ -254,7 +255,8 @@ allswaps as (
     amt0 as token_volume,
     amt1 as usd_volume,
     usd_price
-  from swaps_d0_d1_d2_d3
+  --from swaps_d0_d1_d2_d3
+  from swaps_d0_d1
 ),
 
 -- stable tokens with a price of 1 USD to complete the pricing table (from token0 position)
