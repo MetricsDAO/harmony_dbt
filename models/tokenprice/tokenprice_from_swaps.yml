@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: tokenprice_from_swaps
-    description: "Volume-weighted average daily prices based on swap data, assuming curated stables = 1 USD"
+    description: "Volume-weighted average daily prices based on swap data, assuming curated stables = 1 USD, and preferring most liquid pair"
     columns:
       - name: block_date
         description: daily timestamp
@@ -19,8 +19,8 @@ models:
         tests:
           - not_null
 
-      - name: token_volume
-        description: The amount of tokens swapped on this date based on curated liquidity pool list
+      - name: usd_price
+        description: Volume-weighted average price during the block_date
         tests:
           - not_null
 
@@ -29,7 +29,33 @@ models:
         tests:
           - not_null
 
-      - name: usd_price
-        description: Volume-weighted average price during the block_date
+      - name: token_volume
+        description: The amount of tokens swapped on this date based on curated liquidity pool list
         tests:
           - not_null
+
+      - name: pair_token_for_price
+        description: The swap pair token used to lookup the usd price, usually the highest volume pair
+        tests:
+          - not_null
+
+      - name: pair_symbol_for_price
+        description: The symbol for the swap pair token used to lookup the usd price, usually the highest volume pair
+        tests:
+          - not_null
+
+      - name: volume_for_price
+        description: The quantity of the token swapped with the pair that was used to lookup the usd_price.  
+        tests:
+          - not_null
+
+      - name: key
+        description: Admin field - Unique key - <block_date>-<token_address>
+        tests:
+          - not_null
+
+      - name: lookup_round
+        description: Admin field - the point in the price lookup loop that this price was matched
+        tests:
+          - not_null
+          
