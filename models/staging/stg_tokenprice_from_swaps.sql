@@ -1,22 +1,11 @@
 {{
     config(
-        materialized='table',
+        materialized='incremental',
         unique_key="key",
         tags=['core', 'defi', 'tokenprice'],
         cluster_by=['block_date', 'token_address']
         )
 }}
-
--- unique_key="token_address||'-'||block_date",
-
--- TODO: price discrepancy for 1ETH '0x6983d1e6def3690c4d616b13597a09e6193ea013' on Jan 24 
-    -- small swaps through USDC extrapolated to all volume - need to prioritize highest volume pairs for accurate pricing
---     suspected: 1USDC / AVAX pool: 0x422a9ff25a356525b8188c3c7074e0b0a345279d
-
--- TODO: -- remove gross mispriced swaps?
-    -- where s.tx_hash not in ( -- remove gross mispriced swaps
-    --'0x45306aade61a002fff4bf42b68edb48addfb821c0f5d373201f3ab33b8d4abb4',
-    --'0x8c0b1638bf8f9e093b70d12faa5e639818e25902860fa1e0a6c422e6e3ccadfe'
 
 with 
 stables as (
@@ -61,7 +50,7 @@ swaps_daily_agg as (
 
 consolidated_pairs as (
   select 
-    (block_date || '-' || token_address) as key,
+    concat_ws( '-', block_date, token_address ) as key,
     block_date,
     token_address,
     token_symbol,
@@ -98,7 +87,7 @@ consolidated_pairs as (
 
 start_stables as (
 select distinct
-    (c.block_date || '-' || c.token_address) as key,
+    concat_ws( '-', c.block_date, c.token_address ) as key,
     c.block_date,
     s.token_address,
     s.token_symbol,

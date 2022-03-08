@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: tokenprice_from_swaps
+  - name: stg_tokenprice_from_swaps
     description: "Volume-weighted average daily prices based on swap data, assuming curated stables = 1 USD, and preferring most liquid pair"
     columns:
       - name: block_date
