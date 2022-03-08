@@ -43,11 +43,10 @@ swaps_daily_agg as (
     sum(s.amt0) as amt0,
     sum(s.amt1) as amt1
   from simpleswaps as s
-  --where s.block_date >= '2022-02-27' and s.block_date < '2022-03-02'
   group by 1,2,3,4,5,6
 ),
 
-
+-- union all 0->1 and 1->0 swaps into a tall table for simplified bi-directional lookups and volume ranking
 consolidated_pairs as (
   select 
     concat_ws( '-', block_date, token_address ) as key,
@@ -80,7 +79,7 @@ consolidated_pairs as (
         token0_symbol as pair_symbol,
         amt0 as pair_amt
     from swaps_daily_agg
-   ) --1372
+   ) 
   group by 1,2,3,4,6,7
   order by 4,2,5 desc
 ),
@@ -144,7 +143,7 @@ where c.key not in (select key from wone_lookup)
   
 union all
   select * from wone_lookup
-), --112
+), 
 
 -- add lookups1b table for next round of matches, where top pair matches the lookups1a table (exclude keys that already exist in lookups1a table)
 lookups1b as (
@@ -167,7 +166,7 @@ where c.key not in (select key from lookups1a)
   
 union all
   select * from lookups1a
-), --274
+), 
 
 -- add lookups1c table for next round of matches, where top pair matches the lookups1b table (exclude keys that already exist in lookups1b table)
 lookups1c as (
@@ -190,7 +189,7 @@ where c.key not in (select key from lookups1b)
   
 union all
   select * from lookups1b
-), -- 276
+), 
 
 -- add lookups2a table for next round of matches, where 2nd most common pair matches the lookups1c table (exclude keys that already exist in lookups1c table)
 lookups2a as (
@@ -213,7 +212,7 @@ where c.key not in (select key from lookups1c)
   
 union all
   select * from lookups1c
-), -- 278
+),
 
 -- add lookups2b table for next round of matches, where 2nd most common pair matches the lookups2a table (exclude keys that already exist in lookups2a table)
 lookups2b as (
@@ -236,14 +235,13 @@ where c.key not in (select key from lookups2a)
   
 union all
   select * from lookups2a
-), -- 278
+), 
 
 -- IF needed, additional lookup rounds could be added, e.g.:
 -- TODO: add lookups2c table for next round of matches, where 2nd most common pair matches the lookups2b table (exclude keys that already exist in lookups2b table)
 -- TODO: add lookups3a table for next round of matches, where 3rd most common pair matches the lookups2c table (exclude keys that already exist in lookups2c table)
 -- TODO: add lookups3b table for next round of matches, where 3rd most common pair matches the lookups3a table (exclude keys that already exist in lookups3a table)
 -- TODO: add lookups3c table for next round of matches, where 3rd most common pair matches the lookups3b table (exclude keys that already exist in lookups3b table)
--- TODO: remove date filter from swaps_daily_agg
 
 final as (
 select 
