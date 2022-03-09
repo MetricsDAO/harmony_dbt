@@ -15,6 +15,30 @@ dfk_lp as (
     from {{ ref('dfk_dex_lp_labels') }}
 ),
 
+src_logs_lp as (
+select 
+    event_inputs:pair::string as pool_address,
+    '' as pool_name,
+    event_inputs:token0::string as token0,
+    event_inputs:token1::string as token1
+from {{ ref('logs') }} 
+Where event_name = 'PairCreated'
+  ),
+  
+  logs_lp as (
+  select 
+    pool_address,
+    concat(' ', concat_ws('-',t0.token_symbol, t1.token_symbol), 'LP') as pool_name,
+    token0,
+    token1
+  from src_logs_lp p
+  inner join {{ ref('tokens') }} t0
+    on p.token0 = t0.token_address
+  inner join {{ ref('tokens') }} t1
+    on p.token1 = t1.token_address
+  
+  ),
+
 -- this is an example of adding new protocols
 tranq_lp as (
     -- this is an example of renaming columns, make sure the columns are in the right order
@@ -32,6 +56,12 @@ final as (
     select
         * 
     from dfk_lp
+
+    union
+
+    select
+        *
+    from logs_lp
 
     union
 
