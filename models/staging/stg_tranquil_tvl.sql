@@ -15,7 +15,12 @@ old_source_table as (
         ingest_timestamp::timestamp as ingest_timestamp,
         try_parse_json(ingest_data) as parsed_data
     from {{ source("ingest","src_old_ant_ingest") }}
-    where {{ incremental_load_filter("ingest_timestamp") }}
+    where 
+        {% if is_incremental() %}
+            ingest_timestamp > ( select max(day_date) from {{ this }} )
+        {% else %}
+            true
+        {% endif %}  
         and ingest_timestamp < '2022-03-07 15:00:00.000'
 
 ),
@@ -25,7 +30,12 @@ current_source_table as (
         ingest_timestamp::timestamp as ingest_timestamp,
         try_parse_json(ingest_data) as parsed_data
     from {{ source("ingest","ant_ingest") }}
-    where {{ incremental_load_filter("ingest_timestamp") }}
+    where 
+        {% if is_incremental() %}
+            ingest_timestamp > ( select max(day_date) from {{ this }} )
+        {% else %}
+            true
+        {% endif %}  
         and ingest_timestamp > '2022-03-07 15:00:00.000'
 
 ),
