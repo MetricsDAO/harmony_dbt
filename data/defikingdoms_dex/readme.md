@@ -1,5 +1,8 @@
+## Last Update
+11-mar-2022
+
 ## Operational steps
-1. Go to http://graph3.defikingdoms.com/subgraphs/name/defikingdoms/dex/graphql
+1. Go to http://graph4.defikingdoms.com/subgraphs/name/defikingdoms/dex/graphql
 2. Extract the data using this graphql snippet
 ```
 {
@@ -28,8 +31,8 @@
 
 ## Input files
 1. liquidity_pools.json 
-    - extracted from http://graph3.defikingdoms.com/subgraphs/name/defikingdoms/dex/graphql 
-    - only has 500-ish pairs for now (21-dec-2021)
+    - extracted from http://graph4.defikingdoms.com/subgraphs/name/defikingdoms/dex/graphql 
+    - only has 750-ish pairs for now (11-mar-2022)
 ```
 {
   pairs (first: 1000)
