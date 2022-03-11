@@ -9,13 +9,32 @@
 }}
 
 with
+old_source_table as (
 
-source as (
-    select 
-        ingest_timestamp,
+    select
+        ingest_timestamp::timestamp as ingest_timestamp,
         try_parse_json(ingest_data) as parsed_data
-    from harmony.dev.ant_ingest
+    from {{ source("ingest","src_old_ant_ingest") }}
     where {{ incremental_load_filter("ingest_timestamp") }}
+        and ingest_timestamp < '2022-03-07 15:00:00.000'
+
+),
+current_source_table as (
+
+    select
+        ingest_timestamp::timestamp as ingest_timestamp,
+        try_parse_json(ingest_data) as parsed_data
+    from {{ source("ingest","ant_ingest") }}
+    where {{ incremental_load_filter("ingest_timestamp") }}
+        and ingest_timestamp > '2022-03-07 15:00:00.000'
+
+),
+source_table as (
+
+    select * from old_source_table
+    union all 
+    select * from current_source_table
+
 ),
 
 final as (
@@ -23,7 +42,7 @@ final as (
         ingest_timestamp,
         parsed_data:data:result as active_validators,
         array_size(parsed_data:data:result) as active_validators_count
-    from source
+    from source_table
     where parsed_data is not null
         and parsed_data:type = 'hmy_getAllValidatorAddresses'
 )

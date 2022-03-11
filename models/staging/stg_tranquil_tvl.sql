@@ -9,19 +9,38 @@
 }}
 
 with
+old_source_table as (
 
-ingest_data as (
     select
         ingest_timestamp::timestamp as ingest_timestamp,
-        try_parse_json(ingest_data) as parsed_object
-    from harmony.dev.ant_ingest
-    where {{ incremental_last_x_days("ingest_timestamp", 2) }}
+        try_parse_json(ingest_data) as parsed_data
+    from {{ source("ingest","src_old_ant_ingest") }}
+    where {{ incremental_load_filter("ingest_timestamp") }}
+        and ingest_timestamp < '2022-03-07 15:00:00.000'
+
+),
+current_source_table as (
+
+    select
+        ingest_timestamp::timestamp as ingest_timestamp,
+        try_parse_json(ingest_data) as parsed_data
+    from {{ source("ingest","ant_ingest") }}
+    where {{ incremental_load_filter("ingest_timestamp") }}
+        and ingest_timestamp > '2022-03-07 15:00:00.000'
+
+),
+source_table as (
+
+    select * from old_source_table
+    union all 
+    select * from current_source_table
+
 ),
 
 parsed_injest as (
     select
         *
-    from ingest_data
+    from source_table
     where parsed_object:type = 'tranquil_ingest'
 ),
 
