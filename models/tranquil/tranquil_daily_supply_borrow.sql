@@ -58,12 +58,12 @@ backfill_tvl as (
 
     select 
         tml.token_symbol,
-        '2021-12-06 00:00:00.000' as block_date,
+        '2021-12-06 00:00:00.000' as block_date, -- Current HarmonyONE data begins 2021-12-07, so setting backfill date to the prior day
         0 as price,
         ( (l.event_inputs:cashPrior + l.event_inputs:totalBorrows) / pow(10,tml.decimals) ) as net_supplied_token_chg,
         (l.event_inputs:totalBorrows / pow(10,tml.decimals) ) as net_borrowed_token_chg
-    from tranquil_market_labels tml
-    left join logs l 
+    from {{ ref("tranquil_market_labels") }} as tml
+    left join {{ ref("logs") }} as l 
         on tml.first_tx = l.tx_hash
         and l.event_name = 'AccrueInterest'
 ),
@@ -75,7 +75,7 @@ deltas as (
         c.price,
         (c.deposit_token_amt - c.withdrawal_token_amt) as net_supplied_token_chg,
         (c.borrow_token_amt - c.repayment_token_amt) as net_borrowed_token_chg
-    from txns_typecols c
+    from txns_typecols as c
 ),
 
 add_backfill as (
@@ -100,7 +100,6 @@ running as (
                     and c.block_date >= d2.block_date
         ) as running_total_borrowed_token
     from add_backfill as c
-    order by 1,2
 ),
 
 final as (
@@ -110,7 +109,6 @@ final as (
         (running_total_supplied_token * price) as running_total_supplied_usd,
         (running_total_borrowed_token * price) as running_total_borrowed_usd
     from running as r
-    order by 1,2
 )
 
 select * from final
