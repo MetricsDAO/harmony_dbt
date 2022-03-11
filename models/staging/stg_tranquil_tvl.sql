@@ -41,13 +41,13 @@ parsed_injest as (
     select
         *
     from source_table
-    where parsed_object:type = 'tranquil_ingest'
+    where parsed_data:type = 'tranquil_ingest'
 ),
 
 final as (
     select
         date_trunc('day',ingest_timestamp) as day_date,
-        avg(parsed_object:data::float) as tranq_tvl
+        avg(parsed_data:data::float) as tranq_tvl
     from parsed_injest
     group by 1
 )
