@@ -28,7 +28,7 @@ Where event_name = 'PairCreated'
   logs_lp as (
   select 
     pool_address,
-    concat(' ', concat_ws('-',t0.token_symbol, t1.token_symbol), 'LP') as pool_name,
+    concat(' ', concat_ws('-',t0.token_symbol, t1.token_symbol), ' LP') as pool_name,
     token0,
     token1
   from src_logs_lp p
@@ -36,7 +36,16 @@ Where event_name = 'PairCreated'
     on p.token0 = t0.token_address
   inner join {{ ref('tokens') }} t1
     on p.token1 = t1.token_address
-  
+  where p.pool_address not in
+    (select pool_address from dfk_lp)
+  ),
+
+  backfill_from_swaps as (
+      select * from backfill_lps_from_swaps
+      where pool_address not in 
+        (select pool_address from logs_lp)
+        and pool_address not in 
+        (select pool_address from dfk_lp)
   ),
 
 -- this is an example of adding new protocols
@@ -62,6 +71,12 @@ final as (
     select
         *
     from logs_lp
+
+    union
+
+    select
+        *
+    from backfill_from_swaps
 
     union
 
