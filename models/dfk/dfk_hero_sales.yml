@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: dfk_hero_sales
-    description: "Defi Kingdom Hero Sales - Still a Work in progress.. copied from kakamora's branch because I need some stats"
+    description: "Defi Kingdom Hero Sales"
 
     columns:      
       - name: tx_hash

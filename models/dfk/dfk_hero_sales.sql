@@ -44,7 +44,6 @@ hero_auction_txns as (
 ),
 final as (
     select
-        auction_created.auction_id,
         auction_created.seller_address,
         hero_auction_txns.*
     from auction_created
