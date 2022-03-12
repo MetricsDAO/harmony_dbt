@@ -1,0 +1,19 @@
+version: 2
+models: 
+  - name: stg_ant_ingest
+    description: |-
+      This table is used to combined different ingests from different sources and format types correctly.
+      The data is used in the following tables...
+        - stg_delegators_counts
+        - stg_delegators
+        - stg_staked_one
+        - stg_total_supply
+        - stg_tranquil_tvl
+        - stg_validators
+    columns:
+      - name: ingest_timestamp
+        description: Timestamp that the data was ingested.
+        tests:
+          - not_null
+      - name: parsed_data
+        description: Data that is expected to be in a json format.
