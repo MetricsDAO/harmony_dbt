@@ -53,6 +53,7 @@ union select 'Payment service team and contractors'    as contract_name, 'defi-k
 union select 'Cross-Chain Liquidity Fund'              as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0xa3f87fbcc69d2f97f528266c35b713e4bb12f962') as contract_address
 union select 'Gen 0 Summon'                            as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0xdf0bf714e80f5e6c994f16b05b7ffcbcb83b89e9') as contract_address
 union select 'Land Sale'                               as contract_name, 'defi-kingdoms' as organization,'dfk-todo'     as sub_type, '' as misc, lower('0x77d991987ca85214f9686131c58c1abe4c93e547') as contract_address
+union select 'Quest Reward Pool'                       as contract_name, 'defi-kingdoms' as organization,'dfk-quests'   as sub_type, '' as misc, lower('0x5ca5bcd91929c7152ca577e8c001c9b5a185f568') as contract_address
 union select 'Perilous Journey'                        as contract_name, 'defi-kingdoms' as organization,'dfk-quests'   as sub_type, '' as misc, lower('0xE92Db3bb6E4B21a8b9123e7FdAdD887133C64bb7') as contract_address
 
 -- gardening
