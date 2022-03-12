@@ -20,7 +20,7 @@ models:
         tests:
           - not_null
       - name: auction_id
-        description: Temporary column, should be removed
+        description: Auction ID of the Sale
         tests:
           - not_null
       - name: total_jewels
