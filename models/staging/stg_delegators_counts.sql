@@ -3,7 +3,7 @@
         materialized='incremental',
         unique_key='day_date || validator_address',
         incremental_strategy = 'delete+insert',
-        tags=['core'],
+        tags=['core', 'ant_ingest'],
         cluster_by=['day_date']
         )
 }}
