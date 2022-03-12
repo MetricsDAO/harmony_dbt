@@ -60,12 +60,12 @@ costs_to_summon AS (
 ),
 final as (
     select 
-    m.block_timestamp,
-    m.amount as jewel_amount,
-    m.who as user_address,
-    stx.from_address as renter_address,
-    m.tx_hash,
-    jewel_amount * j.price as amount_usd
+        m.block_timestamp,
+        m.amount as jewel_amount,
+        m.who as user_address,
+        stx.from_address as renter_address,
+        m.tx_hash,
+        jewel_amount * j.price as amount_usd
     from costs_to_summon as m
     left join summon_tx as stx
         on stx.tx_hash = m.tx_hash
