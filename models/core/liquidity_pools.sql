@@ -22,19 +22,19 @@ select
     event_inputs:token0::string as token0,
     event_inputs:token1::string as token1
 from {{ ref('logs') }} 
-Where event_name = 'PairCreated'
+where event_name = 'PairCreated'
   ),
   
   logs_lp as (
   select 
     pool_address,
-    concat(' ', concat_ws('-',t0.token_symbol, t1.token_symbol), ' LP') as pool_name,
+    t0.token_symbol || '-' || t1.token_symbol || ' LP' as pool_name, -- "TOKEN0-TOKEN1 LP"
     token0,
     token1
   from src_logs_lp p
-  inner join {{ ref('tokens') }} t0
+  inner join {{ ref('tokens') }} as t0
     on p.token0 = t0.token_address
-  inner join {{ ref('tokens') }} t1
+  inner join {{ ref('tokens') }} as t1
     on p.token1 = t1.token_address
   where p.pool_address not in
     (select pool_address from dfk_lp)
