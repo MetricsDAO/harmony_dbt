@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: dfk_potions_crafted
-    description: "Defi Kingdom Hero Sales"
+    description: "Defi Kingdoms Potions Crafted"
 
     columns:
       
