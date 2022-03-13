@@ -28,7 +28,7 @@ Where event_name = 'PairCreated'
   logs_lp as (
   select 
     pool_address,
-    concat(' ', concat_ws('-',t0.token_symbol, t1.token_symbol), ' LP') as pool_name,
+    t0.token_symbol || '-' || t1.token_symbol || ' LP' as pool_name, -- "TOKEN0-TOKEN1 LP"
     token0,
     token1
   from src_logs_lp p
