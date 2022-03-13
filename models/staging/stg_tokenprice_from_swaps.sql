@@ -2,6 +2,7 @@
     config(
         materialized='incremental',
         unique_key="key",
+        incremental_strategy = 'delete+insert',
         tags=['core', 'defi', 'tokenprice'],
         cluster_by=['block_date', 'token_address']
         )
@@ -10,6 +11,11 @@
 with 
 stables as (
   select * from {{ ref('harmony_stable_tokens')}}
+),
+
+swaps_ref as (
+  select * from {{ ref('swaps') }}
+  where {{ incremental_last_x_days("block_timestamp", 3) }}
 ),
 
 -- trim the swaps table, truncate to day, and normalize the decimals, remove nulls with inner join
@@ -24,7 +30,7 @@ simpleswaps as (
     s.token1_symbol,
     (s.amount0in + s.amount0out) / pow(10, t0.decimals) as amt0,
     (s.amount1in + s.amount1out) / pow(10, t1.decimals) as amt1
-  from {{ ref('swaps') }} as s
+  from swaps_ref as s
   inner join {{ ref('tokens') }} as t0
     on t0.token_address = s.token0_address
   inner join {{ ref('tokens') }} as t1

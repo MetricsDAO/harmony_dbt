@@ -53,6 +53,7 @@ models:
         description: Admin field - Unique key - <block_date>-<token_address>
         tests:
           - not_null
+          - unique
 
       - name: lookup_round
         description: Admin field - the point in the price lookup loop that this price was matched

@@ -4,6 +4,12 @@ models:
   - name: tokenprices
     description: "Volume-weighted average daily prices based on swap data, assuming curated stables = 1 USD, and preferring the most liquid pair.  Token prices will show up if they have at least USD100 of daily volume."
     columns:
+      - name: key
+        description: The unique key for the block_date and token_address.
+        tests:
+          - not_null
+          - unique
+
       - name: block_date
         description: The date of the token price.
         tests:
