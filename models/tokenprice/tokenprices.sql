@@ -1,7 +1,7 @@
 {{
     config(
         materialized='incremental',
-        unique_key="block_date||'-'||token_address",
+        unique_key="key",
         tags=['core', 'defi', 'tokenprice'],
         cluster_by=['block_date', 'token_address']
         )
@@ -13,7 +13,8 @@ stage as (
 ),
 
 final as (
-  SELECT
+  select
+    key,
     block_date,
     token_address,
     token_symbol,
