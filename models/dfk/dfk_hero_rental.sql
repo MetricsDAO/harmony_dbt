@@ -36,18 +36,19 @@ summon_tx as (
                 or substr(data,0,10) = '0xc2b40631' -- summonCrystalWithAuctionOld
         )
 ),
-costs_to_summon AS (
-    select 
-        block_timestamp,
-        evm_contract_address,
-        event_inputs:value/pow(10,18)::number as amount,
-        event_inputs:to::string as who,
-        event_inputs:from::string as renter,
-        tx_hash
-    from logs
-    where tx_hash in (select tx_hash from summon_tx)
+costs_to_summon_new AS (
+    select
+        logs.block_timestamp,
+        tx.tx_hash,
+        tx.from_address,
+        logs.evm_contract_address,
+        logs.event_inputs:value/pow(10,18)::number as amount,
+        logs.event_inputs:to::string as who,
+        logs.event_inputs:from::string as renter
+    from summon_tx as tx
+    left join logs on logs.tx_hash = tx.tx_hash
+    where evm_contract_address = '0x72cb10c6bfa5624dd07ef608027e366bd690048f' -- jewel address
         and event_name = 'Transfer'
-        and evm_contract_address != '0x5f753dcdf9b1ad9aabc1346614d1f4746fd6ce5c'
         and who != '0xa9ce83507d872c5e1273e745abcfda849daa654f' -- xJewel
         and who != '0xa4b9a93013a5590db92062cf58d4b0ab4f35dbfb' -- Dev Fund
         and who != '0x3875e5398766a29c1b28cc2068a0396cba36ef99' -- Market Fund
@@ -63,12 +64,10 @@ final as (
         m.block_timestamp,
         m.amount as jewel_amount,
         m.who as user_address,
-        stx.from_address as renter_address,
+        m.from_address as renter_address,
         m.tx_hash,
         jewel_amount * j.price as amount_usd
-    from costs_to_summon as m
-    left join summon_tx as stx
-        on stx.tx_hash = m.tx_hash
+    from costs_to_summon_new as m
     left join jewel_price j
         on date(j.timestamp) = date(m.block_timestamp)
 )
