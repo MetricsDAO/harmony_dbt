@@ -79,7 +79,7 @@ sources:
           - name: ingest_timestamp
             description: What time this infomations was ingested
           - name: ingest_data
-            description: the json that was ingested
+            description: The json that was ingested.
       - name: src_token_usd_prices
         description: "Token Prices in Harmony Chain from CoinGecko"
         columns:
