@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: tokenprice_swap_vwap_daily
-    description: "Volume-weighted average prices based on stablecoin swaps"
+  - name: tokenprices
+    description: "Volume-weighted average daily prices based on swap data, assuming curated stables = 1 USD, and preferring most liquid pair.  Filtered to >=USD100 daily volume"
     columns:
       - name: block_date
         description: daily timestamp
@@ -24,7 +24,13 @@ models:
         tests:
           - not_null
 
-      - name: usd_24h_volume
-        description: The amount of direct stablecoin swap volume the USD price is based on
+      - name: usd_volume
+        description: The USD-equivalent amount swapped on this date based on curated liquidity pool list
         tests:
           - not_null
+
+      - name: token_volume
+        description: The amount of tokens swapped on this date based on curated liquidity pool list
+        tests:
+          - not_null
+          
