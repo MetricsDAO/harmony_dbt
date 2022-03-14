@@ -9,6 +9,11 @@
 }}
 
 with
+jewel_price as (
+    select 
+        *
+    from {{ ref('tokenprice_jewel') }}
+),
 logs as (
     select 
         *
@@ -36,18 +41,18 @@ hero_auction_txns as (
         total_jewels * jewel_price.price  as total_usd,
         tax_jewels * jewel_price.price as tax_usd
     from logs
-    left join harmony.dev.tokenprice_jewel as jewel_price
+    left join jewel_price
         on date_trunc('day', block_timestamp) = jewel_price.timestamp
-    where event_removed = false
-        and evm_contract_address = '0x13a65b9f8039e2c032bc022171dc05b30c3f2892'
+    where not event_removed
+        and evm_contract_address = '0x13a65b9f8039e2c032bc022171dc05b30c3f2892' -- Serendale_AuctionHouse
         and topics[0]::string ='0xe40da2ed231723b222a7ba7da994c3afc3f83a51da76262083e38841e2da0982' -- AuctionSuccessful event
 ),
 final as (
     select
-        auction_created.seller_address,
-        hero_auction_txns.*
-    from auction_created
-    right join hero_auction_txns
+        hero_auction_txns.*,
+        auction_created.seller_address
+    from hero_auction_txns
+    left join auction_created
         on hero_auction_txns.auction_id = auction_created.auction_id
 )
 
