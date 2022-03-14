@@ -1,0 +1,34 @@
+
+version: 2
+
+models:
+  - name: dfk_potions_crafted
+    description: "Defi Kingdoms Potions Crafted"
+
+    columns:
+      
+      - name: tx_hash
+        description: The hash of the transaction, this is the primary key for this table.
+        tests:
+          - not_null
+          - unique
+      
+      - name: block_timestamp
+        description: The time when the block was mined.
+        tests:
+          - not_null
+      
+      - name: crafter
+        description: The Wallet address of the crafter.
+        tests:
+          - not_null
+      
+      - name: potion_type
+        description: Potion Contract Address
+        tests:
+          - not_null
+      
+      - name: potions_crafted
+        description: The total amount potions crafted
+        tests:
+          - not_null

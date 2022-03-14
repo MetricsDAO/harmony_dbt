@@ -47,3 +47,51 @@ sources:
             description: Synonmous with blockchain name for Harmony.
           - name: ingested_at
             description: The time this row was ingested by Chainwalkers.
+  - name: ingest
+    schema: public
+    database: ingest
+    tables:
+      - name: src_old_ant_ingest
+        description: "Ingest from ant - when it was directly ingested into the harmony db"
+        columns:
+          - name: ingest_timestamp
+            description: What time this infomations was ingested
+          - name: ingest_data
+            description: the json that was ingested
+      - name: src_old_tokenprice_coingecko_mr
+        description: "Token Prices in Harmony Chain from CoinGecko - when it was directly ingested into the harmony db"
+        columns:
+          - name: address
+            description: token_address.
+          - name: usd
+            description: USD Price.
+          - name: usd_24h_change
+            description: USD Price Changed in the last 24 Hours
+          - name: usd_24h_vol
+            description: 24 Hour Volume Traded.
+          - name: usd_market_cap
+            description: Market Cap of the coin in USD.
+          - name: timestamp
+            description: When the data was ingested.
+      - name: ant_ingest
+        description: "Ingest from ant"
+        columns:
+          - name: ingest_timestamp
+            description: What time this infomations was ingested
+          - name: ingest_data
+            description: The json that was ingested.
+      - name: src_token_usd_prices
+        description: "Token Prices in Harmony Chain from CoinGecko"
+        columns:
+          - name: address
+            description: token_address.
+          - name: usd
+            description: USD Price.
+          - name: usd_24h_change
+            description: USD Price Changed in the last 24 Hours
+          - name: usd_24h_vol
+            description: 24 Hour Volume Traded.
+          - name: usd_market_cap
+            description: Market Cap of the coin in USD.
+          - name: timestamp
+            description: When the data was ingested.
