@@ -46,7 +46,7 @@ costs_to_summon_new AS (
         logs.event_inputs:to::string as who,
         logs.event_inputs:from::string as renter
     from summon_tx as tx
-    left join logs on logs.tx_hash = tx.tx_hash
+    join logs on logs.tx_hash = tx.tx_hash
     where evm_contract_address = '0x72cb10c6bfa5624dd07ef608027e366bd690048f' -- jewel address
         and event_name = 'Transfer'
         and who != '0xa9ce83507d872c5e1273e745abcfda849daa654f' -- xJewel
@@ -66,9 +66,9 @@ final as (
         m.who as user_address,
         m.from_address as renter_address,
         m.tx_hash,
-        jewel_amount * j.price as amount_usd
+        m.jewel_amount * j.price as amount_usd
     from costs_to_summon_new as m
-    left join jewel_price j
+    join jewel_price as j
         on date(j.timestamp) = date(m.block_timestamp)
 )
 
