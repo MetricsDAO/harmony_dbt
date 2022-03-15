@@ -15,6 +15,7 @@ max(total_jewels) as max_jewel,
 avg(total_jewels) as avg_jewel,
 median(total_jewels) as median_jewel,
 mode(total_jewels) as mode_jewel,
+sum(total_jewels * (current_date-block_timestamp::date)) / sum(current_date-block_timestamp::date) as tw_average,
 count(total_jewels) as sample_size
 from harmony.dev.dfk_last_30_days
 where 1=1
