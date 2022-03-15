@@ -1,0 +1,39 @@
+
+version: 2
+
+models:
+  - name: dfk_hero_rental
+    description: "Defi Kingdom Hero Rentals"
+
+    columns:
+      
+      - name: tx_hash
+        description: The hash of the transaction, this is the primary key for this table.
+        tests:
+          - not_null
+          - unique
+      
+      - name: block_timestamp
+        description: The time when the block was mined.
+        tests:
+          - not_null
+      
+      - name: jewel_amount
+        description: Amount of Jewels the owner gained after tax
+        tests:
+          - not_null
+      
+      - name: user_address
+        description: The owner of the hero's address
+        tests:
+          - not_null
+      
+      - name: renter_address
+        description: The wallet that rented the hero
+        tests:
+          - not_null
+      
+      - name: amount_usd
+        description: The amount of JEWEL * average price of jewel on that day itself
+        tests:
+          - not_null
