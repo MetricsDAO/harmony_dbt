@@ -66,7 +66,7 @@ final as (
         m.who as user_address,
         m.from_address as renter_address,
         m.tx_hash,
-        m.jewel_amount * j.price as amount_usd
+        m.amount * j.price as amount_usd
     from costs_to_summon_new as m
     join jewel_price as j
         on date(j.timestamp) = date(m.block_timestamp)
