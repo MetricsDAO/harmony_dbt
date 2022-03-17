@@ -41,7 +41,9 @@ where event_name = 'PairCreated'
   ),
 
   backfill_from_swaps as (
-      select * from backfill_lps_from_swaps
+      select
+          *
+      from {{ ref('backfill_pools_data') }}
       where pool_address not in 
         (select pool_address from logs_lp)
         and pool_address not in 
