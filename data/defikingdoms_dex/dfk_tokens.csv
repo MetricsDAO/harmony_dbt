@@ -441,3 +441,39 @@ token_address,token_name,token_symbol,decimals
 0x1f3f655079b70190cb79ce5bc5ae5f19daf2a6cf,Lesser Atonement Crystal,DFKLATONECR,0
 0x6d4f4bc32df561a35c05866051cbe9c92759da29,Lesser Chaos Stone,DFKLCHSST,0
 0x17f3b5240c4a71a3bbf379710f6fa66b9b51f224,Greater Atonement Crystal,DFKGATONECR,0
+0xab464901afbc61bac440a97fa568ac42885da58b,"Lesser Might Crystal",DFKLMGHTCR,0
+0xb368f69be6eda74700763672aeb2ae63f3d20ae6,"Might Crystal",DFKMGHTCR,0
+0x39927a2cee5580d63a163bc402946c7600300373,"Lesser Finesse Crystal",DFKLFINCR,0
+0xc6a58efc320a7afdb1cd662eaf6de10ee17103f2,"Finesse Crystal",DFKFINCR,0
+0xf5c26f2f34e9245c3a9ea0b0e7ea7b33e6404da0,"Lesser Swiftness Crystal",DFKLSWFTCR,0
+0x5d7f20e3b0f1406bf038175218ea7e9b4838908c,"Swiftness Crystal",DFKSWFTCR,0
+0x0d8403e47445db9e316e36f476dacd5827220bdd,"Lesser Vigor Crystal",DFKLVGRCR,0
+0xbba50bd111dc586fd1f2b1476b6ec505800a3fd0,"Vigor Crystal",DFKVGRCR,0
+0x3017609b9a59b77b708d783835b6ff94a3d9e337,"Lesser Fortitude Crystal",DFKLFRTICR,0
+0x603919aeb55eb13f9cde94274fc54ab2bd2dece7,"Fortitude Crystal",DFKFRTICR,0
+0x17ff2016c9eccfbf4fc4da6ef95fe646d2c9104f,"Lesser Wit Crystal",DFKLWITCR,0
+0x3619fc2386fbbc19ddc39d29a72457e758cfad69,"Wit Crystal",DFKWITCR,0
+0xc63b76f710e9973b8989678eb16234cfadc8d9db,"Lesser Insight Crystal",DFKLINSCR,0
+0x117e60775584cdfa4f414e22b075f31cc9c3207c,"Insight Crystal",DFKINSCR,0
+0x13af184aea970fe79e3bb7a1b0b156b195fb1f40,"Lesser Fortune Crystal",DFKLFRTUCR,0
+0x6d777c64f0320d8a5b31be0fdeb694007fc3ed45,"Fortune Crystal",DFKFRTUCR,0
+0xe4e7c0c693d8a7fc159776a993495378705464a7,"Lesser Might Stone",DFKLMGHTST,0
+0xe7f6ea1ce7bbebc9f2cf080010dd938d2d8d8b1b,"Might Stone",DFKMGHTST,0
+0xbb5614d466b77d50dded994892dfe6f0aca4eebb,"Lesser Finesse Stone",DFKLFINST,0
+0xd0b689cb5de0c15792aa456c89d64038c1f2eedc,"Finesse Stone",DFKFINST,0
+0xd9a8abc0ce1adc23f1c1813986c9a9c21c9e7510,"Lesser Swiftness Stone",DFKLSWFTST,0
+0x08f362517ad4119d93bbcd20825c2e4119abb495,"Swiftness Stone",DFKSWFTST,0
+0xb00cbf5cd5e7b321436c2d3d8078773522d2f073,"Lesser Vigor Stone",DFKLVGRST,0
+0x9df75917ac9747b4a70fa033e4b0182d85b62857,"Vigor Stone",DFKVGRST,0
+0x1f57eb682377f5ad6276b9315412920bdf9530f6,"Lesser Fortitude Stone",DFKLFRTIST,0
+0x17fa96ba9d9c29e4b96d29a7e89a4e7b240e3343,"Fortitude Stone",DFKFRTIST,0
+0x4ff7a020ec1100d36d5c81f3d4815f2e9c704b59,"Lesser Wit Stone",DFKLWITST,0
+0x939ea05c81aac48f7c10bdb08615082b82c80c63,"Wit Stone",DFKWITST,0
+0x762b98b3758d0a5eb95b3e4a1e2914ce0a80d99c,"Lesser Insight Stone",DFKLINSST,0
+0x9d71bb9c781fc2ebdd3d6cb709438e3c71200149,"Insight Stone",DFKINSST,0
+0x6d6ea1d2dc1df6eaa2153f212d25cf92d13be628,"Lesser Fortune Stone",DFKLFRTUST,0
+0x5da2effe9857dcecb786e13566ff37b92e1e6862,"Fortune Stone",DFKFRTUST,0
+0x8f655142104478724bbc72664042ea09ebbf7b38,"Moksha Rune",DFKMOKSHA,0
+0x45b53e55b5c0a10fdd4fe2079a562d5702f3a033,"Chaos Crystal",DFKCHSCR,0
+0xa509c34306adf6168268a213cc47d336630bf101,"Lesser Chaos Crystal",DFKLCHSCR,0
+0x3633f956410163a98d58d2d928b38c64a488654e,"Lesser Chaos Stone",DFKLCHSST,0
