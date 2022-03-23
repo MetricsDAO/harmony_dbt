@@ -10,8 +10,9 @@
 
 with
 source_table as (
-
-    select * from {{ ref("stg_ant_ingest") }}
+    select
+        *
+    from {{ ref("stg_ant_ingest") }}
     where {{ incremental_load_filter("ingest_timestamp") }}
 ),
 
@@ -39,6 +40,4 @@ flattened_validators as (
     from subselect_source, Table(Flatten(subselect_source.actual_data)) as f
 )
 
-select
-    *
-from flattened_validators
+select * from flattened_validators
