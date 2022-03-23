@@ -29,8 +29,8 @@ flattened_validators as (
     select
         ingest_timestamp,
         date_trunc('day', ingest_timestamp) as day_date,
-        f.value:validator:address::string as validator_address, -- TODO: - convert to 0x
-        f.value:validator:identity::string as validator_identity, -- random name that people used
+        f.value:validator:address::string as validator_address,
+        f.value:validator:identity::string as validator_identity,
         f.value:"active-status"::string as active_status,
         f.value:"booted-status"::string as booted_status,
         f.value:validator:delegations as delegations,
