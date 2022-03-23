@@ -9,7 +9,7 @@
 
 with delegators_incremental as (
 	select *
-	from harmony.dev.stg_delegators
+	from {{ ref('stg_delegators') }}
 	where {{ incremental_load_filter('ingest_timestamp') }}
 ),
 
