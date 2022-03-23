@@ -7,13 +7,18 @@
 	)
 }}
 
-with latest_day_timestamps as (
+with delegators_incremental as (
+	select *
+	from {{ ref('stg_delegators') }}
+	where {{ incremental_load_filter('ingest_timestamp') }}
+),
+
+latest_day_timestamps as (
     select
         max(ingest_timestamp) as ingest_timestamp,
         validator_address
-    from {{ ref('stg_delegators') }}
+    from delegators_incremental
     group by day_date, validator_address
-	where {{ incremental_load_filter('ingest_timestamp') }}
 ),
 
 latest_day_flat_delegations as (
@@ -21,7 +26,7 @@ latest_day_flat_delegations as (
         value,
         ingest_timestamp,
         validator_address
-    from {{ ref('stg_delegators') }}
+    from delegators_incremental
 	natural join latest_day_timestamps
 	inner join lateral flatten(input => delegations)
 ),
@@ -65,8 +70,8 @@ validators as (
 		total_delegation as total_one_delegated,
 		ifnull(total_one_rewarded, 0) as total_one_rewarded,
 		ifnull(total_one_undelegated, 0) as total_one_undelegated
-	from dev.stg_delegators
-	join totals using (ingest_timestamp, validator_address
+	from delegators_incremental
+	join totals using (ingest_timestamp, validator_address)
 ),
 
 final as (
