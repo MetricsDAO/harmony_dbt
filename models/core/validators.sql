@@ -8,7 +8,8 @@
 }}
 
 with delegators_incremental as (
-	select *
+	select
+	    *
 	from {{ ref('stg_delegators') }}
 	where {{ incremental_load_filter('ingest_timestamp') }}
 ),
