@@ -54,8 +54,8 @@ undelegations as (
 
 totals as (
     select
-        ingest_timestamp,
-        validator_address,
+        rewards.ingest_timestamp as ingest_timestamp,
+        rewards.validator_address as validator_address,
         rewards.amount as total_one_rewarded,
         undelegations.amount as total_one_undelegated
     from rewards join undelegations
@@ -66,8 +66,8 @@ totals as (
 validators as (
 	select
 		day_date,
-		validator_address,
-		js_onetohex(validator_address) as validator_hex_address,
+		delegators_incremental.validator_address as validator_address,
+		js_onetohex(delegators_incremental.validator_address) as validator_hex_address,
 		validator_identity,
 		active_status,
 		booted_status,
