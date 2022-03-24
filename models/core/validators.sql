@@ -57,7 +57,9 @@ totals as (
         validator_address,
         rewards.amount as total_one_rewarded,
         undelegations.amount as total_one_undelegated
-    from rewards join undelegations using (ingest_timestamp, validator_address)
+    from rewards join undelegations
+    on rewards.ingest_timestamp = undelegations.ingest_timestamp
+    and rewards.validator_address = undelegations.validator_address
 ),
 
 validators as (
@@ -72,7 +74,9 @@ validators as (
 		ifnull(total_one_rewarded, 0) as total_one_rewarded,
 		ifnull(total_one_undelegated, 0) as total_one_undelegated
 	from delegators_incremental
-	join totals using (ingest_timestamp, validator_address)
+	join totals 
+	on delegators_incremental.ingest_timestamp = totals.ingest_timestamp
+	and delegators_incremental.validator_address = totals.validator_address
 ),
 
 final as (
