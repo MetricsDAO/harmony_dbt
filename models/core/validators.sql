@@ -1,7 +1,7 @@
 {{
 	config(
 		materialized='incremental',
-		unique_key='log_id',
+		unique_key='u_key',
 		tags=['core'],
 		cluster_by=['day_date']
 	)
@@ -81,7 +81,7 @@ validators as (
 
 final as (
 	select
-		concat_ws('-', to_char(day_date, '%Y%m%d'), validator_address) as log_id,
+		concat_ws('-', to_char(day_date, '%Y%m%d'), validator_address) as u_key,
 		*
 	from validators
 )

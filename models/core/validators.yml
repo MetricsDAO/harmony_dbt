@@ -6,8 +6,8 @@ models:
       This table records various daily statistics of Harmony validators.
 
     columns:
-      - name: log_id
-        description: The log ID composed of the date and validator address.
+      - name: u_key
+        description: The daily update key composed of the date and validator address.
         tests:
           - unique
           - not_null
