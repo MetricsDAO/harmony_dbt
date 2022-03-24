@@ -16,10 +16,11 @@ with delegators_incremental as (
 
 latest_day_timestamps as (
     select
-        max(ingest_timestamp) as ingest_timestamp,
-        validator_address
+	day_date,
+        validator_address,
+        max(ingest_timestamp) as ingest_timestamp
     from delegators_incremental
-    group by day_date, validator_address
+    group by 1, 2
 ),
 
 latest_day_flat_delegations as (
@@ -38,7 +39,7 @@ rewards as (
         validator_address,
         sum(value:reward) as amount
     from latest_day_flat_delegations
-    group by ingest_timestamp, validator_address
+    group by 1, 2
 ),
 
 undelegations as (
@@ -48,7 +49,7 @@ undelegations as (
         sum(ifnull(flat_undelegations.value:amount, 0)) as amount
     from latest_day_flat_delegations
 	inner join lateral flatten(input => value:undelegations, outer => true) flat_undelegations
-    group by ingest_timestamp, validator_address
+    group by 1, 2
 ),
 
 totals as (
