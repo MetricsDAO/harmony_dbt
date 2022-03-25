@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: validators
+    description: |-
+      This table records various daily statistics of Harmony validators.
+
+    columns:
+      - name: u_key
+        description: The daily update key composed of the date and validator address.
+        tests:
+          - unique
+          - not_null
+
+      - name: day_date
+        description: The date of this log.
+        tests:
+          - not_null
+
+      - name: validator_address
+        description: The validator's native Harmony address.
+        tests:
+          - not_null
+
+      - name: validator_hex_address
+        description: The validator's address in hex format.
+        tests:
+          - not_null
+
+      - name: validator_identity
+        description: The validator's provided identity.
+        tests:
+          - not_null
+
+      - name: active_status
+        description: The validator's active status.
+        tests:
+          - not_null
+
+      - name: booted_status
+        description: |-
+          The reason for booting this validator off the network.
+          NULL if validator is active and not booted.
+        tests:
+
+      - name: total_one_delegated
+        description: The total amount of ONE delegated to this validator in ATTO format (a factor of 10^18).
+        tests:
+          - not_null
+
+      - name: total_one_rewarded
+        description: The total amount of ONE rewarded by this validator to delegators in ATTO format (a factor of 10^18).
+        tests:
+          - not_null
+
+      - name: total_one_undelegated
+        description: The total amount of ONE undelegated from this validator in ATTO format (a factor of 10^18).
+        tests:
+          - not_null
