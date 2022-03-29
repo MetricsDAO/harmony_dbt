@@ -10,6 +10,11 @@
 
 with 
 
+logs as (
+    select * from {{ ref('logs') }}
+    where {{ incremental_load_filter("block_timestamp") }}
+),
+
 events as (
     select 
         log_id,
@@ -19,7 +24,7 @@ events as (
         event_index,
         native_contract_address,
         evm_contract_address,
-        
+
         case 
             when event_name='Mint' 
                 then 'ADD_LIQUIDITY'
@@ -27,10 +32,8 @@ events as (
         end as action,
     
         event_inputs:amount0::int as amount0_raw,
-    
         event_inputs:amount1::int as amount1_raw
-    
-    from {{ ref('logs') }}
+    from logs
     where (event_name='Mint' or 
            event_name='Burn') 
         and event_inputs:sender = '0x1b02da8cb0d097eb8d57a175b88c7d8b47997506'
@@ -41,6 +44,7 @@ txs as (
         tx_hash,
         from_address
     from {{ ref('txs') }}
+    where {{ incremental_load_filter("block_timestamp") }}
 ),
 
 liquidity_pools as (
@@ -100,24 +104,18 @@ final_table as (
         events_liquidity_pools.action,
         events_liquidity_pools.amount0_raw/pow(10, token0_prices_usd.decimals) 
             as amount0_adjusted,
-    
         events_liquidity_pools.amount1_raw/pow(10, token1_prices_usd.decimals) 
             as amount1_adjusted,
-    
         events_liquidity_pools.amount0_raw/pow(10, token0_prices_usd.decimals)*token0_prices_usd.usd_price
             as amount0_usd,
-    
         events_liquidity_pools.amount1_raw/pow(10, token1_prices_usd.decimals)*token1_prices_usd.usd_price 
             as amount1_usd
-    
     from events_liquidity_pools
         join txs 
             on events_liquidity_pools.tx_hash=txs.tx_hash
-        -- join token prices table to token0
         left join token_prices_usd as token0_prices_usd
             on events_liquidity_pools.token0=token0_prices_usd.token_address 
                 and events_liquidity_pools.block_date=token0_prices_usd.block_date
-        -- join token prices table to token1
         left join token_prices_usd as token1_prices_usd
             on events_liquidity_pools.token1=token1_prices_usd.token_address 
                 and events_liquidity_pools.block_date=token1_prices_usd.block_date
