@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dfk_bank_transactions
+    description: "Defi Kingdoms Jeweler transactions"
+
+    columns:
+      - name: tx_hash
+        description: The hash of this Harmony transaction.
+        tests:
+          - unique
+          - not_null
+
+      - name: block_timestamp
+        description: The timestamp of when the block that this transaction was in was mined.
+        tests:
+          - not_null
+
+      - name: from_address
+        description: The native Harmony address of the account that performed this transaction.
+        tests:
+          - not_null
+
+      - name: from_hex_address
+        description: The hex format address of the account that performed this transaction.
+        tests:
+          - not_null
+
+      - name: type
+        description: The type of this bank transaction. Either 'Deposit' or 'Withdraw'. Deposits stores JEWEL in the bank, withdrawals removes JEWEL from the bank.
+        tests:
+          - not_null
+
+      - name: jewel_amount
+        description: The amount of JEWEL this transaction involves. When `type` is 'Deposit', the amount JEWEL deposited into the bank. When `type` is 'Withdraw', the amount of JEWEL received from the bank.
+        tests:
+          - not_null
+
+      - name: xjewel_amount
+        description: The amount of xJEWEL this transaction involves. When `type` is 'Deposit', the amount of xJEWEL added to the bank. When `type` is 'Withdraw', the amount of xJEWEL removed from the bank.
+        tests:
+          - not_null
