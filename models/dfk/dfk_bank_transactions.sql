@@ -11,8 +11,8 @@ with banking_txs as (
     select
         tx_hash,
         block_timestamp,
-        native_from_address as from_address,
-        from_address as from_hex_address,
+        native_from_address,
+        from_address,
         case
             when data like '0xa59f3e0c%' then 'Deposit'
             when data like '0x67dfd4c9%' then 'Withdraw'
@@ -39,8 +39,8 @@ final as (
     select
         banking_txs.tx_hash as tx_hash,
         block_timestamp,
+        native_from_address,
         from_address,
-        from_hex_address,
         type,
         jewel_amount,
         xjewel_amount

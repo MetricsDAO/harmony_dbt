@@ -16,12 +16,12 @@ models:
         tests:
           - not_null
 
-      - name: from_address
+      - name: native_from_address
         description: The native Harmony address of the account that performed this transaction.
         tests:
           - not_null
 
-      - name: from_hex_address
+      - name: from_address
         description: The hex format address of the account that performed this transaction.
         tests:
           - not_null
