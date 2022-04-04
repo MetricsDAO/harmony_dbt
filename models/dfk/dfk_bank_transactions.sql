@@ -7,7 +7,13 @@
 	)
 }}
 
-with banking_txs as (
+with incremental_txs as (
+	select *
+    from {{ ref("txs") }}
+	where {{ incremental_load_filter("block_timestamp") }}
+),
+
+banking_txs as (
     select
         tx_hash,
         block_timestamp,
@@ -17,11 +23,10 @@ with banking_txs as (
             when data like '0xa59f3e0c%' then 'Deposit'
             when data like '0x67dfd4c9%' then 'Withdraw'
         end as type
-    from {{ ref("txs") }} txs
+    from incremental_txs
     where to_address = '0xa9ce83507d872c5e1273e745abcfda849daa654f'
     and (data like '0xa59f3e0c%' or data like '0x67dfd4c9%')
     and status = true
-	and {{ incremental_load_filter("block_timestamp") }}
 ),
 
 token_amounts as (
@@ -30,7 +35,8 @@ token_amounts as (
         sum(case evm_contract_address when '0x72cb10c6bfa5624dd07ef608027e366bd690048f' then event_inputs:value end) as jewel_amount,
         sum(case evm_contract_address when '0xa9ce83507d872c5e1273e745abcfda849daa654f' then event_inputs:value end) as xjewel_amount
     from banking_txs
-    join {{ ref("logs") }} logs on banking_txs.tx_hash = logs.tx_hash
+    join {{ ref("logs") }} logs
+	on banking_txs.tx_hash = logs.tx_hash
     where event_name = 'Transfer'
     group by 1
 ),
@@ -45,7 +51,8 @@ final as (
         jewel_amount,
         xjewel_amount
     from banking_txs
-    join token_amounts on banking_txs.tx_hash = token_amounts.tx_hash
+    join token_amounts
+	on banking_txs.tx_hash = token_amounts.tx_hash
 )
 
 select * from final
