@@ -1,0 +1,29 @@
+
+version: 2
+
+models:
+  - name: dfk_hero_summons
+    description: "Defi Kingdom Hero Summons"
+
+    columns:
+      - name: tx_hash
+        description: The hash of the transaction, this is the primary key for this table.
+        tests:
+          - not_null
+          - unique
+      - name: block_timestamp
+        description: The time when the block was mined.
+        tests:
+          - not_null
+      - name: hero_id
+        description: Token ID of the DFK Hero summoned
+        tests:
+          - not_null
+      - name: crystal_id
+        description: Crystal ID used to summon the hero
+        tests:
+          - not_null
+      - name: summoneer
+        description: Wallet Address that summoned the hero
+        tests:
+          - not_null
