@@ -44,7 +44,6 @@ models:
       - name: token0_name
         description: Name of the first token in the token pair.
         tests:
-          - not_null
 
       - name: token1
         description: EVM address of the second token in the token pair.
@@ -54,7 +53,6 @@ models:
       - name: token1_name
         description: Name of the second token in the token pair.
         tests:
-          - not_null
 
       - name: action
         description: The action executed to the liquidity pool.
