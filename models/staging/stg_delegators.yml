@@ -1,0 +1,46 @@
+version: 2
+models: 
+  - name: stg_delegators
+    description: |-
+      Filtered ingest from hmy_getAllValidatorInformation from the harmony endpoint.
+    columns:
+      - name: ingest_timestamp
+        description: Timestamp the block chain was queried.
+        tests:
+          - not_null
+
+      - name: day_date
+        description: Truncated Date of the blockchain.
+        tests:
+          - not_null
+
+      - name: validator_address
+        description: Address of the Validator.
+        tests:
+          - not_null
+
+      - name: validator_identity
+        description: Identity of the Validator.
+        tests:
+          - not_null
+
+      - name: active_status
+        description: If the Validator is active.
+
+      - name: booted_status
+        description: If the Validator is booted.
+          
+      - name: delegations
+        description: The number of delegations.
+        tests:
+          - not_null
+
+      - name: total_delegation
+        description: The total number of delegations
+        tests:
+          - not_null
+
+      - name: total_delegator_count
+        description: The total number of delegators
+        tests:
+          - not_null

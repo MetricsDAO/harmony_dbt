@@ -21,6 +21,16 @@ harmony_explorer_tokens as (
     from {{ ref('harmony_explorer_tokens') }}
 ),
 
+backfill_tokens as (
+    select
+        *
+    from {{ ref('backfill_tokens_data') }}
+    where token_address not in 
+        (select token_address from dfk_tokens)
+    and token_address not in 
+        (select token_address from harmony_explorer_tokens)
+),
+
 -- this is an example of adding new protocols
 tranq_tokens as (
     -- this is an example of renaming columns, make sure the columns are in the right order
@@ -46,6 +56,12 @@ final as (
     select
         * 
     from harmony_explorer_tokens
+
+    union
+
+    select
+        * 
+    from backfill_tokens
 
     union
 
