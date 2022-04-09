@@ -32,9 +32,11 @@ crystal_to_hero_summons as (
         txs.from_address as summoneer,
         logs.event_inputs:tokenId as hero_id
     from txs
-    left join logs on txs.tx_hash = logs.tx_hash and logs.event_name = 'Transfer'
+    left join logs
+        on txs.tx_hash = logs.tx_hash
+        and logs.event_name = 'Transfer'
     where substr(txs.data,0,10) = '0x690e7c09' -- open
-        and status = TRUE
+        and status
         and (
                 txs.to_address = '0x65dea93f7b886c33a78c10343267dd39727778c2' -- Summoning Contract
                 or txs.to_address = '0xf4d3ae202c9ae516f7eb1db5aff19bf699a5e355' -- Summoning Contract 2
@@ -47,7 +49,7 @@ final as (
         concat('0x',crystal_id) as crystal_id,
         block_timestamp,
         summoneer
-    from crystal_to_hero_summons s
+    from crystal_to_hero_summons
 )
 
 select * from final
