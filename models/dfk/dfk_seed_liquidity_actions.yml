@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: dfk_seed_liquidity_actions
+    description: "DeFi Kingdom Seed Liquidity Actions"
+
+    columns:
+      - name: log_id
+        description: Log identifier composed of tx_hash-event_index
+        tests:
+          - unique
+          - not_null
+
+      - name: block_id
+        description: The block number.
+        tests:
+          - not_null
+
+      - name: block_timestamp
+        description: The timestamp for when the block was collated.
+        tests:
+          - not_null
+
+      - name: tx_hash
+        description: Hash of the transaction (32 Bytes).
+        tests:
+          - not_null
+
+      - name: amount_0
+        description: The quantity of the first token being added or removed from the pool.
+        tests:
+
+      - name: amount_1
+        description: The quantity of the second token being added or removed from the pool.
+        tests:
+
+      - name: one_lp_address
+        description: ONE native address of the liquidity pool involved in the transaction.
+        tests:
+          - not_null
+
+      - name: eth_lp_address
+        description: EVM address of the liquidity pool involved in the transaction.
+        tests:
+          - not_null
+
+      - name: pool_name
+        description: The name of the liquidity pool.
+        tests:
+          - not_null
+
+      - name: token0_address
+        description: EVM address of the first token in the token pair.
+        tests:
+          - not_null
+
+      - name: token1_address
+        description: EVM address of the second token in the token pair.
+        tests:
+          - not_null
+
+      - name: token0_name
+        description: Name of the first token in the token pair.
+        tests:
+
+      - name: token1_name
+        description: Name of the second token in the token pair.
+        tests:
+
+      - name: action
+        description: The action executed to the liquidity pool.
+        tests:
+          - not_null
