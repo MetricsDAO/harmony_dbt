@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: dfk_seed_harvests
+    description: "Defi Kingdoms Jewel Garden Harvests"
+
+    columns:
+      - name: block_timestamp
+        description: The timestamp of when the block that this transaction was in was mined.
+        tests:
+          - not_null
+
+      - name: block_number
+        description: The block number of the block this transaction is in.
+        tests:
+          - not_null
+
+      - name: garden_epoch
+        description: The epoch of the garden for this transaction.
+        tests:
+          - not_null
+
+      - name: native_from_address
+        description: The native Harmony address of the account that performed this transaction.
+        tests:
+          - not_null
+
+      - name: from_address
+        description: The hex format address of the account that performed this transaction.
+        tests:
+          - not_null
+
+      - name: tx_hash
+        description: The hash of this Harmony transaction.
+        tests:
+          - unique
+          - not_null
+
+      - name: jewel_locked
+        description: The amount of JEWEL locked away in this transaction until after epoch 51 or unlocked with Heroes.
+        tests:
+          - not_null
+
+      - name: jewel_unlocked
+        description: The amount of JEWEL unlocked and received from this transaction.
+        tests:
+          - not_null
