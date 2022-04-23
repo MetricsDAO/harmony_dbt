@@ -13,12 +13,7 @@ deduped_raw_txs as (
     select
         *
     from {{ source("chainwalkers", "harmony_txs") }}
-    where 
-        {% if is_incremental() %}
-            ingested_at > ( select max(block_timestamp) from {{ this }} )
-        {% else %}
-            true
-        {% endif %}
+    where {{ incremental_load_filter("ingested_at") }}
     qualify row_number() over (partition by tx_id order by ingested_at desc) = 1
 )
 
