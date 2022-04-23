@@ -15,17 +15,17 @@ models:
         description: Block number
         tests:
           - not_null
-
+      
       - name: block_timestamp
         description: The timestamp for when the block was collated
         tests:
           - not_null
-
+      
       - name: tx_hash
         description: The hash of the transaction (32 Bytes)
         tests:
           - not_null
-
+      
       - name: liquidity_provider
         description: EVM address of the liquidity provider
         tests:
@@ -40,11 +40,11 @@ models:
         description: EVM address of the liquidity pool involved in the transaction
         tests:
           - not_null
-
+      
       - name: pool_name
         description: Name of liquidity pool
         tests:
-
+      
       - name: token0
         description: EVM address of the first token in the liquidity pool
         tests:
@@ -57,7 +57,7 @@ models:
       - name: token0_name
         description: Name of the first token in the liquidity pool
         tests:
-
+      
       - name: token1
         description: EVM address of the second token in the liquidity pool
         tests:
@@ -66,29 +66,29 @@ models:
       - name: token1_symbol
         description: Symbol of the second token in the liquidity pool
         tests:
-
+      
       - name: token1_name
         description: Name of the second token in the liquidity pool
         tests:
-
+      
       - name: amount0_raw
         description: The raw quantity of the first token being added or removed from the liquidity pool
         tests:
           - not_null
-
+      
       - name: amount0_adjusted
         description: The decimal-adjusted quantity of the first token being added or removed from the liquidity pool
         tests:
-
+      
       - name: amount1_raw
         description: The raw quantity of the second token being added or removed from the liquidity pool
         tests:
           - not_null
-
+      
       - name: amount1_adjusted
         description: The decimal-adjusted quantity of the first token being added or removed from the liquidity pool
         tests:
-
+      
       - name: amount0_usd
         description: The USD value of the first token being added or removed from the liquidity pool
         tests:
