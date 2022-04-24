@@ -1,6 +1,6 @@
 {{ 
     config(
-        incremental_strategy = 'delete+insert',
+        materialized='table',
         tags=['metrics'],
         cluster_by=['metric_date']
     )

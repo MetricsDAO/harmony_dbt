@@ -1,6 +1,6 @@
 {{ 
     config(
-        materialized='incremental',
+        materialized='table',
         tags=['metrics'],
         cluster_by=['metric_date']
     )
