@@ -14,19 +14,20 @@ logs as (
     select
         *
     from {{ ref("logs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 txs as (
     select
         *
     from {{ ref("txs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 crystal_to_hero_summons as (
     select  
         txs.block_timestamp,
+        txs.ingested_at,
         txs.tx_hash,
         substr(txs.data,11) as crystal_id,
         txs.from_address as summoneer,
@@ -48,6 +49,7 @@ final as (
         hero_id,
         concat('0x',crystal_id) as crystal_id,
         block_timestamp,
+        ingested_at,
         summoneer
     from crystal_to_hero_summons
 )

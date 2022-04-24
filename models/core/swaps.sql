@@ -20,7 +20,7 @@ logs as (
 final as (
     select 
         l.block_timestamp,
-        l.ingested_at
+        l.ingested_at,
         l.log_id,
         l.tx_hash,
         l.evm_contract_address as pool_address,

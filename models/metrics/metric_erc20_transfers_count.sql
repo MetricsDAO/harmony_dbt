@@ -1,8 +1,6 @@
 {{ 
     config(
-        materialized='incremental',
-        unique_key = 'metric_date || metric_period',
-        incremental_strategy = 'delete+insert',
+        materialized='table',
         tags=['metrics'],
         cluster_by=['metric_date']
     )
@@ -16,7 +14,6 @@ daily as (
         'daily' as metric_period,
         count(1) as transfers_count
     from {{ ref("transfers") }}
-    where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
 
@@ -26,7 +23,6 @@ hourly as (
         'hourly' as metric_period,
         count(1) as transfers_count
     from {{ ref("transfers") }}
-    where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
 
@@ -36,7 +32,6 @@ minute as (
         'minute' as metric_period,
         count(1) as transfers_count
     from {{ ref("transfers") }}
-    where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
 

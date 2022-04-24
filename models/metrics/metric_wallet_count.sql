@@ -1,8 +1,6 @@
 {{ 
     config(
-        materialized='incremental',
-        unique_key = 'metric_date || metric_period',
-        incremental_strategy = 'delete+insert',
+        materialized='table',
         tags=['metrics'],
         cluster_by=['metric_date']
     )
@@ -17,7 +15,6 @@ daily as (
         count( distinct from_address ) as txs_count_from,
         count( distinct to_address ) as txs_count_to
     from {{ ref("txs") }}
-    where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
 
@@ -28,7 +25,6 @@ hourly as (
         count( distinct from_address ) as txs_count_from,
         count( distinct to_address ) as txs_count_to
     from {{ ref("txs") }}
-    where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
 
@@ -39,7 +35,6 @@ minute as (
         count( distinct from_address ) as txs_count_from,
         count( distinct to_address ) as txs_count_to
     from {{ ref("txs") }}
-    where {{ incremental_last_x_days("block_timestamp", 3) }}
     group by 1, 2
 ),
 
