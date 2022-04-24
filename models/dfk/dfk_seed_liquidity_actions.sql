@@ -3,7 +3,7 @@
         materialized='incremental',
         unique_key='log_id',
         tags=['dfk', 'dfk_seed_liquidity_actions'],
-        cluster_by=['log_id']
+        cluster_by=['block_timestamp']
         )
 }}
 
@@ -30,9 +30,12 @@ txs as (
         tx_hash 
     from {{ ref('txs') }}
     where {{ incremental_load_filter("block_timestamp") }}
-        and to_address = '0x24ad62502d1c652cc7684081169d04896ac20f30'
+        and to_address = '0x24ad62502d1c652cc7684081169d04896ac20f30' -- UniswapV2Router address
         and substr(data,0,10) 
-            in ('0x02751cec','0xf305d719','0xbaa2abde','0xe8e33700')
+            in ('0x02751cec', -- RemoveLiquidityETH
+                '0xf305d719', -- AddLiquidityETH
+                '0xbaa2abde', -- RemoveLiquidity
+                '0xe8e33700') -- AddLiquidity
 ),
 
 final_table as (
@@ -73,7 +76,6 @@ final_table as (
             on liquidity_pools.token0 = t0.token_address
         left join tokens t1 
             on liquidity_pools.token1 = t1.token_address
-    where 1=1
         and tx_hash in (select tx_hash from txs)
         and (event_name = 'Mint' or 
              event_name = 'Burn')
