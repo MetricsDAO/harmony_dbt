@@ -15,6 +15,10 @@ models:
         description: The time when the block was mined.
         tests:
           - not_null
+      - name: ingested_at
+        description: The timestamp for when the block was ingested.
+        tests:
+          - not_null
       - name: hero_token_id
         description: Token id of the DFK Hero sold
         tests:

@@ -14,35 +14,31 @@ jewel_price as (
     select 
         *
     from {{ ref("tokenprice_jewel") }}
-    where {{ incremental_last_x_days("timestamp", 3) }}
 ),
 
 tear_price as (
     select
         *
     from {{ ref("tokenprice_gaiatear") }}
-    where {{ incremental_last_x_days("timestamp", 3) }}
 ),
 
 shva_price as (
     select
         *
     from {{ ref("tokenprice_shvasrune") }}
-    where {{ incremental_last_x_days("timestamp", 3) }}
 ),
 
 gold_price as (
     select
         *
     from {{ ref("tokenprice_dfkgold") }}
-    where {{ incremental_last_x_days("timestamp", 3) }}
 ),
 
 logs as (
     select
         *
     from {{ ref('logs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 item2gold as (
@@ -61,8 +57,10 @@ all_quest_rewards as (
     select
         tx_hash as quest_tx
     from {{ ref('txs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
-        and to_address = '0x5100bd31b822371108a0f63dcfb6594b9919eaf4' -- quest_contract
+    where {{ incremental_load_filter("ingested_at") }}
+        and (   to_address = '0x5100bd31b822371108a0f63dcfb6594b9919eaf4' -- quest_contract
+                or to_address = '0xaa9a289ce0565e4d6548e63a441e7c084e6b52f6' -- quest_contract_new
+            )
         and substr(data,0,10) = '0x528be0a9' -- collect quest rewards
 ),
 
@@ -70,6 +68,7 @@ final as (
     select
         logs.log_id,
         logs.block_timestamp,
+        logs.ingested_at,
         logs.evm_contract_address,
         tokens.token_name,
         logs.event_inputs:from as from_address,

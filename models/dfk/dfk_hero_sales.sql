@@ -18,12 +18,13 @@ logs as (
     select 
         *
     from {{ ref('logs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 auction_created as (
     select
         tx_hash,
         block_timestamp,
+        ingested_at,
         concat('0x',LTRIM(substr(topics[1], 3, 64),'0')) as seller_address,
         java_hextoint(substr(data,3,64))::number as auction_id
     from {{ ref('logs') }} -- reverse lookup, need to look at all the data
@@ -33,6 +34,7 @@ hero_auction_txns as (
     select 
         tx_hash,
         block_timestamp,
+        ingested_at,
         java_hextoint(replace(topics[1]::string, '0x','' )) as hero_token_id,
         java_hextoint(substr(data, 3, 64)) as auction_id,
         java_hextoint(substr(data, 3+64, 64))::number / 1e18  as total_jewels,
