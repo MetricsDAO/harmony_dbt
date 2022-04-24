@@ -11,31 +11,31 @@
 with 
 
 logs as (
-    select * from {{ ref('logs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    select
+        *
+    from {{ ref('logs') }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 events as (
     select 
         log_id,
         block_timestamp,
+        ingested_at,
         date_trunc('day', block_timestamp) as block_date,
         tx_hash,
         event_index,
         native_contract_address,
         evm_contract_address,
-
         case 
             when event_name='Mint' 
                 then 'ADD_LIQUIDITY'
             else 'REMOVE_LIQUIDITY'
         end as action,
-    
         event_inputs:amount0::int as amount0_raw,
         event_inputs:amount1::int as amount1_raw
     from logs
-    where (event_name='Mint' or 
-           event_name='Burn') 
+    where ( event_name='Mint' or event_name='Burn' )
         and event_inputs:sender = '0x1b02da8cb0d097eb8d57a175b88c7d8b47997506'
 ),
 
@@ -44,21 +44,24 @@ txs as (
         tx_hash,
         from_address
     from {{ ref('txs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 liquidity_pools as (
-    select *
+    select
+        *
     from {{ ref('liquidity_pools') }}
 ),
 
 tokenprices as (
-    select * 
+    select
+        *
     from {{ ref('tokenprices') }}
 ),
 
 tokens as (
-    select *
+    select
+        *
     from {{ ref('tokens') }}
 ),
 

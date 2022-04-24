@@ -12,6 +12,11 @@ models:
         description: The time when the block was mined.
         tests:
           - not_null
+      
+      - name: ingested_at
+        description: The timestamp for when the block was ingested.
+        tests:
+          - not_null
 
       - name: nonce
         description: The number of transactions made by the sender prior to this one.

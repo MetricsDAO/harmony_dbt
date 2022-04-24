@@ -54,6 +54,11 @@ models:
         tests:
           - not_null
 
+      - name: ingested_at
+        description: The timestamp for when the block was ingested.
+        tests:
+          - not_null
+
       - name: contract_address
         description: The address of the transferred token.
         tests:
