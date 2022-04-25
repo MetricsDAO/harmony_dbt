@@ -14,7 +14,7 @@ logs as (
     select 
         *
     from {{ ref('logs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 final as (
