@@ -76,7 +76,7 @@ final_table as (
             on liquidity_pools.token0 = t0.token_address
         left join tokens t1 
             on liquidity_pools.token1 = t1.token_address
-        and tx_hash in (select tx_hash from txs)
+    where tx_hash in (select tx_hash from txs)
         and (event_name = 'Mint' or 
              event_name = 'Burn')
 )
