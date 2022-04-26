@@ -16,6 +16,11 @@ models:
         tests:
           - not_null
 
+      - name: ingested_at
+        description: The timestamp for when the block was ingested.
+        tests:
+          - not_null
+
       - name: native_from_address
         description: The native Harmony address of the account that performed this transaction.
         tests:

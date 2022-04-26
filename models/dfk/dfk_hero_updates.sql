@@ -13,7 +13,7 @@ events as (
     select
         *
     from {{ ref("logs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
         and evm_contract_address = '0x5f753dcdf9b1ad9aabc1346614d1f4746fd6ce5c'
         -- honestly not sure what event is this as its un-documented.
         -- if you select distinct topics[0] from the above address, its the only topic that doesn't appear in 4byte.directory.
@@ -22,6 +22,7 @@ events as (
 final as (
     select
         block_timestamp,
+        ingested_at,
         block_id,
         log_id,
         java_hextoint(substr(data,3+64+(0*64),64)) as hero_id,

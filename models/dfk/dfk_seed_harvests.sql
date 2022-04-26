@@ -10,13 +10,13 @@
 with incremental_txs as (
     select *
     from {{ ref("txs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 incremental_logs as (
     select *
     from {{ ref("logs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 harvest_txs as (
@@ -53,6 +53,7 @@ jewel_amounts as (
 final as (
     select
         block_timestamp,
+        ingested_at,
         block_number,
         floor((block_number - 16350367) / 302400) + 1 as garden_epoch,
         native_from_address,

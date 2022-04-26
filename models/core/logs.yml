@@ -22,6 +22,11 @@ models:
         tests:
           - not_null
 
+      - name: ingested_at
+        description: The timestamp for when the block was ingested.
+        tests:
+          - not_null
+
       - name: tx_hash
         description: Hash of the transaction (32 Bytes).
         tests:

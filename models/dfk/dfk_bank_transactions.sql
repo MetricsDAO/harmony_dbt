@@ -12,19 +12,20 @@ with
 incremental_txs as (
     select *
     from {{ ref("txs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 incremental_logs as (
     select *
     from {{ ref("logs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 banking_txs as (
     select
         tx_hash,
         block_timestamp,
+        ingested_at,
         native_from_address,
         from_address,
         case
@@ -53,6 +54,7 @@ final as (
     select
         banking_txs.tx_hash as tx_hash,
         block_timestamp,
+        ingested_at,
         native_from_address,
         from_address,
         type,

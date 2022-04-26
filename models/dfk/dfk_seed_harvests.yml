@@ -10,6 +10,11 @@ models:
         tests:
           - not_null
 
+      - name: ingested_at
+        description: The timestamp for when the block was ingested.
+        tests:
+          - not_null
+
       - name: block_number
         description: The block number of the block this transaction is in.
         tests:
