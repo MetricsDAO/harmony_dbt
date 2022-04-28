@@ -43,7 +43,6 @@ models:
       +pre-hook: "{{ create_java_hextoint() }}"
     dfk:
       +pre-hook: "{{ create_java_hextoint() }}"
-    +schema: prod
   +post-hook: "{{ grant_data_share_statements() }}"
 
 seeds:
