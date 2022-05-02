@@ -3,8 +3,15 @@ version: 2
 
 models:
   - name: blocks
-    description: |-
+    description: 
       This table records all the blocks of Harmony blockchain.
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - block_id
+      - sequence_gaps:
+          column_name: block_id
+          where: BLOCK_TIMESTAMP < CURRENT_DATE - 1
 
     columns:
       - name: block_id
@@ -12,11 +19,20 @@ models:
         tests:
           - unique
           - not_null
-
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list:
+                - NUMBER
+                - FLOAT
       - name: block_timestamp
         description: The timestamp for when the block was collated.
         tests:
           - not_null
+          - dbt_expectations.expect_row_values_to_have_recent_data:
+              datepart: day
+              interval: 1
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list:
+                - TIMESTAMP_NTZ
 
       - name: ingested_at
         description: The timestamp for when the block was ingested.
@@ -32,8 +48,9 @@ models:
       - name: block_parent_hash
         description: Hash of the parent block (32 Bytes).
         tests:
-          - unique
           - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: 0[xX][0-9a-fA-F]+
 
       - name: gas_limit
         description: The maximum gas allowed in this block.
@@ -49,11 +66,15 @@ models:
         description: The address of the beneficiary to whom the mining rewards were given.
         tests:
           - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: 0[xX][0-9a-fA-F]+
 
       - name: nonce
         description: Hash of the generated proof-of-work (8 Bytes).
         tests:
           - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: 0[xX][0-9a-fA-F]+
 
       - name: size
         description: Integer the size of this block in bytes.
