@@ -3,7 +3,11 @@ version: 2
 
 models:
   - name: liquidity_pools
-    description: "Harmony Liquidity Pools"
+    description: "Harmony Liquidity Pools"    
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - POOL_ADDRESS
 
     columns:
       - name: pool_address

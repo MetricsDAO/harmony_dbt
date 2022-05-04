@@ -12,7 +12,10 @@ models:
         description: The time when the block was mined.
         tests:
           - not_null
-      
+          - dbt_expectations.expect_row_values_to_have_recent_data:
+              datepart: day
+              interval: 1
+        
       - name: ingested_at
         description: The timestamp for when the block was ingested.
         tests:

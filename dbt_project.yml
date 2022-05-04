@@ -48,3 +48,6 @@ models:
 
 seeds:
   +quote_columns: false
+
+vars:
+  "dbt_date:time_zone": GMT
