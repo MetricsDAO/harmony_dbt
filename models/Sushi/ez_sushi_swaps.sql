@@ -15,7 +15,8 @@ se.block_timestamp,
 se.block_id as block_number,
 se.tx_hash, 
 se.pool_address,
-CASE  WHEN se.amount0In <> 0 THEN se.amount0In / power(10, token0.decimals)::float
+CASE  wHEN se.amount0In <> 0 and se.amount1In <> 0  THEN amount1In / power(10, token1.decimals ) :: FLOAT
+      WHEN se.amount0In <> 0 THEN se.amount0In / power(10, token0.decimals)::float
       WHEN se.amount1In <> 0 THEN se.amount1In/ power(10, token1.decimals)::float
       END AS amount_in,
 CASE 
@@ -26,6 +27,7 @@ se.from_address as sender,
 se.LOG_ID,
 se.event_index,
 CASE 
+    WHEN se.amount0In <> 0 AND se.amount1In <> 0 THEN token1_address
     WHEN se.amount0In <> 0 THEN token0_address
     WHEN se.amount1In <> 0 THEN token1_address
     END AS token_In,
@@ -34,6 +36,7 @@ CASE
     WHEN se.amount1Out <> 0 THEN TOKEN1_ADDRESS
     END AS token_out,
 CASE 
+    WHEN se.amount0In <> 0 AND se.amount1In <> 0 THEN token1_symbol
     WHEN se.amount0In <> 0 THEN TOKEN0_SYMBOL
     WHEN se.amount1In <> 0 THEN token1_symbol
     END AS symbol_In,
