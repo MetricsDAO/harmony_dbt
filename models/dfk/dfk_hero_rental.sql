@@ -13,20 +13,19 @@ logs as (
     select
         *
     from {{ ref("logs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 jewel_price as (
     select 
         *
     from {{ ref("tokenprice_jewel") }}
-    where {{ incremental_last_x_days("timestamp", 3) }}
 ),
 summon_tx as (
     select
         tx_hash,
         from_address
     from {{ ref("txs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
         and (
                 to_address = '0x65dea93f7b886c33a78c10343267dd39727778c2' -- old summoning contract
                 or to_address = '0xf4d3ae202c9ae516f7eb1db5aff19bf699a5e355' -- new summoning contract
@@ -39,6 +38,7 @@ summon_tx as (
 costs_to_summon_new AS (
     select
         logs.block_timestamp,
+        logs.ingested_at,
         tx.tx_hash,
         tx.from_address,
         logs.evm_contract_address,
@@ -62,6 +62,7 @@ costs_to_summon_new AS (
 final as (
     select 
         m.block_timestamp,
+        m.ingested_at,
         m.amount as jewel_amount,
         m.who as user_address,
         m.from_address as renter_address,

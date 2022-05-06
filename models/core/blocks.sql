@@ -10,15 +10,15 @@
 with base_blocks as (
 
     select * from {{ ref("stg_blocks") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 final as (
 
     select
-
         block_id,
         block_timestamp,
+        ingested_at,
         header:hash::string as block_hash,
         header:parent_hash::string as block_parent_hash,
         header:gas_limit as gas_limit,

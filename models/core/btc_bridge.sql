@@ -7,31 +7,26 @@
         cluster_by = ['block_timestamp']
     ) 
 }}
--- Collateral is required to launch a vault
+
 with logs as (
-
-  select 
-    *
-  from {{ ref('logs') }}
-  where {{ incremental_load_filter("block_timestamp") }}
-
+    select
+        *
+    from {{ ref('logs') }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
+
 vaults as (
-
-  select 
-    distinct 
-      event_inputs:_to::string as vault_address
-  from logs
-  where 
-    evm_contract_address = '0xdc54046c0451f9269fee1840aec808d36015697d' -- HMY_ONE_BTC_CONTRACT
-    and event_name = 'IssueTokens'
-
+    select distinct 
+        event_inputs:_to::string as vault_address
+    from logs
+    where evm_contract_address = '0xdc54046c0451f9269fee1840aec808d36015697d' -- HMY_ONE_BTC_CONTRACT
+        and event_name = 'IssueTokens'
 ),
 transfers as (
-  select 
-    *
-  from  {{ ref('transfers') }}
-  where {{ incremental_load_filter("block_timestamp") }}
+    select
+        *
+    from  {{ ref('transfers') }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 final as (
   select 
@@ -39,6 +34,7 @@ final as (
     t.block_id,
     t.tx_hash,
     t.block_timestamp,
+    t.ingested_at,
     t.contract_address,
     t.from_address,
     t.to_address,
