@@ -14,12 +14,13 @@ logs as (
     select 
         *
     from {{ ref('logs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 final as (
     select 
         l.block_timestamp,
+        l.ingested_at,
         l.log_id,
         l.tx_hash,
         l.evm_contract_address as pool_address,
@@ -36,7 +37,7 @@ final as (
         l.event_inputs:sender::string as from_address,
         l.event_inputs:to as to_address
     from logs as l
-    left join {{ ref('liquidity_pools') }} as p on p.pool_address = l.evm_contract_address
+    join {{ ref('liquidity_pools') }} as p on p.pool_address = l.evm_contract_address
     left join {{ ref('tokens') }} as t0 on t0.token_address = p.token0
     left join {{ ref('tokens') }} as t1 on t1.token_address = p.token1
     where l.event_name = 'Swap'

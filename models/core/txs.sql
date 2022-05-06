@@ -8,16 +8,16 @@
 }}
 
 with base_txs as (
-
-    select * from {{ ref("stg_txs") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    select
+        *
+    from {{ ref("stg_txs") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 final as (
-    
     select
-    
         block_timestamp,
+        ingested_at,
         tx:nonce::string as nonce,
         tx_block_index as index,
         tx:bech32_from::string as native_from_address,
@@ -32,9 +32,7 @@ final as (
         tx_id as tx_hash,
         tx:input::string as data,
         tx:receipt:status::string = '0x1'  as status
-    
     from base_txs
-
 )
 
 select * from final

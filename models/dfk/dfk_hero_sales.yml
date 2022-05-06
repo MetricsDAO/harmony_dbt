@@ -1,0 +1,52 @@
+
+version: 2
+
+models:
+  - name: dfk_hero_sales
+    description: "Defi Kingdom Hero Sales"
+
+    columns:      
+      - name: tx_hash
+        description: The hash of the transaction, this is the primary key for this table.
+        tests:
+          - not_null
+          - unique
+      - name: block_timestamp
+        description: The time when the block was mined.
+        tests:
+          - not_null
+      - name: ingested_at
+        description: The timestamp for when the block was ingested.
+        tests:
+          - not_null
+      - name: hero_token_id
+        description: Token id of the DFK Hero sold
+        tests:
+          - not_null
+      - name: auction_id
+        description: Auction ID of the Sale
+        tests:
+          - not_null
+      - name: total_jewels
+        description: The total amount of JEWEL tokens paid including tax to purchase DFK Hero
+        tests:
+          - not_null
+      - name: tax_jewels
+        description: The amount of JEWEL tokens paid as tax to purchase the DKF Hero
+        tests:
+          - not_null
+      - name: total_usd
+        description: The total amount of USD paid including tax to purchase the DFK Hero 
+        tests:
+          - not_null
+      - name: tax_usd
+        description: The amount of USD paid  as tax to purchase the DFK Hero 
+        tests:
+          - not_null
+      - name: seller_address
+        description: Address of the wallet that sold DFK Hero -- maybe null because of incomplete data
+        
+      - name: buyer_address
+        description: Address of the wallet that purchased DFK Hero
+        tests:
+          - not_null

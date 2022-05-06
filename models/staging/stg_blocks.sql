@@ -14,7 +14,7 @@ deduped_raw_blocks as (
     select 
         *
     from {{ source("chainwalkers","harmony_blocks") }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
     qualify row_number() over (partition by block_id order by ingested_at desc) = 1
 
 )

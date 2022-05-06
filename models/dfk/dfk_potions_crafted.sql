@@ -13,12 +13,13 @@ txs as (
     select
         *
     from {{ ref('txs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 create_potions as (
     select
         tx_hash,
         block_timestamp,
+        ingested_at,
         from_address as crafter,
         concat('0x',substr(data,11+24,40)) as potion_type,
         java_hextoint(substr(data,11+64,64)) as potions_crafted
