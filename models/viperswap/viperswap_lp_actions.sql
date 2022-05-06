@@ -74,7 +74,6 @@ liquidity_tokens as (
         tx_hash,
         substring(data, 1, 10),
         concat('0x', substring(data, 35, 40)) as token0,
-
         --0xf305d719 - function signature for addLiquidityETH
         --0x02751cec - function signature for removeLiquidityETH
         --0xcf664087a5bb0237a0bad6742852ec6c8d69a27a - WONE token
