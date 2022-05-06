@@ -20,7 +20,12 @@ models:
         description: The timestamp for when the block was collated
         tests:
           - not_null
-      
+
+      - name: ingested_at
+        description: The timestamp for when the event was ingested into snowflake
+        tests:
+          - not_null
+
       - name: tx_hash
         description: The hash of the transaction (32 Bytes)
         tests:
@@ -48,21 +53,19 @@ models:
       - name: token0
         description: EVM address of the first token in the liquidity pool
         tests:
-          - not_null
-      
+
       - name: token0_symbol
         description: Symbol of the first token in the liquidity pool
         tests:
-      
+
       - name: token0_name
         description: Name of the first token in the liquidity pool
         tests:
-      
+
       - name: token1
         description: EVM address of the second token in the liquidity pool
         tests:
-          - not_null
-      
+
       - name: token1_symbol
         description: Symbol of the second token in the liquidity pool
         tests:

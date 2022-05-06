@@ -13,14 +13,14 @@ logs as (
     select
         *
     from {{ ref('logs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 txs as (
     select
         *
     from {{ ref('txs') }}
-    where {{ incremental_load_filter("block_timestamp") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 liquidity_pools as (
@@ -51,6 +51,7 @@ liquidity_events as (
         log_id,
         block_id,
         block_timestamp,
+        ingested_at,
         tx_hash,
         evm_contract_address AS pool_address,
 
@@ -73,7 +74,7 @@ liquidity_tokens as (
         tx_hash,
         substring(data, 1, 10),
         concat('0x', substring(data, 35, 40)) as token0,
-   
+
         --0xf305d719 - function signature for addLiquidityETH
         --0x02751cec - function signature for removeLiquidityETH
         --0xcf664087a5bb0237a0bad6742852ec6c8d69a27a - WONE token
@@ -99,15 +100,16 @@ liquidity_providers as (
 liquidity_events_pools as (
     select
         events.log_id,
-	      events.block_id,
-	      events.block_timestamp,
-	      events.tx_hash,
-	      events.action,
-	      events.pool_address,
-	      pools.pool_name,
-	      liquidity_tokens.token0,
-	      liquidity_tokens.token1,
-	      events.amount0_raw,
+        events.block_id,
+        events.block_timestamp,
+        events.ingested_at,
+        events.tx_hash,
+        events.action,
+        events.pool_address,
+        pools.pool_name,
+        liquidity_tokens.token0,
+        liquidity_tokens.token1,
+        events.amount0_raw,
         events.amount1_raw
     from liquidity_events as events
     left join liquidity_tokens
@@ -125,7 +127,7 @@ token_prices_usd as (
         tokens.decimals,
         prices.usd_price
     from tokens 
-    left join	prices
+    left join prices
         on tokens.token_address = prices.token_address
 ),
 
@@ -134,6 +136,7 @@ final as (
         events_pools.log_id,
         events_pools.block_id,
         events_pools.block_timestamp,
+        events_pools.ingested_at,
         events_pools.tx_hash,
         providers.liquidity_provider,
         events_pools.action,
