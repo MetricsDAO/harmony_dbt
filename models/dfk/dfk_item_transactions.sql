@@ -75,15 +75,23 @@ final as (
             when '0x9f37092a' then 'Buy'
             when '0x096c5e1a' then 'Sell'
         end as market_action,
-        to_number(gives.amount) as amount_give,
-        gives.token as token_give,
-        to_number(takes.amount) as amount_take,
-        takes.token as token_take
+        to_number(gives.amount)/pow(10, IFNULL(token_give.decimals, 0)) as amount_give,
+        gives.token as token_give_address,
+        token_give.token_symbol as token_give_symbol,
+        token_give.token_name as token_give_name,
+        to_number(takes.amount)/pow(10, IFNULL(token_take.decimals, 0)) as amount_take,
+        takes.token as token_take_address,
+        token_take.token_symbol as token_take_symbol,
+        token_take.token_name as token_take_name
     from market_txs
     inner join gives
         on market_txs.tx_hash = gives.tx_hash
     inner join takes
         on market_txs.tx_hash = takes.tx_hash
+    left join tokens token_give
+        on gives.token = token_give.token_address
+    left join tokens token_take
+        on takes.token = token_take.token_address
 )
 
 select * from final
