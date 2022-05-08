@@ -10,13 +10,13 @@
 with incremental_txs as (
     select *
     from {{ ref("txs") }}
-    where {{ incremental_load_filter("ingest_at") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 incremental_logs as (
     select *
     from {{ ref("logs") }}
-    where {{ incremental_load_filter("ingest_at") }}
+    where {{ incremental_load_filter("ingested_at") }}
 ),
 
 market_txs as (
