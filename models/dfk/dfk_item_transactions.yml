@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: dfk_item_transactions
+    description: "Defi Kingdoms item transactions"
+
+    columns:
+      - name: tx_hash
+        description: The hash of this Harmony transaction.
+        tests:
+          - unique
+          - not_null
+
+      - name: block_timestamp
+        description: The timestamp of when the block that this transaction was in was mined.
+        tests:
+          - not_null
+
+      - name: ingested_at
+        description: The timestamp of when this transaction was ingested.
+        tests:
+          - not_null
+
+      - name: native_from_address
+        description: The native Harmony address of the account that performed this transaction.
+        tests:
+          - not_null
+
+      - name: from_address
+        description: The hex format address of the account that performed this transaction.
+        tests:
+          - not_null
+
+      - name: market_action
+        description: The action of this transaction, either `'Buy'` or `'Sell'`.
+        tests:
+          - not_null
+
+      - name: amount_give
+        description: The amount of the token given by `from_address`. In the context of a buy transaction, the amount spent to buy. In the context of a sell transaction, the amount of token sold.
+        tests:
+          - not_null
+
+      - name: token_give_address
+        description: The contract address of the token given.
+        tests:
+          - not_null
+
+      - name: token_give_symbol
+        description: The symbol of the token given.
+
+      - name: token_give_name
+        description: The name of the token given.
+
+      - name: amount_take
+        description: The amount of the token taken by `from_address`. In the context of a buy transaction, the amount of token purchased. In the context of a sell transaction, the amount received.
+        tests:
+          - not_null
+
+      - name: token_take_address
+        description: The contract address of the token taken.
+        tests:
+          - not_null
+
+      - name: token_take_symbol
+        description: The symbol of the token taken.
+
+      - name: token_take_name
+        description: The name of the token taken.
