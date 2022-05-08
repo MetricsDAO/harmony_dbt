@@ -41,17 +41,29 @@ models:
         tests:
           - not_null
 
-      - name: token_give
+      - name: token_give_address
         description: The contract address of the token given.
         tests:
           - not_null
+
+      - name: token_give_symbol
+        description: The symbol of the token given.
+
+      - name: token_give_name
+        description: The name of the token given.
 
       - name: amount_take
         description: The amount of the token taken by `from_address`. In the context of a buy transaction, the amount of token purchased. In the context of a sell transaction, the amount received.
         tests:
           - not_null
 
-      - name: token_take
+      - name: token_take_address
         description: The contract address of the token taken.
         tests:
           - not_null
+
+      - name: token_take_symbol
+        description: The symbol of the token taken.
+
+      - name: token_take_name
+        description: The name of the token taken.
