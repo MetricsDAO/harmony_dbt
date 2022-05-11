@@ -44,7 +44,7 @@ CASE
     WHEN se.amount0Out <> 0 THEN token0_symbol
     WHEN se.amount1Out <> 0 THEN token1_symbol
     END AS symbol_out,  
-se.TO_ADDRESS as tx_to
+se.TO_ADDRESS::string as tx_to
 from {{ ref('swaps') }} se --27,288,348
 left join {{ ref('tokens') }} token0
 on se.token0_address = token0.token_address
