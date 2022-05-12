@@ -20,10 +20,12 @@ logs as (
 final as (
     select 
         l.block_timestamp,
+        l.block_id,
         l.ingested_at,
         l.log_id,
         l.tx_hash,
         l.evm_contract_address as pool_address,
+        l.event_index,
         p.token0 as token0_address,
         t0.token_name as token0_name,
         t0.token_symbol as token0_symbol,

@@ -95,3 +95,13 @@ sources:
             description: Market Cap of the coin in USD.
           - name: timestamp
             description: When the data was ingested.
+  - name: ethereum_db_sushi
+    database: ethereum
+    schema: CORE
+    tables:
+      - name: FACT_HOURLY_TOKEN_PRICES
+  - name: symbols_cross_tab
+    database: FLIPSIDE_PROD_DB
+    schema: SILVER
+    tables:
+      - name: MARKET_ASSET_METADATA

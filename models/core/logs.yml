@@ -4,7 +4,16 @@ version: 2
 models:
   - name: logs
     description: "Harmony Logs"
-
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - LOG_ID
+      - sequence_gaps:
+          partition_by:
+            - BLOCK_ID
+            - TX_HASH
+          column_name: EVENT_INDEX
+          where: BLOCK_TIMESTAMP < CURRENT_DATE
     columns:
       - name: log_id
         description: Log identifier composed of tx_hash-event_index
@@ -16,11 +25,20 @@ models:
         description: The block number.
         tests:
           - not_null
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list:
+                - NUMBER  
 
       - name: block_timestamp
         description: The timestamp for when the block was collated.
         tests:
           - not_null
+          - dbt_expectations.expect_row_values_to_have_recent_data:
+              datepart: day
+              interval: 1
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list:
+                - TIMESTAMP_NTZ
 
       - name: ingested_at
         description: The timestamp for when the block was ingested.
@@ -31,6 +49,8 @@ models:
         description: Hash of the transaction (32 Bytes).
         tests:
           - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: 0[xX][0-9a-fA-F]+
 
       - name: event_index
         description: Integer of of the log position in the block.
@@ -46,6 +66,8 @@ models:
         description: EVM address of the contract.
         tests:
           - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: 0[xX][0-9a-fA-F]+
 
       - name: contract_name
         description: Name of the contract called.
@@ -54,10 +76,17 @@ models:
       - name: event_name
         description: Name of the event executed.
         tests:
+          - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list:
+                - STRING
+                - VARCHAR
 
       - name: event_inputs
         description: Parameter inputs for the event called.
         tests:
+           - dbt_expectations.expect_column_values_to_be_in_type_list:
+              column_type_list:
+                - OBJECT
 
       - name: topics
         description: Array of 0 to 4 32 Bytes data of indexed log arguments.

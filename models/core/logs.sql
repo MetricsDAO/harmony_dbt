@@ -32,7 +32,7 @@ logs as (
         block_timestamp,
         ingested_at,
         tx_hash,
-        value:logIndex::string as event_index,
+        to_number(Right(value:logIndex::string,length(value:logIndex::string)-2), 'xxxxx') as event_index,
         value:bech32_address::string as native_contract_address,
         value:address::string as evm_contract_address,
         value:decoded:contractName::string as contract_name,
