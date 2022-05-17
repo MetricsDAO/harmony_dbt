@@ -1,3 +1,4 @@
 [build]
   base = "target/"
-  command = "dbt docs generate"
+  command = "brew install dbt
+  dbt docs generate"
