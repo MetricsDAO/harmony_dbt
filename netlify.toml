@@ -1,3 +1,3 @@
 [build]
   base = "target/"
-  command = "brew install dbt && dbt docs generate"
+  command = brew update && brew install git && brew tap dbt-labs/dbt && brew install dbt && dbt docs generate"
