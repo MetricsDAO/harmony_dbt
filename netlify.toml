@@ -12,5 +12,5 @@
   # a base has not been set. This sample publishes the directory 
   # located at the absolute path "root/project/build-output"
   
-command = "pip install dbt-core
+command = "pip3 install dbt-core
 dbt docs generate"
