@@ -1,8 +1,13 @@
-target/
+target/*
 dbt_modules/
+dbt_packages
 logs/
 .env
 .notes
 dbt_docs.sh
 dbt_docs
 .DS_Store
+
+!target/index.html
+!target/catalog.json
+!target/manifest.json
