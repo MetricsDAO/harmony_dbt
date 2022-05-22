@@ -33,6 +33,9 @@ clean-targets: # directories to be removed by `dbt clean`
 # example:
 # +materialized: view
 
+tests:
+  +severity: warn  # all tests
+
 # TODO configure project
 models:
   harmony:
