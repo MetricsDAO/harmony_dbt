@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: delegators
+    description: |-
+      This table records various daily statistics of Harmony validators.
+
+    columns:
+      - name: u_key
+        description: The daily update key composed of the date and delegator address.
+        tests:
+          - unique
+          - not_null
+
+      - name: day_date
+        description: The date of this log.
+        tests:
+          - not_null
+
+      - name: delegator_address
+        description: The delegator's native Harmony address.
+        tests:
+          - not_null
+
+      - name: total_amount_delegated
+        description: The total amount of ONE delegated by this delegated in ATTO format (a factor of 10^18).
+        tests:
+          - not_null
+
+      - name: total_amount_undelegated
+        description: The total amount of ONE undelegated by this delegator in ATTO format (a factor of 10^18).
+        tests:
+          - not_null
+
+      - name: delegator_reward
+        description: The total amount of ONE reward gotten by this delegator from the validator in ATTO format (a factor of 10^18).
+        tests:
+          - not_null
