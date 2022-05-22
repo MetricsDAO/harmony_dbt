@@ -4,6 +4,11 @@ sources:
   - name: chainwalkers
     schema: prod
     database: chainwalkers
+    freshness: # default freshness
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+    loaded_at_field: ingested_at
+
     tables:
       - name: harmony_blocks
         description: "Blocks from the Harmony chain. Note always use the latest ingested at timestamp as duplicates can exist in this table!"
@@ -47,6 +52,34 @@ sources:
             description: Synonmous with blockchain name for Harmony.
           - name: ingested_at
             description: The time this row was ingested by Chainwalkers.
+
+  - name: harmony
+    schema: prod
+    database: harmony
+    freshness: # default freshness
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+      filter: datediff('hour', block_timestamp, current_timestamp) < 48
+    loaded_at_field: ingested_at
+
+    tables:
+      - name: blocks
+      - name: btc_bridge
+      - name: dfk_bank_transactions
+      - name: dfk_hero_rental
+      - name: dfk_hero_summons
+      - name: dfk_hero_updates
+      - name: dfk_item_transactions
+      - name: dfk_potions_crafted
+      - name: dfk_quest_rewards
+      - name: dfk_seed_harvests
+      - name: dfk_seed_liquidity_actions
+      - name: logs
+      - name: swaps
+      - name: transfers
+      - name: txs
+
+
   - name: ingest
     schema: public
     database: ingest
