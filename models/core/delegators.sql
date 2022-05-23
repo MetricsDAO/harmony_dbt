@@ -19,10 +19,10 @@ with delegators_incremental as (
 delegator as (
     select 
        day_date,
-       d.value:"delegator-address" as delegator_address,
-       sum(d.value:amount) as total_amount_delegated,
-       sum(u.value:amount) as total_amount_undelegated,
-       sum(d.value:reward) as delegator_reward
+       d.value:"delegator-address"::variant as delegator_address,
+       sum(d.value:amount::int)/ pow(10, 18) as total_amount_delegated,
+       sum(u.value:amount::int) as total_amount_undelegated,
+       sum(d.value:reward::int) as delegator_reward
 from delegators_incremental,
 lateral flatten(input => delegators_incremental.delegations) as d,
 lateral flatten(input => d.value:undelegations) as u
