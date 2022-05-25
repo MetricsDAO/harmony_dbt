@@ -37,4 +37,4 @@ final as (
     from delegator
 )
 
-select * from final 
+select * from final
