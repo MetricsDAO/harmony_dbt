@@ -1,38 +1,41 @@
-{{ 
-     config(
-         materialized = 'incremental',
-         unique_key = 'tx_hash',
-         tags = ['core'],
-         cluster_by = ['block_timestamp']
-     ) 
-}}
+{{ config(
+    materialized = 'incremental',
+    unique_key = 'tx_hash',
+    tags = ['core'],
+    cluster_by = ['block_timestamp']
+) }}
 
-with base_txs as (
-    select
+WITH base_txs AS (
+
+    SELECT
         *
-    from {{ ref("stg_txs") }}
-    where {{ incremental_load_filter("ingested_at") }}
+    FROM
+        {{ ref("stg_txs") }}
+    WHERE
+        {{ incremental_load_filter("ingested_at") }}
 ),
-
-final as (
-    select
+FINAL AS (
+    SELECT
         block_timestamp,
         ingested_at,
-        tx:nonce::string as nonce,
-        tx_block_index as index,
-        tx:bech32_from::string as native_from_address,
-        tx:bech32_to::string as native_to_address,
-        tx:from::string as from_address,
-        tx:to::string as to_address,
-        tx:value as value,
-        tx:block_number as block_number,
-        tx:block_hash::string as block_hash,
-        tx:gas_price as gas_price,
-        tx:gas as gas,
-        tx_id as tx_hash,
-        tx:input::string as data,
-        tx:receipt:status::string = '0x1'  as status
-    from base_txs
+        tx :nonce :: STRING AS nonce,
+        tx_block_index AS INDEX,
+        tx :bech32_from :: STRING AS native_from_address,
+        tx :bech32_to :: STRING AS native_to_address,
+        tx :from :: STRING AS from_address,
+        tx :to :: STRING AS to_address,
+        tx :value AS VALUE,
+        tx :block_number AS block_number,
+        tx :block_hash :: STRING AS block_hash,
+        tx :gas_price AS gas_price,
+        tx :gas AS gas_limit,
+        tx_id AS tx_hash,
+        tx :input :: STRING AS DATA,
+        tx :receipt :status :: STRING = '0x1' AS status
+    FROM
+        base_txs
 )
-
-select * from final
+SELECT
+    *
+FROM
+    FINAL

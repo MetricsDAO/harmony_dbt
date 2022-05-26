@@ -1,18 +1,16 @@
-
 version: 2
 
 models:
-
   - name: txs
     description: |-
       This table records all the transactions of the Harmony blockchain.
-      
+
     columns:
       - name: block_timestamp
         description: The time when the block was mined.
         tests:
           - not_null
-      
+
       - name: ingested_at
         description: The timestamp for when the block was ingested.
         tests:
@@ -45,7 +43,7 @@ models:
         description: The Ethereum address of the receiver.
         tests:
           - not_null
-          
+
       - name: value
         description: The value transfered in ATTO format (a factor of 10^18).
         tests:
@@ -62,8 +60,8 @@ models:
         tests:
           - not_null
 
-      - name: gas
-        description: Gas provided by the sender.
+      - name: gas_limit
+        description: Gas provided by the sender, which could be different than actual gas used by the transaction.
         tests:
           - not_null
 
@@ -82,4 +80,3 @@ models:
         description: Boolean representing whether the transaction is successful or not.
         tests:
           - not_null
-          
