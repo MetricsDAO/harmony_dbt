@@ -59,6 +59,18 @@ tranq_lp as (
     where 1=0 -- to select nothing for now
 ),
 
+viperswap_lp as (
+    select
+        *
+    from {{ ref('viperswap_liquidity_pools') }}
+),
+
+dfk_lp as (
+    select
+        *
+    from {{ ref('dfk_liquidity_pools') }}
+),
+
 final as (
 
     select
@@ -82,6 +94,18 @@ final as (
     select
         * 
     from tranq_lp
+
+    union
+
+    select
+        * 
+    from viperswap_lp
+
+    union
+
+    select
+        * 
+    from dfk_lp
 )
 
 select * from final
