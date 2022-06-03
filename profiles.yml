@@ -1,7 +1,7 @@
 harmony:
   target: dev
   outputs:
-    harmony:
+    dev:
       type: snowflake
       account: "{{ env_var('SF_ACCOUNT') }}"
       # User/password auth
