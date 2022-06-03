@@ -1,5 +1,5 @@
-default:
-  target: harmony
+harmony:
+  target: dev
   outputs:
     harmony:
       type: snowflake
