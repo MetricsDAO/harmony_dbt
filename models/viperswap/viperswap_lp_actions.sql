@@ -2,6 +2,7 @@
     config(
         materialized = 'incremental',
         unique_key = 'log_id',
+        incremental_strategy = 'delete+insert',
         tags = ['models', 'viperswap', 'viperswap_lp_actions'],
         cluster_by = ['block_timestamp']
     )
