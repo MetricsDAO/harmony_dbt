@@ -5,6 +5,10 @@ models:
   - name: blocks
     description: |-
       This table records all the blocks of Harmony blockchain.
+    tests:
+      - sequence_gaps:
+          column_name: block_id
+          where: BLOCK_TIMESTAMP < CURRENT_DATE
 
     columns:
       - name: block_id
