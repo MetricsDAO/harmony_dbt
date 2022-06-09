@@ -4,6 +4,11 @@ models:
   - name: txs
     description: |-
       This table records all the transactions of the Harmony blockchain.
+    tests:
+      - tx_gaps:
+          column_block: block_number
+          column_tx_hash: tx_hash
+          where: BLOCK_TIMESTAMP < CURRENT_DATE
 
     columns:
       - name: block_timestamp
