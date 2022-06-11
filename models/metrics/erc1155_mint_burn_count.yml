@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: erc20_mint_burn_count
+  - name: erc1155_mint_burn_count
     description: "The daily mint and burn for each erc20 token"
     columns:
       - name: day_date
