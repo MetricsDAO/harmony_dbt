@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: metric_erc1155_mint_burn_count
-    description: "The daily mint and burn for each erc20 token"
+    description: The total daily count of each erc1155 token minted and burned
     columns:
       - name: evm_contract_address
         description: The contract address of the token minted or tokens burned
