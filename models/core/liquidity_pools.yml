@@ -27,3 +27,12 @@ models:
         tests:
           - not_null
 
+      - name: from_address
+        description: The address of the liquidity provider (ETH format).
+        tests:
+          - not_null
+
+      - name: native_from_address
+        description: The address of the liquidity provider (ONE format).
+        tests:
+          - not_null
