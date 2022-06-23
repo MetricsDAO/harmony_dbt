@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: metric_erc1155_mint_burn_count
+    description: The total daily count of each erc1155 token minted and burned
+    columns:
+      - name: evm_contract_address
+        description: The contract address of the token minted or tokens burned
+        tests:
+          - not_null
+      - name: day_date
+        description: The date the metric occurred
+        tests:
+          - not_null
+      - name: tokens_minted
+        description: the count of the tokens minted.
+        tests:
+      - name: tokens_burned
+        description: The count of the token burned.
+        tests:
