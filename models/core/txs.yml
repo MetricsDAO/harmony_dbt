@@ -69,6 +69,11 @@ models:
         description: Gas provided by the sender, which could be different than actual gas used by the transaction.
         tests:
           - not_null
+      
+      - name: gas_used
+        description: Gas used in during the transaction execution.
+        tests:
+          - not_null
 
       - name: tx_hash
         description: The Ethereum hash of the transaction which is the primary key for this table.

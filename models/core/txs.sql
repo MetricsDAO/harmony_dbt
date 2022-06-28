@@ -29,6 +29,7 @@ FINAL AS (
         tx :block_hash :: STRING AS block_hash,
         tx :gas_price AS gas_price,
         tx :gas AS gas_limit,
+        js_hextoint(tx :receipt :cumulativeGasUsed) AS gas_used,
         tx_id AS tx_hash,
         tx :input :: STRING AS DATA,
         tx :receipt :status :: STRING = '0x1' AS status
